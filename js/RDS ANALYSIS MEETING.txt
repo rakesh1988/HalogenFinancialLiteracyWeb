@@ -1,0 +1,171 @@
+caching
+update insert
+static data from prod > i4 data prod from 
+
+https://intranet.ubs.net/en/corporate-center/group-chief-operating-officer/group-technology/corporate-center-it/group-data-services-instrument/reference-data-services/tools.html
+
+begin
+pkg_order.hide_rubric(803861, 23323, 't620741');
+end;
+
+aa1_v_config >>pkg_file_output
+pkg_order it also calls aa1_pg_util
+aa1_pg_util
+
+
+
+do we have any pkg_order_housekeeping
+
+*************************************
+aa1_v_config
+****************************************
+WHERE     valid_from_dt <= SYSDATE
+AND (valid_to_dt IS NULL OR valid_to_dt > SYSDATE);
+
+
+
+*******************************
+pkg_order>>>>>>>>>aa1_t_rubrics >>>>
+*************************************
+
+
+PROCEDURE hide_rubric
+    (p_order_nr      IN NUMBER
+    ,p_rubric_id     IN NUMBER
+    ,p_user_tnr      IN VARCHAR2
+    )
+  IS
+    v_cnt NUMBER;
+  BEGIN
+    --
+    SELECT COUNT(*)
+      INTO v_cnt
+      FROM aa1_t_reports
+     WHERE order_nr = p_order_nr;
+    IF v_cnt = 0 THEN
+      RAISE no_data_found;
+    END IF;
+    --
+    SELECT COUNT(*)
+      INTO v_cnt
+      FROM aa1_t_rubrics
+     WHERE rubric_id = p_rubric_id;
+    IF v_cnt = 0 THEN
+      RAISE no_data_found;
+    END IF;
+    --
+
+
+*******************************
+aa1_pg_util>>>>>t_sorce_system
+*************************************
+
+PROCEDURE insert_object_type_mapping
+    (p_product_txt     IN VARCHAR2
+    ,p_source_system   IN VARCHAR2
+    ,p_tnr             IN VARCHAR2
+    ,p_mapping_seq     IN NUMBER   DEFAULT 1
+    ,p_object_type_cd  IN VARCHAR2 DEFAULT null
+    ,p_object_type_nr  IN NUMBER   DEFAULT null
+    ,p_valid_from_dt   IN DATE     DEFAULT null
+    ,p_valid_to_dt     IN DATE     DEFAULT null
+    )
+  IS
+    v_valid_from_dt DATE;
+    v_cnt           NUMBER;
+  BEGIN
+    --
+    -- check date range validity, exit if illegal
+    --
+    -- %%%%% changes in the past allowed during dwh pilot phase %%%%%
+    -- %%%%% reactivate statements when going live              %%%%%
+    --
+    --IF p_tnr <> 'install' THEN
+    --  IF p_valid_from_dt < sysdate OR p_valid_to_dt < sysdate THEN
+    --    RAISE_APPLICATION_ERROR(-20001,'no changes in the past allowed');
+    --  END IF;
+    --END IF;
+    --
+    IF p_valid_from_dt > p_valid_to_dt THEN
+      RAISE_APPLICATION_ERROR(-20002,'from date must be before to date');
+    END IF;
+    --
+    -- if from date is missing: sysdate for inserts, p_valid_to_dt for deletes
+    --
+    v_valid_from_dt := NVL(p_valid_from_dt,NVL(p_valid_to_dt,sysdate));
+    --
+    -- delete all future records and delimit the actual one
+    --
+    DELETE FROM aa1_t_object_type_mapping
+     WHERE product_txt   =  p_product_txt
+       AND source_system =  p_source_system
+       AND mapping_seq   =  p_mapping_seq
+       AND valid_from_dt >= v_valid_from_dt;
+    --
+    UPDATE aa1_t_object_type_mapping
+       SET valid_to_dt = v_valid_from_dt
+          ,modified_dt = sysdate
+          ,modified_tnr = p_tnr
+     WHERE product_txt   = p_product_txt
+       AND source_system = p_source_system
+       AND mapping_seq   = p_mapping_seq
+       AND (valid_to_dt IS NULL OR valid_to_dt > v_valid_from_dt);
+    --
+    IF p_valid_to_dt IS NULL OR p_valid_to_dt <> v_valid_from_dt THEN
+      --
+      -- if not a delete: insert a new validity range
+      --
+      SELECT COUNT(*)
+        INTO v_cnt
+        FROM aa1_t_source_systems
+       WHERE source_system = p_source_system;
+      IF v_cnt = 0 THEN
+        RAISE_APPLICATION_ERROR(-20004,'source system does not exist');
+      END IF;
+      --
+      IF p_tnr <> 'install' THEN
+        SELECT COUNT(*)
+          INTO v_cnt
+          FROM aa1_t_object_types
+         WHERE object_type_cd = p_object_type_cd
+           AND object_type_nr = p_object_type_nr;
+        IF v_cnt = 0 THEN
+          RAISE_APPLICATION_ERROR(-20003,'object type code does not exist');
+        END IF;
+      END IF;
+      --
+      INSERT INTO aa1_t_object_type_mapping
+        (product_txt
+        ,source_system
+        ,mapping_seq
+        ,valid_from_dt
+        ,valid_to_dt
+        ,object_type_cd
+        ,object_type_nr
+        ,inserted_dt
+        ,inserted_tnr)
+      VALUES
+        (p_product_txt
+        ,p_source_system
+        ,p_mapping_seq
+        ,v_valid_from_dt
+        ,p_valid_to_dt
+        ,p_object_type_cd
+        ,p_object_type_nr
+        ,sysdate
+        ,p_tnr);
+      --
+    END IF;
+    --
+    COMMIT;
+    --
+  END insert_object_type_mapping;
+
+
+
+
+*******************************
+pkg_file_output
+*************************************
+
+not used in code >>check in jobs table and in used by columns
