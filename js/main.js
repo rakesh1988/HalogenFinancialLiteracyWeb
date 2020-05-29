@@ -275,7 +275,7 @@ bakery.hidePrevNextButton= function(){
         document.getElementById("backButtonId").style.display="inline";
       }
 	
-   if(navCnt==7 || navCnt==3)
+   if(navCnt==7 || navCnt==3 || navCnt==4)
       { 
         document.getElementById("nxtButtonId").style.display="none";
       }      
@@ -353,11 +353,10 @@ $(document).ready(function() {
 $(".enterKeyPress").keyup( function(e) {
 
         var key = e.charCode ? e.charCode : e.keyCode ? e.keyCode : 0;
+		
         if(key == 13) {
 		alert("enter key");
-		e.preventDefault();
-        // Get all focusable elements on the page
-		alert($(this).next());
+		e.preventDefault();  
 		debugger;
         $(this).next().focus();
 		}
