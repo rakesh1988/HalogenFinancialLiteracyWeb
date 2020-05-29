@@ -95,12 +95,14 @@ bakery.getTranslation = function(key) {
 
 bakery.gotoPage = function(breadCrum) {
 var retVal=bakery.highlightHeader(breadCrum);
+
 if(retVal)
    {
  
 		if(breadCrum=='Welcome')
 		{
 			var functionToSetData='set'+nextPrevNav[curPos]+'DataObject';
+			
 			bakery[functionToSetData]();
 		
 			var functionToRestoreData='restoreWelcomeDataObject';			
@@ -138,7 +140,9 @@ if(retVal)
 			  }
 			  return;
 		  }
+		  
 			var functionToSetData='set'+nextPrevNav[curPos]+'DataObject';
+			
 			bakery[functionToSetData]();
 			
 			var functionToRestoreData='restoreStaffDataObject';			
@@ -153,6 +157,9 @@ if(retVal)
 		
 		else if(breadCrum=='Expenditure')
 		{	
+		    var functionToSetData='set'+nextPrevNav[curPos]+'DataObject';	
+		
+			bakery[functionToSetData]();
 			document.getElementById("bakeryBase").innerHTML=bakeryTemplatePage4(bakery.pages);			
 			empSalary=pageArray[2].getEmpQty1()*staff[0][0].substring(1, staff[0][0].length)+pageArray[2].getEmpQty2()*staff[1][0].substring(1, staff[1][0].length)+pageArray[2].getEmpQty3()*staff[2][0].substring(1, staff[2][0].length);
 			
@@ -171,9 +178,7 @@ if(retVal)
 			
 			document.getElementById("selectionsMade").innerHTML=empImgString;
 			
-			var functionToSetData='set'+nextPrevNav[curPos]+'DataObject';
-			alert(functionToSetData);
-			bakery[functionToSetData]();
+			
 			
 			var functionToRestoreData='restoreExpenditureDataObject';				
 			bakery[functionToRestoreData]();
@@ -185,19 +190,19 @@ if(retVal)
 		}
 		
 		else if(breadCrum=='Inventory')
-		{		
-		    
+		{
+			
+			
 			
 			var functionToSetData='set'+nextPrevNav[curPos]+'DataObject';
+			
 			bakery[functionToSetData]();
-			
-			
-			
+			alert("before html");
 			document.getElementById("bakeryBase").innerHTML=bakeryTemplatePage5(bakery.pages);
-			debugger;
+		
 			var functionToRestoreData='restoreInventoryDataObject';				
 			bakery[functionToRestoreData]();
-			
+			alert("after html");
 			bakery['hidePrevNextButton']();
 			
 			curPos=4;
@@ -253,6 +258,7 @@ bakery.nxtButton = function(){
 bakery.prevButton = function(){
 	
 		navCnt=navCnt-1;
+		
 		bakery.gotoPage(nextPrevNav[navCnt]);	
 
 }
