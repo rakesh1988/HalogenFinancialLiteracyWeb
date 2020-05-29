@@ -292,7 +292,7 @@ bakery.page4='</br></br></br>'+
 	'</tr>'+
 	'</tr><tr style="height:10px"></tr>'+
 '</table>';
-bakery.page5='</br></br></br><ul>'+  
+bakery.page5='</br><p class="boldHeaderFrutiger">Inventory List</p></br><p class="inputTextFont" id="errMsgInventory"></p><ul>'+  
   '<li><input type="checkbox" id="cb1" onClick="bakery.selectIngridients(\'cb1\');"/>'+
     '<label for="cb1"><img src="'+chkBoxImageAndPrice[1][0]+'"/></label>'+
 	chkBoxImageAndPrice[0][1]+
@@ -330,11 +330,11 @@ bakery.page5='</br></br></br><ul>'+
 	chkBoxImageAndPrice[8][1]+
   '</li>'+
   '<li><input type="checkbox" id="cb10" onClick="bakery.selectIngridients(\'cb10\');"/>'+
-    '<label for="cb10"><img src="'+chkBoxImageAndPrice[9][0]+'"/><label>'+
+    '<label for="cb10"><img src="'+chkBoxImageAndPrice[9][0]+'"/></label>'+
 	chkBoxImageAndPrice[9][1]+
   '</li>'+
   '<li><input type="checkbox" id="cb11" onClick="bakery.selectIngridients(\'cb11\');"/>'+
-    '<label for="cb11"><img src="'+chkBoxImageAndPrice[10][0]+'"/></l<abel>'+
+    '<label for="cb11"><img src="'+chkBoxImageAndPrice[10][0]+'"/></label>'+
 	chkBoxImageAndPrice[10][1]+
   '</li>'+
   '<li><input type="checkbox" id="cb12" onClick="bakery.selectIngridients(\'cb12\')"/>'+
