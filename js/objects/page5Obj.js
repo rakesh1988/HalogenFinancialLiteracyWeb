@@ -12,6 +12,19 @@ if(this.invntryItems==undefined)
  return this.invntryItems;
 }
 
+setTotalInvExp(invExpTotal)
+{
+  this.invExpTotal=invExpTotal;
+}
+
+getTotalInvExp()
+{
+if(this.invExpTotal==undefined)
+ return "";
+ else
+ return this.invExpTotal;
+}
+
 
 
 
