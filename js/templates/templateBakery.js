@@ -340,7 +340,30 @@ bakery.page5='</br><p class="boldHeaderFrutiger">Inventory List</p></br><p class
   '<li><input type="checkbox" id="cb12" onClick="bakery.selectIngridients(\'cb12\')"/>'+
     '<label for="cb12"><img src="'+chkBoxImageAndPrice[11][0]+'"/></label>'+
 	chkBoxImageAndPrice[11][1]+
-  '</li></br><input type="text"></input><img src="images/calculator.svg" onclick="bakery.showCalculator()"/>'+
+  '</li></br><input type="text" id="totalInvExpTxt"></input><img src="images/calculator.svg" onclick="bakery.showCalculator()"/>'+
+   '<div class="popup">'+
+			  '<span class="popuptext" id="myPopup">'+
+			  '           <input type="text" readonly size="10" maxlength="7" id="numberInput">'+
+			'           <input id="calcButton" class="button gray" type="button" value="7" onclick="bakery.addToDisplay(7)">'+
+			'           <input id="calcButton" class="button gray" type="button" value="8" onclick="bakery.addToDisplay(8)">'+
+			'           <input id="calcButton" class="button gray" type="button" value="9" onclick="bakery.addToDisplay(9)">'+
+			'           <input id="calcButton" class="button pink" type="button" value="/" onclick="bakery.addToDisplay(\'/\')">'+
+			'           <input id="calcButton" class="button gray" type="button" value="4" onclick="bakery.addToDisplay(4)">'+
+			'           <input id="calcButton" class="button gray" type="button" value="5" onclick="bakery.addToDisplay(5)">'+
+			'           <input id="calcButton" class="button gray" type="button" value="6" onclick="bakery.addToDisplay(6)">'+
+			'           <input id="calcButton" class="button pink" type="button" value="*" onclick="bakery.addToDisplay(\'*\')">'+
+			'           <input id="calcButton" class="button gray" type="button" value="1" onclick="bakery.addToDisplay(1)">'+
+			'           <input id="calcButton" class="button gray" type="button" value="2" onclick="bakery.addToDisplay(2)">'+
+			'           <input id="calcButton" class="button gray" type="button" value="3" onclick="bakery.addToDisplay(3)">'+
+			'           <input id="calcButton" class="button pink" type="button" value="+" onclick="bakery.addToDisplay(\'+\')">'+
+			'           <input id="calcButton" class="button orange" type="button" value="C" onclick="bakery.addToDisplay(\'C\')">'+
+			'           <input id="calcButton" class="button gray" type="button" value="0" onclick="bakery.addToDisplay(0)">'+
+			'           <input id="calcButton" class="button orange" type="button" value="=" onclick="bakery.addToDisplay(\'=\')">'+
+			'           <input id="calcButton" class="button pink" type="button" value="-" onclick="bakery.addToDisplay(\'-\')">'+
+			'           <input id="calcButton" class="button gray" type="button" value="." onclick="bakery.addToDisplay(\'.\')">'+
+
+			  '</span><input type="button" value="Evaluate" class="buttonIdCls" onClick="bakery.evaluateInvExp()"/><div id="evalResult"></div>'+
+	'</div>'+
   '</br></br>'+
 '</ul>'
 
