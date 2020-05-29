@@ -1,6 +1,8 @@
 var page4ObjInner=pageArray[3];
 bakery.setExpenditureDataObject = function(){
-if(document.getElementById("mnthlyTotalExpenses").value=='undefined')
+if (document.getElementById("mnthlyTotalExpenses")== null)
+  page4ObjInner.setFixedExpVal("");
+else if(document.getElementById("mnthlyTotalExpenses").value=='undefined')
   page4ObjInner.setFixedExpVal("");
 else
  page4ObjInner.setFixedExpVal(document.getElementById("mnthlyTotalExpenses").value);
