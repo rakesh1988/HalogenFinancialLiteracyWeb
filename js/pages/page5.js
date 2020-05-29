@@ -9,8 +9,12 @@ bakery.selectIngridients = function(elmentSelected){
 
 	if(cnt==5)
 	{
-
+     document.getElementById("errMsgInventory").innerHTML="Cannot select more than 4 ingridients";
 	 document.getElementById(elmentSelected).checked = false;
+	}
+	else
+	{
+	  document.getElementById("errMsgInventory").innerHTML="";
 	}
 }
 
@@ -20,32 +24,43 @@ bakery.setInventoryDataObject = function(){
 var selectedList="";
 var cnt=1;
 $('input[type=checkbox]').each(function () {
+
 	if(this.checked)
 	{
 	  selectedList=selectedList+'cb'+cnt+",";
 	  cnt++;
+	  alert(selectedList);
 	}
 	else
 	{
 	  cnt++;
 	}
-	alert(selectedList);
-	page5ObjInner.setSelectedInventoryItems(selectedList);
 	 
 	});
+	
+	if(selectedList.indexOf(",")!=-1)
+	 {
+	   selectedList =selectedList.substr(0,selectedList.length-1);
+	 }
+	 page5ObjInner.setSelectedInventoryItems(selectedList);
+	 
+	alert(selectedList);
 }
 
 bakery.restoreInventoryDataObject = function(){
 
- if(page5ObjInner  !=null)
+ if(page5ObjInner  !=null && page5ObjInner.getSelectedInventoryItems() !=null )
  {
  
     var selectedChkBox=page5ObjInner.getSelectedInventoryItems().split(",");
 	alert(selectedChkBox);
-	for (i = 0; i < selectedChkBox.length; i++) 
-	{
-	  document.getElementById(selectedChkBox[i]).checked = true; 
-    }	
+	 if(selectedChkBox != '')
+	 {
+		for (i = 0; i < selectedChkBox.length; i++) 
+		{
+		  document.getElementById(selectedChkBox[i]).checked = true; 
+		}	
+	}
  }
  
 }
