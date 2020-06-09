@@ -1,14 +1,27 @@
-.headerNavWidth10 {
+.headerNavWidth15Txt {
     text-align: left;
     font-family: Frutiger45Light;
     font-weight: bold;
-    font-size: 14px;   
+    font-size: 16px;   
+    color:#797979; 
+    text-decoration : none;
+	width: 15%;
+}
+
+a{
+cursor: pointer;
+}
+.headerNavWidth10Txt {
+    text-align: left;
+    font-family: Frutiger45Light;
+    font-weight: bold;
+    font-size: 16px;   
     color:#797979; 
     text-decoration : none;
 	width: 10%;
 }
 .headerNavWidth15 {
-    width: 15%;
+    width: 5%;
 }
 
 .tableRowSpacing {

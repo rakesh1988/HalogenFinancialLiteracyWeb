@@ -10,6 +10,7 @@ var bakeryTemplatePage4;
 var bakeryTemplatePage5;
 var bakeryTemplatePage6;
 var bakeryTemplatePage7;
+var bakeryTemplatePage8;
 var bakeryShowCalc;
 var currentPage="";
 var navCnt=0;
@@ -48,10 +49,21 @@ $(document).ready(function(){
 	bakery.renderPages();
 	
 	
-	alert("Your screen resolution is: " + screen.width + "x" + screen.height);
+	//alert("Your screen resolution is: " + screen.width + "x" + screen.height);
   
-  alert("Your screen resolution is 2: " + $(window).width() + "x" + $(window).height());
-  $('body').css('zoom', '90%');
+ //alert("Your screen resolution is 2: " + $(window).width() + "x" + $(window).height());
+ 
+ //alert(parseInt($(window).width()));
+  
+  if(parseInt(screen.width)<1400)
+  {  
+	$('body').css('zoom', '90%');
+  }
+  else
+  {
+ 
+     $('body').css('zoom', '100%');
+  }
 
 	
 });
@@ -78,7 +90,8 @@ try{
 	bakeryTemplatePage4=     Template7.compile(bakery.page4);
 	bakeryTemplatePage5=     Template7.compile(bakery.page5);
 	bakeryTemplatePage6=     Template7.compile(bakery.page6);	
-	bakeryTemplatePage7=     Template7.compile(bakery.page7);		
+	bakeryTemplatePage7=     Template7.compile(bakery.page7);
+	bakeryTemplatePage8=     Template7.compile(bakery.page8);		
 	bakeryShowCalc     =     Template7.compile(bakery.showcalculator);	
 	
 	}
@@ -100,6 +113,7 @@ bakery.initializeUbsPages = function() {
 	bakery.pages=$.extend(bakery.pages,bakery.page5Config);
 	bakery.pages=$.extend(bakery.pages,bakery.page6Config);
 	bakery.pages=$.extend(bakery.pages,bakery.page7Config);
+	bakery.pages=$.extend(bakery.pages,bakery.page8Config);
 }
 
 bakery.translateScenarios=function(){
@@ -148,7 +162,7 @@ if(retVal)
 			navCnt=0;
 			
 			bakery['hidePrevNextButton']();
-			
+			document.getElementById("showCalculator").innerHTML='';
 		
 		}
 		else if(breadCrum=='Location')
@@ -164,6 +178,7 @@ if(retVal)
 			curPos=1;
 			navCnt=1;
 			bakery['hidePrevNextButton']();
+			document.getElementById("showCalculator").innerHTML='';
 		}
 		
 		else if(breadCrum=='Staff')
@@ -189,6 +204,7 @@ if(retVal)
 			navCnt=2;
 			
 			bakery['hidePrevNextButton']();
+			document.getElementById("showCalculator").innerHTML='';
 		}
 		
 		else if(breadCrum=='Expenditure')
@@ -243,6 +259,7 @@ if(retVal)
 			
 			curPos=4;
 			navCnt=4;
+			document.getElementById("showCalculator").innerHTML=bakeryShowCalc(bakery.pages);
 			
 		}
 		
@@ -266,6 +283,8 @@ if(retVal)
 			
 			curPos=5;
 			navCnt=5;
+			
+			document.getElementById("showCalculator").innerHTML=bakeryShowCalc(bakery.pages);
 		}
 		
 		else if(breadCrum=='BreakEven')
@@ -292,6 +311,29 @@ if(retVal)
 			
 			curPos=6;
 			navCnt=6;
+			
+			document.getElementById("showCalculator").innerHTML=bakeryShowCalc(bakery.pages);
+		}
+		
+		else if(breadCrum=='Result')
+		{		
+		var functionToSetData='set'+nextPrevNav[curPos]+'DataObject';
+			
+			bakery[functionToSetData]();
+			
+			
+			document.getElementById("bakeryBase").innerHTML=bakeryTemplatePage8(bakery.pages);
+		
+			
+			
+			
+			curPos=7;
+			navCnt=7;
+			
+			document.getElementById("showCalculator").innerHTML='';
+			bakery.getProfitLossVal();
+			
+			bakery['hidePrevNextButton']();
 		}
 	}
 	
@@ -341,7 +383,7 @@ bakery.prevButton = function(){
 
 bakery.hidePrevNextButton= function(){
 
-   if(navCnt==0)
+   if(navCnt==0 || navCnt==7)
       { 
         document.getElementById("backButtonId").style.display="none";
       }
@@ -360,6 +402,40 @@ bakery.hidePrevNextButton= function(){
       {
         document.getElementById("nxtButtonId").style.display="inline";
       }
+
+}
+
+bakery.copyTheValue= function(){
+
+if(navCnt==3)
+	{ 
+	   document.getElementById('mnthlyTotalExpenses').value=document.getElementById('numberInput').value;
+	   document.getElementById('numberInput').value="";
+	   document.getElementById("calcImg").click();
+	}
+	
+	if(navCnt==4)
+	{ 
+	   document.getElementById('totalInvExpTxt').value=document.getElementById('numberInput').value;
+	   document.getElementById('numberInput').value="";
+	   document.getElementById("calcImg").click();
+	}
+	
+	if(navCnt==5)
+	{ 
+	   document.getElementById('contriMarginTxt').value=document.getElementById('numberInput').value;
+	   document.getElementById('numberInput').value="";
+	   document.getElementById("calcImg").click();
+	}
+
+	
+	if(navCnt==6)
+	{ 
+	   document.getElementById('breakEvenUnitTxt').value=document.getElementById('numberInput').value;
+	   document.getElementById('numberInput').value="";
+	   document.getElementById("calcImg").click();
+	}
+
 
 }
 
