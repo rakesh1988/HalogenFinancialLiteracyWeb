@@ -227,7 +227,8 @@ height:140px;
   visibility: visible;
   -webkit-animation: fadeIn 1s;
   animation: fadeIn 1s;
-  width:110px
+  width:210px;
+  height:200px
 }
 
 .fixedEvalCorrect{
@@ -311,6 +312,41 @@ content:'\2713';
   z-index: -1;
 }
 
+#calcButton{
+	width:17%;
+	height: 10%;
+	margin-left: 5%;
+	margin-top: 5%;
+	cursor:pointer;
+}
+
+#numberInput{
+	width: 85%; 
+	height: 16%; 
+	margin-left:5%; 
+	margin-right:10%;
+	margin-top: 3%;
+	border: 2px solid black; 
+	text-align: right;
+	background-color:#bccd95;
+	padding: 2%;
+	text-align:right
+}
+.button.gray
+{
+color:white;
+background-color:#6f6f6f;
+border-bottom:black 2px solid;
+border-top:2px #6f6f6f solid;
+font-family: Frutiger45Light; 
+font-weight:bold; 
+}
+.button.pink
+{
+color:black;
+background-color:#ff4561;
+border-bottom:black 2px solid;
+}
 
 
 

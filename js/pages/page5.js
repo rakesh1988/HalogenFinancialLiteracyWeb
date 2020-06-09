@@ -29,7 +29,7 @@ $('input[type=checkbox]').each(function () {
 	{
 	  selectedList=selectedList+'cb'+cnt+",";
 	  cnt++;
-	  alert(selectedList);
+	  
 	}
 	else
 	{
@@ -44,7 +44,7 @@ $('input[type=checkbox]').each(function () {
 	 }
 	 page5ObjInner.setSelectedInventoryItems(selectedList);
 	 page5ObjInner.setTotalInvExp(document.getElementById("totalInvExpTxt").value);
-	alert(selectedList);
+	
 }
 
 bakery.restoreInventoryDataObject = function(){
@@ -53,16 +53,14 @@ bakery.restoreInventoryDataObject = function(){
  {
  
     var selectedChkBox=page5ObjInner.getSelectedInventoryItems().split(",");
-	alert(selectedChkBox);
+	
 	 if(selectedChkBox != '')
 	 {
 		for (i = 0; i < selectedChkBox.length; i++) 
 		{
 		  document.getElementById(selectedChkBox[i]).checked = true; 
 		}	
-	}
-	alert(page5ObjInner.getTotalInvExp());
-	alert(document.getElementById("totalInvExpTxt").value);
+	}	
 	document.getElementById("totalInvExpTxt").value=page5ObjInner.getTotalInvExp();
 	
  }

@@ -27,7 +27,14 @@ bakery.translation={
 		"mnthlyFixedExp": "Calculate Monthly Fixed Expenses",
 		"exp1":"Now, try calculating your Monthly Fixed Expenses below.",
 		"calcTxt":"Need a calculator?",
-		"exp2":"Your Selections were:"
+		"exp2":"Your Selections were:",
+		"contributionmargin1":"Let's calculate your contribution margin for one unit",
+		"sellingPrice":"Selling Price",
+		"variableExp":"Variable Expense for One Unit",
+		"contriMargin":"Contribution Margin",		
+		"brkEven1":"Let's find out how many units you have to sell in order to break even Total",
+		"totalFxdExp":"Total Monthly Fixed Expenses",
+		"brkEvenUnit":"Break Even Unit",
 		
 		
     }
