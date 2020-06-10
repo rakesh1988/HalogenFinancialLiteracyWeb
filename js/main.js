@@ -209,6 +209,7 @@ if(retVal)
 		
 		else if(breadCrum=='Expenditure')
 		{	
+		
 		    var functionToSetData='set'+nextPrevNav[curPos]+'DataObject';	
 		
 			bakery[functionToSetData]();
@@ -240,8 +241,9 @@ if(retVal)
 			curPos=3;
 			navCnt=3;
 			
-			bakery['hidePrevNextButton']();
-			bakery.checkResultExpValue();
+			bakery['hidePrevNextButton']();			
+			bakery.checkResultExpValueExp();
+				
 		}
 		
 		else if(breadCrum=='Inventory')
@@ -264,7 +266,7 @@ if(retVal)
 			bakery['hidePrevNextButton']();
 			document.getElementById("showCalculator").innerHTML=bakeryShowCalc(bakery.pages);
 			
-			bakery.checkResultExpValue();
+			bakery.checkResultExpValueInv();
 			
 		}
 		
@@ -293,7 +295,7 @@ if(retVal)
 			
 			document.getElementById("showCalculator").innerHTML=bakeryShowCalc(bakery.pages);
 			
-			bakery.checkResultExpValue();
+			bakery.checkResultExpValueAccnting();
 		}
 		
 		else if(breadCrum=='BreakEven')
@@ -323,7 +325,7 @@ if(retVal)
 			
 			document.getElementById("showCalculator").innerHTML=bakeryShowCalc(bakery.pages);
 			
-			bakery.checkResultExpValue();
+			bakery.checkResultExpValueBrkEven();
 		}
 		
 		else if(breadCrum=='Result')

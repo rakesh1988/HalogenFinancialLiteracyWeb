@@ -102,7 +102,7 @@ $('input[type=checkbox]').each(function () {
 	}
 }
 
-bakery.checkResultExpValue=function(){
+bakery.checkResultExpValueInv=function(){
 if(page5ObjInner.getValEvaluated())
  {
 	   document.getElementById("nxtButtonId").style.display="inline";

@@ -39,7 +39,7 @@ var actualTotalVal=Math.ceil(parseInt(document.getElementById("fxdPriceTxt").val
 	}
 }
 
- bakery.checkResultExpValue=function()
+ bakery.checkResultExpValueBrkEven=function()
  {
 	if(page7ObjInner.getValEvaluated())
 	 {

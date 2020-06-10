@@ -44,7 +44,7 @@ var actualTotalVal= parseInt(document.getElementById("sellingPriceTxt").value)-p
 	}
 }
 
-bakery.checkResultExpValue=function(){
+bakery.checkResultExpValueAccnting=function(){
 if(page6ObjInner.getValEvaluated())
  {
        document.getElementById("nxtButtonId").style.display="inline";

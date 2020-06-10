@@ -46,8 +46,8 @@ document.getElementById("nxtButtonId").style.display="none";
 }
 }
 
-bakery.checkResultExpValue=function(){
-alert(page4ObjInner.getValEvaluated());
+bakery.checkResultExpValueExp=function(){
+
 if(page4ObjInner.getValEvaluated())
  {
 		document.getElementById('evalResult').innerHTML="<img src='images/confirm.svg'/>&nbsp;Correct";
