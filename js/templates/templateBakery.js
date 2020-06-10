@@ -261,7 +261,7 @@ bakery.page4='</br></br></br>'+
 	  '<td colspan="6">&nbsp;</td>'+	 
 	  '<td colspan="1"><div id="evalResult"></div></td>'+	
 	'</tr>'+
-	'</tr><tr style="height:20px"></tr>'+	
+	'</tr>'+	
 	'<tr>'+
 	  '<td class="lightHeaderFrutiger" style="font-size:24px;" colspan="7">{{expLbl2}}</td>'+	 
 	'</tr>'+
