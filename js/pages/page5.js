@@ -91,6 +91,7 @@ $('input[type=checkbox]').each(function () {
 	   document.getElementById('evalResult').innerHTML="<img src='images/confirm.svg'/>&nbsp;Correct";
 	   document.getElementById("evalResult").classList.remove('fixedEvalWrong');
 	   document.getElementById("evalResult").classList.add('fixedEvalCorrect');
+	   page5ObjInner.setValEvaluated(true);
 	}
 	else
 	{
@@ -99,6 +100,16 @@ $('input[type=checkbox]').each(function () {
       document.getElementById("evalResult").classList.add('fixedEvalWrong');
 	  document.getElementById("nxtButtonId").style.display="none";
 	}
+}
+
+bakery.checkResultExpValue=function(){
+if(page5ObjInner.getValEvaluated())
+ {
+	   document.getElementById("nxtButtonId").style.display="inline";
+	   document.getElementById('evalResult').innerHTML="<img src='images/confirm.svg'/>&nbsp;Correct";
+	   document.getElementById("evalResult").classList.remove('fixedEvalWrong');
+	   document.getElementById("evalResult").classList.add('fixedEvalCorrect');
+ }
 }
 
 var chkBoxImageAndPrice = [

@@ -61,6 +61,10 @@ var curCnt;
 var funcToCall='getEmpQty'+imgPos;
 
 curCnt=page3ObjInner[funcToCall]();
+if(curCnt==5)
+{
+   return;
+}
 curCnt=parseInt(curCnt)+1;
 document.getElementById("staffQtyDynamic").value=curCnt;
 funcToCall='setEmpQty'+imgPos;

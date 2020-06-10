@@ -20,7 +20,7 @@ var empSalary;
 
 
 $(document).ready(function(){
-
+document.getElementById("nxtbckBtnPTag").style.textAlign ="right";
 
  $(document).keydown(function(event) {
 	    	    if (event.ctrlKey==true && (event.which == '61' || event.which == '107' || event.which == '173' || event.which == '109'  || event.which == '187'  || event.which == '189'  ) ) {
@@ -216,9 +216,9 @@ if(retVal)
 			empSalary=pageArray[2].getEmpQty1()*staff[0][0].substring(1, staff[0][0].length)+pageArray[2].getEmpQty2()*staff[1][0].substring(1, staff[1][0].length)+pageArray[2].getEmpQty3()*staff[2][0].substring(1, staff[2][0].length);
 			
 			
-			document.getElementById("mnthlyRen").innerHTML= '&nbsp;&nbsp;&nbsp;'+pageArray[1].getExpRental()+document.getElementById("mnthlyRen").innerHTML;	
-			document.getElementById("mnthlyUtility").innerHTML= '&nbsp;&nbsp;&nbsp;'+pageArray[1].getExpUtility()+document.getElementById("mnthlyUtility").innerHTML ;	
-			document.getElementById("mnthlySalary").innerHTML='&nbsp;&nbsp;&nbsp;$'+empSalary+document.getElementById("mnthlySalary").innerHTML;	
+			document.getElementById("mnthlyRen").value= pageArray[1].getExpRental()+document.getElementById("mnthlyRen").value;	
+			document.getElementById("mnthlyUtility").value= pageArray[1].getExpUtility()+document.getElementById("mnthlyUtility").value ;	
+			document.getElementById("mnthlySalary").value='$'+empSalary+document.getElementById("mnthlySalary").value;	
 			
 			
 			var empImgString="<img class='selectionImgDimen' src='"+factsDetails[pageArray[1].getLocationImgInx()][0]+"'/>";
@@ -241,6 +241,7 @@ if(retVal)
 			navCnt=3;
 			
 			bakery['hidePrevNextButton']();
+			bakery.checkResultExpValue();
 		}
 		
 		else if(breadCrum=='Inventory')
@@ -255,11 +256,15 @@ if(retVal)
 			var functionToRestoreData='restoreInventoryDataObject';				
 			bakery[functionToRestoreData]();
 			
-			bakery['hidePrevNextButton']();
+			
 			
 			curPos=4;
 			navCnt=4;
+			
+			bakery['hidePrevNextButton']();
 			document.getElementById("showCalculator").innerHTML=bakeryShowCalc(bakery.pages);
+			
+			bakery.checkResultExpValue();
 			
 		}
 		
@@ -279,12 +284,16 @@ if(retVal)
 			var expObj=pageArray[4];
 			document.getElementById("variableCostTxt").value=expObj.getTotalInvExp();
 			
-			bakery['hidePrevNextButton']();
-			
 			curPos=5;
 			navCnt=5;
 			
+			bakery['hidePrevNextButton']();
+			
+			
+			
 			document.getElementById("showCalculator").innerHTML=bakeryShowCalc(bakery.pages);
+			
+			bakery.checkResultExpValue();
 		}
 		
 		else if(breadCrum=='BreakEven')
@@ -305,14 +314,16 @@ if(retVal)
 			document.getElementById("fxdPriceTxt").value=fixedExpObj.getFixedExpVal();
 			document.getElementById("contriMarginTxt").value=contriMarginObj.getContributionMargin();
 			
-			
-			
-			bakery['hidePrevNextButton']();
-			
 			curPos=6;
 			navCnt=6;
 			
+			bakery['hidePrevNextButton']();
+			
+			
+			
 			document.getElementById("showCalculator").innerHTML=bakeryShowCalc(bakery.pages);
+			
+			bakery.checkResultExpValue();
 		}
 		
 		else if(breadCrum=='Result')
@@ -383,6 +394,17 @@ bakery.prevButton = function(){
 
 bakery.hidePrevNextButton= function(){
 
+   if(navCnt==0)
+      { 
+        document.getElementById("nxtbckBtnPTag").style.textAlign ="right";
+      }
+      
+   else
+      {
+       //document.getElementById("nxtbckBtnPTag").style.removeProperty('textAlign');
+	   document.getElementById("nxtbckBtnPTag").style.textAlign ="center";
+      }
+
    if(navCnt==0 || navCnt==7)
       { 
         document.getElementById("backButtonId").style.display="none";
@@ -402,6 +424,7 @@ bakery.hidePrevNextButton= function(){
       {
         document.getElementById("nxtButtonId").style.display="inline";
       }
+	
 
 }
 

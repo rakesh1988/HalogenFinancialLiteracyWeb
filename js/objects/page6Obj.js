@@ -25,7 +25,18 @@ if(this.contributionMargin==undefined)
  return this.contributionMargin;
 }
 
+setValEvaluated(valEval)
+{
+  this.valEval=valEval;
+}
 
+getValEvaluated()
+{
+if(this.valEval==undefined)
+ return "";
+ else
+ return this.valEval;
+}
 
 
 

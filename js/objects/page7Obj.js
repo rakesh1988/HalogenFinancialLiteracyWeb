@@ -12,4 +12,17 @@ if(this.brkEvenUnit==undefined)
  return this.brkEvenUnit;
 }
 
+setValEvaluated(valEval)
+{
+  this.valEval=valEval;
+}
+
+getValEvaluated()
+{
+if(this.valEval==undefined)
+ return "";
+ else
+ return this.valEval;
+}
+
 }

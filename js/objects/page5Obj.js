@@ -25,7 +25,18 @@ if(this.invExpTotal==undefined)
  return this.invExpTotal;
 }
 
+setValEvaluated(valEval)
+{
+  this.valEval=valEval;
+}
 
+getValEvaluated()
+{
+if(this.valEval==undefined)
+ return "";
+ else
+ return this.valEval;
+}
 
 
 

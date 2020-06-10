@@ -14,6 +14,7 @@ bakery.restoreExpenditureDataObject = function(){
  {
 
  document.getElementById("mnthlyTotalExpenses").value=page4ObjInner.getFixedExpVal();
+ 
    
  }
  
@@ -30,6 +31,7 @@ document.getElementById("evalResult").classList.remove('fixedEvalWrong');
 document.getElementById("evalResult").classList.add('fixedEvalCorrect');
 document.getElementById("mnthlyTotalExpenses").style.borderBottom = "solid 2px #797979";
 document.getElementById("nxtButtonId").style.display="inline";
+page4ObjInner.setValEvaluated(true);
 
 }
 
@@ -44,6 +46,17 @@ document.getElementById("nxtButtonId").style.display="none";
 }
 }
 
+bakery.checkResultExpValue=function(){
+alert(page4ObjInner.getValEvaluated());
+if(page4ObjInner.getValEvaluated())
+ {
+		document.getElementById('evalResult').innerHTML="<img src='images/confirm.svg'/>&nbsp;Correct";
+		document.getElementById("evalResult").classList.remove('fixedEvalWrong');
+		document.getElementById("evalResult").classList.add('fixedEvalCorrect');
+		document.getElementById("mnthlyTotalExpenses").style.borderBottom = "solid 2px #797979";
+		document.getElementById("nxtButtonId").style.display="inline";
+ }
 
+}
 
 

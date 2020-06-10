@@ -12,6 +12,20 @@ if(this.fixedExp==undefined)
  return this.fixedExp;
 }
 
+setValEvaluated(valEval)
+{
+  this.valEval=valEval;
+}
+
+getValEvaluated()
+{
+if(this.valEval==undefined)
+ return "";
+ else
+ return this.valEval;
+}
+
+
 
 
 

@@ -33,6 +33,7 @@ var actualTotalVal= parseInt(document.getElementById("sellingPriceTxt").value)-p
 	   document.getElementById('evalResult').innerHTML="<img src='images/confirm.svg'/>&nbsp;Correct";
 	   document.getElementById("evalResult").classList.remove('fixedEvalWrong');
 	   document.getElementById("evalResult").classList.add('fixedEvalCorrect');
+	   page6ObjInner.setValEvaluated(true);
 	}
 	else
 	{
@@ -42,6 +43,16 @@ var actualTotalVal= parseInt(document.getElementById("sellingPriceTxt").value)-p
 	  document.getElementById("nxtButtonId").style.display="none";
 	}
 }
+
+bakery.checkResultExpValue=function(){
+if(page6ObjInner.getValEvaluated())
+ {
+       document.getElementById("nxtButtonId").style.display="inline";
+	   document.getElementById('evalResult').innerHTML="<img src='images/confirm.svg'/>&nbsp;Correct";
+	   document.getElementById("evalResult").classList.remove('fixedEvalWrong');
+	   document.getElementById("evalResult").classList.add('fixedEvalCorrect');
+ }
+ }
 
 
 

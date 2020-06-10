@@ -60,7 +60,7 @@ bakery.page1='</br></br></br>'+
 								'</td>'+
 								
 								'<td>'+
-								'<table style="height:100%"><tr><td><input type="text" class="inputTextFont textBoxCls inputTextDimension enterKeyPress" id="shopNameId"></input>'+
+								'<table style="height:100%"><tr><td><input type="text" class="inputTextFont textBoxCls inputTextDimension enterKeyPress" id="shopNameId" maxlength="30"></input>'+
 								'</input></td></tr></table>'+
 								'</td>'+								
 							'</tr>'+
@@ -76,7 +76,7 @@ bakery.page1='</br></br></br>'+
 								'</td>'+
 								
 								'<td>'+
-								'<table style="height:100%"><tr><td><input type="text" class="inputTextFont textBoxCls inputTextDimension enterKeyPress" id="pMngrId"></input>'+
+								'<table style="height:100%"><tr><td><input type="text" class="inputTextFont textBoxCls inputTextDimension enterKeyPress" id="pMngrId" maxlength="30"></input>'+
 								'</input></td></tr></table>'+
 								'</td>'+								
 							'</tr>'+
@@ -92,7 +92,7 @@ bakery.page1='</br></br></br>'+
 								'</td>'+
 								
 								'<td>'+
-								'<table style="height:100%"><tr><td><input type="text" class="inputTextFont textBoxCls inputTextDimension enterKeyPress" id="sMngrId"></input>'+
+								'<table style="height:100%"><tr><td><input type="text" class="inputTextFont textBoxCls inputTextDimension enterKeyPress" id="sMngrId" maxlength="30"></input>'+
 								'</input></td></tr></table>'+
 								'</td>'+								
 							'</tr>'+
@@ -110,7 +110,7 @@ bakery.page1='</br></br></br>'+
 bakery.page2='</br></br></br>'+
 '<table>'+
 	'<tr>'+
-	'<td style="height: 100px; "><img src="images/mblm.svg" style="width:430px;height:270px" id="locationImgTag"/><div class="locDiv" id="locationFactsTxt"></br>&nbsp;&nbsp;LOCATION FACTS </br></br>&nbsp;&nbsp;Marina Bay Link Mall is situated directly below The Lawn @ Marina Bay and it is &nbsp;&nbsp;surrounded by multiple office buildings. The area is frequented by working adults &nbsp;&nbsp;from the surrounding offices. As it is a financial and corporate district, there is high &nbsp;&nbsp;human traffic on weekdays. However, there may be little to no patrons on the &nbsp;&nbsp;weekends when offices are closed.</br></br>'+					
+	'<td style="height: 100px; "><img src="images/mblm.svg" style="width:430px;height:270px" id="locationImgTag"/><div class="locDiv" id="locationFactsTxt"></br>&nbsp;&nbsp;LOCATION FACTS </br></br>&nbsp;&nbsp;Marina Bay Link Mall is situated directly below The Lawn @ Marina Bay and it is &nbsp;&nbsp;surrounded by multiple office buildings. The area is frequented by working adults &nbsp;&nbsp;from the surrounding offices. As it is a financial and corporate district, there is high &nbsp;&nbsp;human traffic on weekdays. However, there may be little to no patrons on the &nbsp;&nbsp;weekends when offices are closed.</br></br></div>'+					
 		'</td>'+
 		'<td style="vertical-align:top">'+
 			'<table class="tableRowSpacing">'+
@@ -136,7 +136,7 @@ bakery.page2='</br></br></br>'+
 								'</td>'+
 								
 								'<td>'+
-								'<table style="height:100%"><tr><td><input type="text" class="inputTextFont textBoxCls inputTextDimension" id="expRental"></input>'+
+								'<table style="height:100%"><tr><td><input type="text" class="inputTextFont textBoxCls inputTextDimension" id="expRental" readonly></input>'+
 								'</input></td></tr></table>'+
 								'</td>'+								
 							'</tr>'+
@@ -153,7 +153,7 @@ bakery.page2='</br></br></br>'+
 								'</td>'+
 								
 								'<td>'+
-								'<table style="height:100%"><tr><td><input type="text" class="inputTextFont textBoxCls inputTextDimension" id="expUtility"></input>'+
+								'<table style="height:100%"><tr><td><input type="text" class="inputTextFont textBoxCls inputTextDimension" id="expUtility" readonly></input>'+
 								'</input></td></tr></table>'+
 								'</td>'+								
 							'</tr>'+
@@ -180,12 +180,14 @@ bakery.page3='</br></br></br>'+
 					'<td>'+
 					   '<table class="staffDetailsTable">'+
 						 '<tr>'+
+							'<td style="width:30px"></td>'+
 						    '<td colspan ="2" class="whiteInputTextBold" style="font-size: 24px;"><div id="staffTitleDynamic"></br>'+
 							staff[0][2]+
 							'</div>'+
 							'</td>'+
 						 '</tr>'+
 						 '<tr>'+
+							'<td style="width:30px"></td>'+
 							'<td>'+
 							'<p class="whiteInputTextLight" style="font-size: 14px;">'+
 							'Speciality</br>'+
@@ -205,6 +207,7 @@ bakery.page3='</br></br></br>'+
 							'</td>'+							
 						 '</tr>'+
 						 '<tr>'+
+							'<td style="width:30px"></td>'+
 							'<td colspan ="2" class="whiteInputTextBold" style="font-size: 24px;height:70px">'+
 							   '<table>'+
 							   '<tr>'+
@@ -212,7 +215,7 @@ bakery.page3='</br></br></br>'+
 							    '{{hireQtyStaffLbl}}'+
 							   '</td>'+							    
 							   '<td  style="background-color: white">'+
-								'<div><img src="images/btn-plus.svg" style="vertical-align: middle" onClick="bakery.hireStaffIncrement()"/><input type="text" style="vertical-align: middle;border:0;padding:10px" id="staffQtyDynamic"></input>'+
+								'<div><img src="images/btn-plus.svg" style="vertical-align: middle" onClick="bakery.hireStaffIncrement()"/><input type="text" style="vertical-align: middle;border:0;padding:10px" id="staffQtyDynamic" class="inputTextFont"></input>'+
 								'<img src="images/btn-minus.svg" style="vertical-align: middle" onClick="bakery.hireStaffDecrement()"/></div>'+
 							   '</td>'+
 							   '</tr>'+
@@ -244,13 +247,13 @@ bakery.page4='</br></br></br>'+
 	  '<td class="boldHeaderFrutiger" style="font-size:16px;" colspan="2">{{mnthlyUtilityLbl}}</td>'+
 	  '<td class="boldHeaderFrutiger" style="font-size:16px;" colspan="2">{{mnthlySalaryLbl}}</td>'+
 	   '<td class="boldHeaderFrutiger" style="font-size:16px;">{{mnthlyFixedLbl}}</td>'+
-	'</tr><tr style="height:30px"></tr>'+
-	'<tr>'+
-	  '<td class="boldHeaderFrutiger" style="font-size:16px;"><div class="inputTextFont expTextBoxCls"  style="font-color:black;" id="mnthlyRen"></div></td>'+
+	'</tr><tr style="height:10px"></tr>'+
+	'<tr style="height:5px">'+	
+	  '<td class="boldHeaderFrutiger" style="font-size:16px;"><input type="text" class="inputTextFont expTextBoxCls" style="font-color:black;"  id="mnthlyRen"></input></td>'+
 	  '<td><div>+</div></td>'+
-	  '<td class="boldHeaderFrutiger" style="font-size:16px;"><div class="inputTextFont expTextBoxCls"  style="font-color:black;" id="mnthlyUtility"></div></td>'+
+	  '<td class="boldHeaderFrutiger" style="font-size:16px;"><input type="text" class="inputTextFont expTextBoxCls" style="font-color:black;"  id="mnthlyUtility"></input></td>'+
 	  '<td><div>+</div></td>'+
-	  '<td class="boldHeaderFrutiger" style="font-size:16px;"><div class="inputTextFont expTextBoxCls"  style="font-color:black;" id="mnthlySalary"></div></td>'+
+	  '<td class="boldHeaderFrutiger" style="font-size:16px;"><input type="text" class="inputTextFont expTextBoxCls" style="font-color:black;"  id="mnthlySalary"></input></td>'+
 	  '<td><div>=</div></td>'+
 	   '<td class="boldHeaderFrutiger" style="font-size:16px;">$<input type="text" class="inputTextFont expTextBoxCls" id="mnthlyTotalExpenses"></input>&nbsp;&nbsp;<input type="button" value="Evaluate" class="buttonIdCls" onClick="bakery.evaluateFixedExp()"/></td>'+
 	'</tr>'+
@@ -262,37 +265,13 @@ bakery.page4='</br></br></br>'+
 	'<tr>'+
 	  '<td class="lightHeaderFrutiger" style="font-size:24px;" colspan="7">{{expLbl2}}</td>'+	 
 	'</tr>'+
-	'</tr><tr style="height:20px"></tr>'+	
+	'</tr>'+	
 	'<tr>'+
-	  '<td colspan="7"><div id="selectionsMade" style="width:100% ; height:100%"><img src="images/calculator.svg" onclick="bakery.showCalculator()"/>'+	 
-	  '<div class="popup">'+
-			  '<span class="popuptext" id="myPopup">'+
-			  '           <input type="text" readonly size="10" maxlength="7" id="numberInput">'+
-			'           <input id="calcButton" class="button gray" type="button" value="7" onclick="bakery.addToDisplay(7)">'+
-			'           <input id="calcButton" class="button gray" type="button" value="8" onclick="bakery.addToDisplay(8)">'+
-			'           <input id="calcButton" class="button gray" type="button" value="9" onclick="bakery.addToDisplay(9)">'+
-			'           <input id="calcButton" class="button pink" type="button" value="/" onclick="bakery.addToDisplay(\'/\')">'+
-			'           <input id="calcButton" class="button gray" type="button" value="4" onclick="bakery.addToDisplay(4)">'+
-			'           <input id="calcButton" class="button gray" type="button" value="5" onclick="bakery.addToDisplay(5)">'+
-			'           <input id="calcButton" class="button gray" type="button" value="6" onclick="bakery.addToDisplay(6)">'+
-			'           <input id="calcButton" class="button pink" type="button" value="*" onclick="bakery.addToDisplay(\'*\')">'+
-			'           <input id="calcButton" class="button gray" type="button" value="1" onclick="bakery.addToDisplay(1)">'+
-			'           <input id="calcButton" class="button gray" type="button" value="2" onclick="bakery.addToDisplay(2)">'+
-			'           <input id="calcButton" class="button gray" type="button" value="3" onclick="bakery.addToDisplay(3)">'+
-			'           <input id="calcButton" class="button pink" type="button" value="+" onclick="bakery.addToDisplay(\'+\')">'+
-			'           <input id="calcButton" class="button orange" type="button" value="C" onclick="bakery.addToDisplay(\'C\')">'+
-			'           <input id="calcButton" class="button gray" type="button" value="0" onclick="bakery.addToDisplay(0)">'+
-			'           <input id="calcButton" class="button orange" type="button" value="=" onclick="bakery.addToDisplay(\'=\')">'+
-			'           <input id="calcButton" class="button pink" type="button" value="-" onclick="bakery.addToDisplay(\'-\')">'+
-			'           <input id="calcButton" class="button gray" type="button" value="." onclick="bakery.addToDisplay(\'.\')">'+
-			
-
-			  '</span>'+
-			'</div>'+
+	  '<td colspan="7"><div id="selectionsMade" style="width:100% ; height:100%">'+
 			'</div>'+
 			'</td>'+
 	'</tr>'+
-	'</tr><tr style="height:10px"></tr>'+
+	'</tr><tr style="height:30px"></tr>'+
 '</table>';
 bakery.page5='</br><p class="boldHeaderFrutiger">Inventory List</p></br><p class="inputTextFont" id="errMsgInventory"></p><ul>'+  
   '<li><input type="checkbox" id="cb1" onClick="bakery.selectIngridients(\'cb1\');"/>'+
