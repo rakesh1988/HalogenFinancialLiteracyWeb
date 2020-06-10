@@ -226,7 +226,7 @@ bakery.page3='</br></br></br>'+
 		'</td>'+
 		'<td style="height: 100px;width:30% "><img src="images/bubble-2800.svg" style="width:100px;padding-left:300px"/><img src="images/chef.svg" style="width:430px;height:270px"/>'+					
 		'</td>'+		
-	'</tr><tr style="height:60px"></tr>'+
+	'</tr><tr style="height:30px"></tr>'+
 '</table>';
 
 bakery.page4='</br></br></br>'+
