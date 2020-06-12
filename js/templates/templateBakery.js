@@ -215,7 +215,7 @@ bakery.page3='</br></br></br>'+
 							    '{{hireQtyStaffLbl}}'+
 							   '</td>'+							    
 							   '<td  style="background-color: white">'+
-								'<div><img src="images/btn-plus.svg" style="vertical-align: middle" onClick="bakery.hireStaffIncrement()"/><input type="text" style="vertical-align: middle;border:0;padding:10px" id="staffQtyDynamic" class="inputTextFont"></input>'+
+								'<div><img src="images/btn-plus.svg" style="vertical-align: middle" onClick="bakery.hireStaffIncrement()"/><input type="text" style="vertical-align: middle;border:0;padding:10px;outline:none" id="staffQtyDynamic" class="inputTextFont" readOnly></input>'+
 								'<img src="images/btn-minus.svg" style="vertical-align: middle" onClick="bakery.hireStaffDecrement()"/></div>'+
 							   '</td>'+
 							   '</tr>'+
@@ -224,7 +224,12 @@ bakery.page3='</br></br></br>'+
 						 '</tr>'+
 					 '</table>'+
 					'</td>'+
-				'</tr>'+						
+				'</tr>'+
+'<tr>'+
+'<td>'+
+'<p style ="color:orange;font-family: Frutiger45Light;font-style: italic;display:none" id="employeeValidation">You can select a max of 5 employees</p>'+
+'</td>'+
+'</tr>'+				
 			'</table>'+
 		'</td>'+
 		'<td style="height: 100px;width:30% "><img src="images/bubble-2800.svg" style="width:100px;padding-left:300px"/><img src="images/chef.svg" style="width:430px;height:270px"/>'+					
@@ -249,13 +254,13 @@ bakery.page4='</br></br></br>'+
 	   '<td class="boldHeaderFrutiger" style="font-size:16px;">{{mnthlyFixedLbl}}</td>'+
 	'</tr><tr style="height:10px"></tr>'+
 	'<tr style="height:5px">'+	
-	  '<td class="boldHeaderFrutiger" style="font-size:16px;"><input type="text" class="inputTextFont expTextBoxCls" style="font-color:black;"  id="mnthlyRen"></input></td>'+
+	  '<td class="boldHeaderFrutiger" style="font-size:16px;"><input type="text" class="inputTextFont expTextBoxCls" style="font-color:black;"  id="mnthlyRen" readonly></input></td>'+
 	  '<td><div>+</div></td>'+
-	  '<td class="boldHeaderFrutiger" style="font-size:16px;"><input type="text" class="inputTextFont expTextBoxCls" style="font-color:black;"  id="mnthlyUtility"></input></td>'+
+	  '<td class="boldHeaderFrutiger" style="font-size:16px;"><input type="text" class="inputTextFont expTextBoxCls" style="font-color:black;"  id="mnthlyUtility" readonly></input></td>'+
 	  '<td><div>+</div></td>'+
-	  '<td class="boldHeaderFrutiger" style="font-size:16px;"><input type="text" class="inputTextFont expTextBoxCls" style="font-color:black;"  id="mnthlySalary"></input></td>'+
+	  '<td class="boldHeaderFrutiger" style="font-size:16px;"><input type="text" class="inputTextFont expTextBoxCls" style="font-color:black;"  id="mnthlySalary" readonly></input></td>'+
 	  '<td><div>=</div></td>'+
-	   '<td class="boldHeaderFrutiger" style="font-size:16px;">$<input type="text" class="inputTextFont expTextBoxCls" id="mnthlyTotalExpenses"></input>&nbsp;&nbsp;<input type="button" value="Evaluate" class="buttonIdCls" onClick="bakery.evaluateFixedExp()"/></td>'+
+	   '<td class="boldHeaderFrutiger" style="font-size:16px;">$<input type="text" class="inputTextFont expTextBoxCls" id="mnthlyTotalExpenses" onChange="bakery.hideNextButtonExpPage()"></input>&nbsp;&nbsp;<input type="button" value="Evaluate" class="buttonIdCls" onClick="bakery.evaluateFixedExp()"/></td>'+
 	'</tr>'+
 	'<tr>'+
 	  '<td colspan="6">&nbsp;</td>'+	 
@@ -344,7 +349,7 @@ bakery.page6='</br></br></br>'+
 									'{{sellingPriceLbl}}'+
 								'</td>'+
 								'<td>'+
-								'<table style="height:100%"><tr><td><input type="text" class="inputTextFont textBoxCls inputTextDimension enterKeyPress" id="sellingPriceTxt"></input>'+
+								'<table style="height:100%"><tr><td><input type="text" class="inputTextFont textBoxCls inputTextDimension enterKeyPress" id="sellingPriceTxt" onChange="bakery.hideNextButtonContriPage()"></input>'+
 								'</input></td></tr></table>'+
 								'</td>'+								
 							'</tr>'+
@@ -375,7 +380,7 @@ bakery.page6='</br></br></br>'+
 									'{{contriMarginLbl}}'+
 								'</td>'+
 								'<td>'+
-								'<table style="height:100%"><tr><td><input type="text" class="inputTextFont textBoxCls inputTextDimension enterKeyPress" id="contriMarginTxt"></input>'+
+								'<table style="height:100%"><tr><td><input type="text" class="inputTextFont textBoxCls inputTextDimension enterKeyPress" id="contriMarginTxt" onChange="bakery.hideNextButtonContriPage()"></input>'+
 								'</input></td></tr></table>'+
 								'</td>'+								
 							'</tr>'+
@@ -450,7 +455,7 @@ bakery.page7='</br></br></br>'+
 									'{{brkEvenUnitLbl}}'+
 								'</td>'+
 								'<td>'+
-								'<table style="height:100%"><tr><td><input type="text" class="inputTextFont textBoxCls inputTextDimension enterKeyPress" id="breakEvenUnitTxt"></input>'+
+								'<table style="height:100%"><tr><td><input type="text" class="inputTextFont textBoxCls inputTextDimension enterKeyPress" id="breakEvenUnitTxt" onchange="bakery.hideNextButtonBrkEvenPage()"></input>'+
 								'</input></td></tr></table>'+
 								'</td>'+								
 							'</tr>'+
@@ -476,7 +481,8 @@ bakery.page7='</br></br></br>'+
 	'</tr>'+
 '</table>';
 
-bakery.page8='</br></br></br><p id="resultDisplay" class="inputTextFont"></p>';
+bakery.page8='<audio controls autoplay style="display:none"><source src="audio/clapping.mp3" type="audio/mpeg"></audio>'+
+'</br></br></br><p id="resultDisplay" class="inputTextFont"></p>';
 
 bakery.showcalculator='<table><tr><td class="lightHeaderFrutiger" style="font-size:12px;padding-left:0px;padding-top:130px">{{calcLbl}}<img src="images/calculator.svg" onclick="bakery.showCalculator()" id="calcImg"/></td></tr>'+
 	  '<tr><td><div class="popup">'+
@@ -504,6 +510,13 @@ bakery.showcalculator='<table><tr><td class="lightHeaderFrutiger" style="font-si
 			  '</span>'+
 			'</div>'+
 	  '</td></tr></table>';
+	  
+bakery.showWaitingPopup='<div id="myModal" class="modal">'+  
+  '<div class="modal-content">'+
+    '<span class="close"><img src="images/peopleWalk.gif" style="height:80%;width:100%"/></span>'+
+   ' <span><img src="images/loding_icon.gif" style="height:20%;width:40%;padding-left:300px"/></span>'+
+ ' </div>'+
+'</div>'
 
 	
 

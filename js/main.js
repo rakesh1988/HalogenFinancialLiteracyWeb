@@ -11,6 +11,7 @@ var bakeryTemplatePage5;
 var bakeryTemplatePage6;
 var bakeryTemplatePage7;
 var bakeryTemplatePage8;
+var bakeryShowLoadingPopup;
 var bakeryShowCalc;
 var currentPage="";
 var navCnt=0;
@@ -91,7 +92,8 @@ try{
 	bakeryTemplatePage5=     Template7.compile(bakery.page5);
 	bakeryTemplatePage6=     Template7.compile(bakery.page6);	
 	bakeryTemplatePage7=     Template7.compile(bakery.page7);
-	bakeryTemplatePage8=     Template7.compile(bakery.page8);		
+	bakeryTemplatePage8=     Template7.compile(bakery.page8);	
+	bakeryShowLoadingPopup	=Template7.compile(bakery.showWaitingPopup);
 	bakeryShowCalc     =     Template7.compile(bakery.showcalculator);	
 	
 	}
@@ -329,10 +331,27 @@ if(retVal)
 		}
 		
 		else if(breadCrum=='Result')
-		{		
-		var functionToSetData='set'+nextPrevNav[curPos]+'DataObject';
+		{
+			var functionToSetData='set'+nextPrevNav[curPos]+'DataObject';
 			
-			bakery[functionToSetData]();
+			bakery[functionToSetData]();			
+
+			document.getElementById("bakeryBase").innerHTML=bakeryShowLoadingPopup(bakery.pages);
+	
+			setTimeout(bakery.loadProfitLossResult, 10000);
+		
+		}
+	}
+	
+	else
+	{
+	  return;
+	}
+}
+
+bakery.loadProfitLossResult = function() {
+	
+	
 			
 			
 			document.getElementById("bakeryBase").innerHTML=bakeryTemplatePage8(bakery.pages);
@@ -347,13 +366,6 @@ if(retVal)
 			bakery.getProfitLossVal();
 			
 			bakery['hidePrevNextButton']();
-		}
-	}
-	
-	else
-	{
-	  return;
-	}
 }
 
 bakery.getNotNullValue = function(docId) {
@@ -371,6 +383,8 @@ else
 }
 
 bakery.nxtButton = function(){	
+	var snd = new Audio("audio/buttonClick"+ ".mp3");
+    snd.play();
 	var retVal=bakery.highlightHeader(nextPrevNav[navCnt+1]);
 	if(retVal)
 	{
@@ -387,6 +401,8 @@ bakery.nxtButton = function(){
 }
 
 bakery.prevButton = function(){
+	var snd = new Audio("audio/buttonClick"+ ".mp3");
+    snd.play();
 	
 		navCnt=navCnt-1;
 		

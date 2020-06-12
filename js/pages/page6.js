@@ -53,7 +53,13 @@ if(page6ObjInner.getValEvaluated())
 	   document.getElementById("evalResult").classList.add('fixedEvalCorrect');
  }
  }
-
+bakery.hideNextButtonContriPage=function()
+  {
+	  page6ObjInner.setValEvaluated(false);
+	  document.getElementById('evalResult').innerHTML=""	  
+	  document.getElementById("nxtButtonId").style.display="none";
+	  pageArray[6].setValEvaluated(false);
+  }
 
 
 

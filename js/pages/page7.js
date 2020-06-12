@@ -28,6 +28,7 @@ var actualTotalVal=Math.ceil(parseInt(document.getElementById("fxdPriceTxt").val
 	   document.getElementById('evalResult').innerHTML="<img src='images/confirm.svg'/>&nbsp;Correct";
 	   document.getElementById("evalResult").classList.remove('fixedEvalWrong');
 	   document.getElementById("evalResult").classList.add('fixedEvalCorrect');
+	   document.getElementById("breakEvenUnitTxt").value=Math.ceil(enteredVal);
 	   page7ObjInner.setValEvaluated(true);
 	}
 	else
@@ -51,6 +52,13 @@ var actualTotalVal=Math.ceil(parseInt(document.getElementById("fxdPriceTxt").val
 	   page7ObjInner.setValEvaluated(true);
 	 }
  }
+ 
+  bakery.hideNextButtonBrkEvenPage=function()
+  {
+	  page7ObjInner.setValEvaluated(false);
+	  document.getElementById('evalResult').innerHTML="";	 
+	  document.getElementById("nxtButtonId").style.display="none";
+  }
 
 
 

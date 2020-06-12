@@ -40,12 +40,14 @@ cursor: pointer;
    width: 360px;
    height:55px;
    border:solid #737373;
+   outline: none
 }
 
 .inputDropBoxDimensionLoc {
    width: 360px;
    height:60px;
    border:solid #737373;
+   outline: none
 }
 
 .boldHeaderFrutiger {
@@ -152,7 +154,8 @@ select.classic {
 	border-bottom-left-radius: 25px;
     color:white;
 	background-color:#4AADB6;
-	border:#4AADB6
+	border:#4AADB6;
+	outline: none
 	
 }
 
@@ -361,6 +364,31 @@ font-weight:bold;
 color:black;
 background-color:#ff4561;
 border-bottom:black 2px solid;
+}
+
+.modal {
+  display: inline; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 50px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+ 
+  
+  background-color: #F6F6F6;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  height: 80%;
 }
 
 

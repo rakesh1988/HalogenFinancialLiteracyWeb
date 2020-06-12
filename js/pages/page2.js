@@ -33,6 +33,8 @@ bakery.setPrice = function(){
 var selectedIndexLocation=document.getElementById("locationId").selectedIndex;
 document.getElementById("expRental").value=locationPrice[selectedIndexLocation][0];
 document.getElementById("expUtility").value=locationPrice[selectedIndexLocation][1];
+pageArray[3].setValEvaluated(false);
+pageArray[6].setValEvaluated(false);
 }
 
 bakery.updateFacts = function(){

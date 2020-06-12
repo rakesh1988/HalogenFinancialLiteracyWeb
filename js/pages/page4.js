@@ -58,5 +58,13 @@ if(page4ObjInner.getValEvaluated())
  }
 
 }
+bakery.hideNextButtonExpPage = function(){
+	
+	  page4ObjInner.setValEvaluated(false);
+	  document.getElementById('evalResult').innerHTML="";	 
+	  document.getElementById("nxtButtonId").style.display="none";
+	  pageArray[6].setValEvaluated(false);
+}
+
 
 

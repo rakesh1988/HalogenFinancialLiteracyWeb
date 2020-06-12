@@ -63,12 +63,18 @@ var funcToCall='getEmpQty'+imgPos;
 curCnt=page3ObjInner[funcToCall]();
 if(curCnt==5)
 {
+   document.getElementById("employeeValidation").style.display="inline";
    return;
 }
 curCnt=parseInt(curCnt)+1;
 document.getElementById("staffQtyDynamic").value=curCnt;
 funcToCall='setEmpQty'+imgPos;
 page3ObjInner[funcToCall](curCnt);
+
+pageArray[3].setValEvaluated(false);
+pageArray[6].setValEvaluated(false);
+
+
 }
 
 bakery.hireStaffDecrement = function(){
@@ -84,6 +90,13 @@ curCnt=parseInt(curCnt)-1;
 document.getElementById("staffQtyDynamic").value=curCnt;
 funcToCall='setEmpQty'+imgPos;
 page3ObjInner[funcToCall](curCnt);
+
+pageArray[3].setValEvaluated(false);
+pageArray[4].setValEvaluated(false);
+pageArray[5].setValEvaluated(false);
+pageArray[6].setValEvaluated(false);
+
+document.getElementById("employeeValidation").style.display="none";
 
 }
 var staff = [

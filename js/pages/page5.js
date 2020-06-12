@@ -1,5 +1,7 @@
 var page5ObjInner=pageArray[4];
 bakery.selectIngridients = function(elmentSelected){
+	
+	bakery.hideNextButtonInvPage();
 
 	var cnt=0;
 	$('input[type=checkbox]').each(function () {
@@ -112,19 +114,28 @@ if(page5ObjInner.getValEvaluated())
  }
 }
 
+bakery.hideNextButtonInvPage = function(){
+	
+	  page5ObjInner.setValEvaluated(false);
+	  document.getElementById('evalResult').innerHTML="";	 
+	  document.getElementById("nxtButtonId").style.display="none";
+	  pageArray[5].setValEvaluated(false);
+	  pageArray[6].setValEvaluated(false);
+}
+
 var chkBoxImageAndPrice = [
-    ['images/cafe.svg', '$26'],
-	['images/cafe.svg', '$22'],
-    ['images/cafe.svg', '$24'],
-	['images/cafe.svg', '$21'],
-	['images/cafe.svg', '$26'],
-	['images/cafe.svg', '$25'],
-	['images/cafe.svg', '$16'],
-	['images/cafe.svg', '$56'],
-	['images/cafe.svg', '$76'],
-	['images/cafe.svg', '$96'],
-	['images/cafe.svg', '$26'],
-	['images/cafe.svg', '$76'],
+    ['images/cocopowder.jpg', '$26'],
+	['images/cream.jpg', '$22'],
+    ['images/bakingpowder.jpg', '$24'],
+	['images/cocopowder.jpg', '$21'],
+	['images/cream.jpg', '$26'],
+	['images/bakingpowder.jpg', '$25'],
+	['images/cocopowder.jpg', '$16'],
+	['images/cream.jpg', '$56'],
+	['images/bakingpowder.jpg', '$76'],
+	['images/cocopowder.jpg', '$96'],
+	['images/cream.jpg', '$26'],
+	['images/bakingpowder.jpg', '$76'],
    
     
 ];
