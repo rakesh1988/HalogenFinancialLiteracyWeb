@@ -476,7 +476,7 @@ bakery.page7='</br></br></br>'+
 	'</tr>'+
 '</table>';
 
-bakery.page8='<p id="resultDisplay" class="inputTextFont"></p>';
+bakery.page8='</br></br></br><p id="resultDisplay" class="inputTextFont"></p>';
 
 bakery.showcalculator='<table><tr><td class="lightHeaderFrutiger" style="font-size:12px;padding-left:0px;padding-top:130px">{{calcLbl}}<img src="images/calculator.svg" onclick="bakery.showCalculator()" id="calcImg"/></td></tr>'+
 	  '<tr><td><div class="popup">'+
