@@ -124,18 +124,18 @@ bakery.hideNextButtonInvPage = function(){
 }
 
 var chkBoxImageAndPrice = [
-    ['images/cocopowder.jpg', '$26'],
-	['images/cream.jpg', '$22'],
-    ['images/bakingpowder.jpg', '$24'],
-	['images/cocopowder.jpg', '$21'],
-	['images/cream.jpg', '$26'],
-	['images/bakingpowder.jpg', '$25'],
-	['images/cocopowder.jpg', '$16'],
-	['images/cream.jpg', '$56'],
-	['images/bakingpowder.jpg', '$76'],
-	['images/cocopowder.jpg', '$96'],
-	['images/cream.jpg', '$26'],
-	['images/bakingpowder.jpg', '$76'],
+    ['images/cocopowder.jpg', '$5'],
+	['images/cream.jpg', '$6'],
+    ['images/bakingpowder.jpg', '$2'],
+	['images/cocopowder.jpg', '$5'],
+	['images/cream.jpg', '$6'],
+	['images/bakingpowder.jpg', '$2'],
+	['images/cocopowder.jpg', '$5'],
+	['images/cream.jpg', '$6'],
+	['images/bakingpowder.jpg', '$2'],
+	['images/cocopowder.jpg', '$5'],
+	['images/cream.jpg', '$6'],
+	['images/bakingpowder.jpg', '$2'],
    
     
 ];

@@ -482,7 +482,10 @@ bakery.page7='</br></br></br>'+
 '</table>';
 
 bakery.page8='<audio controls autoplay style="display:none"><source src="audio/clapping.mp3" type="audio/mpeg"></audio>'+
-'</br></br></br><p id="resultDisplay" class="inputTextFont"></p>';
+'</br></br></br><p id="resultDisplay" class="inputTextFont"></p>'+
+'<div style="height:700px; width:700px; ">'+
+    '<canvas id="Chart"></canvas>'+
+'</div>';
 
 bakery.showcalculator='<table><tr><td class="lightHeaderFrutiger" style="font-size:12px;padding-left:0px;padding-top:130px">{{calcLbl}}<img src="images/calculator.svg" onclick="bakery.showCalculator()" id="calcImg"/></td></tr>'+
 	  '<tr><td><div class="popup">'+
