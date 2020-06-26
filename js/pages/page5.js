@@ -13,6 +13,7 @@ bakery.selectIngridients = function(elmentSelected){
 	{
      document.getElementById("errMsgInventory").innerHTML="Cannot select more than 4 ingridients";
 	 document.getElementById(elmentSelected).checked = false;
+	 document.getElementById("errMsgInventory").style.display='inline';
 	}
 	else
 	{
@@ -68,7 +69,6 @@ bakery.restoreInventoryDataObject = function(){
  }
  
 }
-
 bakery.evaluateInvExp= function(){
 var enteredVal=document.getElementById("totalInvExpTxt").value;
 var cntCheckedBox=1;
@@ -124,18 +124,22 @@ bakery.hideNextButtonInvPage = function(){
 }
 
 var chkBoxImageAndPrice = [
-    ['images/cocopowder.jpg', '$5'],
-	['images/cream.jpg', '$6'],
-    ['images/bakingpowder.jpg', '$2'],
-	['images/cocopowder.jpg', '$5'],
-	['images/cream.jpg', '$6'],
-	['images/bakingpowder.jpg', '$2'],
-	['images/cocopowder.jpg', '$5'],
-	['images/cream.jpg', '$6'],
-	['images/bakingpowder.jpg', '$2'],
-	['images/cocopowder.jpg', '$5'],
-	['images/cream.jpg', '$6'],
-	['images/bakingpowder.jpg', '$2'],
+    ['images/inventory/cake/baking-glove@2x.png', '$6'],	
+	['images/inventory/cake/balloon-whisk@2x.png', '$10'],	
+	['images/inventory/cake/cake-pan@2x.png', '$7'],
+	['images/inventory/cake/flour-sift@2x.png', '$10'],
+	['images/inventory/cake/stand-mixer@2x.png', '$50'],
+	['images/inventory/cake/muffin-pan@2x.png', '$10'],
+	['images/inventory/cake/rolling-pin@2x.png', '$20'],
+	['images/inventory/cake/cocoa@2x.png', '$8'],
+	['images/inventory/cake/eggs@2x.png', '$2'],
+	['images/inventory/cake/flour@2x.png', '$2'],	
+	['images/inventory/cake/measure-flask@2x.png', '$10'],	
+	['images/inventory/cake/salt@2x.png', '$1'],
+	['images/inventory/cake/milk@2x.png', '$6'],	
+	['images/inventory/cake/sugar@2x.png', '$2']  ,
+	['images/inventory/cake/baking-soda@2x.png', '$2'],
+	['images/inventory/cake/butter@2x.png', '$7'],
    
     
 ];

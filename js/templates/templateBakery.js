@@ -101,7 +101,7 @@ bakery.page1='</br></br></br>'+
 				'</tr>'+
 			'</table>'+
 		'</td>'+
-		'<td style="height: 70px; "><div class="container"><img src="images/cafe.svg" style="width:600px"><div class="text-block" id="bakeryNameLblDynamic"></div></div>'+					
+		'<td style="height: 70px; "><div class="container"><img src="images/cafe.svg" style="width:600px"><div class="text-block" id="bakeryNameLblDynamic"></div></div></img>'+					
 		'</td>'+
 	'</tr>'+
 '</table>';
@@ -227,7 +227,7 @@ bakery.page3='</br></br></br>'+
 				'</tr>'+
 '<tr>'+
 '<td>'+
-'<p style ="color:orange;font-family: Frutiger45Light;font-style: italic;display:none" id="employeeValidation">You can select a max of 5 employees</p>'+
+'<p class="warningMsg" id="employeeValidation">You can select a max of 5 employees</p>'+
 '</td>'+
 '</tr>'+				
 			'</table>'+
@@ -278,55 +278,71 @@ bakery.page4='</br></br></br>'+
 	'</tr>'+
 	'</tr><tr style="height:30px"></tr>'+
 '</table>';
-bakery.page5='</br><p class="boldHeaderFrutiger">Inventory List</p></br><p class="inputTextFont" id="errMsgInventory"></p><ul>'+  
+bakery.page5='</br><p class="boldHeaderFrutiger" style="height:10px">Inventory List</p><p class="lightHeaderFrutiger" style="height:30px">Purchase items you need and calculate total cost.</p><p class="warningMsg" id="errMsgInventory"></p><ul>'+  
   '<li><input type="checkbox" id="cb1" onClick="bakery.selectIngridients(\'cb1\');"/>'+
-    '<label for="cb1"><img src="'+chkBoxImageAndPrice[1][0]+'"/></label>'+
+    '<label for="cb1"><div class="container"><img src="'+chkBoxImageAndPrice[0][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPrice[0][1]+
-  '</li>'+
+	'</div></div></img></label></li>'+
   '<li><input type="checkbox" id="cb2" onClick="bakery.selectIngridients(\'cb2\');"/>'+
-    '<label for="cb2"><img src="'+chkBoxImageAndPrice[1][0]+'"/></label>'+
+    '<label for="cb2"><div class="container"><img src="'+chkBoxImageAndPrice[1][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPrice[1][1]+
-  '</li>'+
+	'</div></div></img></label></li>'+
   '<li><input type="checkbox" id="cb3" onClick="bakery.selectIngridients(\'cb3\');"/>'+
-    '<label for="cb3"><img src="'+chkBoxImageAndPrice[2][0]+'"/></label>'+
+    '<label for="cb3"><div class="container"><img src="'+chkBoxImageAndPrice[2][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPrice[2][1]+
-  '</li>'+
+	'</div></div></img></label></li>'+
   '<li><input type="checkbox" id="cb4" onClick="bakery.selectIngridients(\'cb4\');"/>'+
-    '<label for="cb4"><img src="'+chkBoxImageAndPrice[3][0]+'"/></label>'+
+    '<label for="cb4"><div class="container"><img src="'+chkBoxImageAndPrice[3][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPrice[3][1]+
-  '</li>'+
+	'</div></div></img></label></li>'+
   '<li><input type="checkbox" id="cb5" onClick="bakery.selectIngridients(\'cb5\');"/>'+
-    '<label for="cb5"><img src="'+chkBoxImageAndPrice[4][0]+'"/></label>'+
+    '<label for="cb5"><div class="container"><img src="'+chkBoxImageAndPrice[4][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPrice[4][1]+
-  '</li>'+
+	'</div></div></img></label></li>'+
   '<li><input type="checkbox" id="cb6" onClick="bakery.selectIngridients(\'cb6\');"/>'+
-    '<label for="cb6"><img src="'+chkBoxImageAndPrice[5][0]+'"/></label>'+
+    '<label for="cb6"><div class="container"><img src="'+chkBoxImageAndPrice[5][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPrice[5][1]+
-  '</li></br></br>'+
+	'</div></div></img></label></li>'+
   '<li><input type="checkbox" id="cb7" onClick="bakery.selectIngridients(\'cb7\');"/>'+
-    '<label for="cb7"><img src="'+chkBoxImageAndPrice[6][0]+'"/></label>'+
+    '<label for="cb7"><div class="container"><img src="'+chkBoxImageAndPrice[6][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPrice[6][1]+
-  '</li>'+
+	'</div></div></img></label></li>'+
   '<li><input type="checkbox" id="cb8" onClick="bakery.selectIngridients(\'cb8\');"/>'+
-    '<label for="cb8"><img src="'+chkBoxImageAndPrice[7][0]+'"/></label>'+
+    '<label for="cb8"><div class="container"><img src="'+chkBoxImageAndPrice[7][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPrice[7][1]+
-  '</li>'+
+	'</div></div></img></label></li></br></br>'+
   '<li><input type="checkbox" id="cb9" onClick="bakery.selectIngridients(\'cb9\');"/>'+
-    '<label for="cb9"><img src="'+chkBoxImageAndPrice[8][0]+'"/></label>'+
+    '<label for="cb9"><div class="container"><img src="'+chkBoxImageAndPrice[8][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPrice[8][1]+
-  '</li>'+
+	'</div></div></img></label></li>'+
   '<li><input type="checkbox" id="cb10" onClick="bakery.selectIngridients(\'cb10\');"/>'+
-    '<label for="cb10"><img src="'+chkBoxImageAndPrice[9][0]+'"/></label>'+
+    '<label for="cb10"><div class="container"><img src="'+chkBoxImageAndPrice[9][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPrice[9][1]+
-  '</li>'+
+	'</div></div></img></label></li>'+
   '<li><input type="checkbox" id="cb11" onClick="bakery.selectIngridients(\'cb11\');"/>'+
-    '<label for="cb11"><img src="'+chkBoxImageAndPrice[10][0]+'"/></label>'+
+    '<label for="cb11"><div class="container"><img src="'+chkBoxImageAndPrice[10][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPrice[10][1]+
-  '</li>'+
-  '<li><input type="checkbox" id="cb12" onClick="bakery.selectIngridients(\'cb12\')"/>'+
-    '<label for="cb12"><img src="'+chkBoxImageAndPrice[11][0]+'"/></label>'+
+	'</div></div></img></label></li>'+
+   '<li><input type="checkbox" id="cb12" onClick="bakery.selectIngridients(\'cb12\');"/>'+
+    '<label for="cb12"><div class="container"><img src="'+chkBoxImageAndPrice[11][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPrice[11][1]+
-  '</li></br><input type="text" id="totalInvExpTxt"></input>'+
+	'</div></div></img></label></li>'+
+   '<li><input type="checkbox" id="cb13" onClick="bakery.selectIngridients(\'cb13\');"/>'+
+    '<label for="cb13"><div class="container"><img src="'+chkBoxImageAndPrice[12][0]+'"><div class="inventoryPrice">'+
+	chkBoxImageAndPrice[12][1]+
+	'</div></div></img></label></li>'+
+   '<li><input type="checkbox" id="cb14" onClick="bakery.selectIngridients(\'cb14\');"/>'+
+    '<label for="cb14"><div class="container"><img src="'+chkBoxImageAndPrice[13][0]+'"><div class="inventoryPrice">'+
+	chkBoxImageAndPrice[13][1]+
+	'</div></div></img></label></li>'+
+   '<li><input type="checkbox" id="cb15" onClick="bakery.selectIngridients(\'cb15\');"/>'+
+    '<label for="cb15"><div class="container"><img src="'+chkBoxImageAndPrice[14][0]+'"><div class="inventoryPrice">'+
+	chkBoxImageAndPrice[14][1]+
+	'</div></div></img></label></li>'+
+  '<li><input type="checkbox" id="cb16" onClick="bakery.selectIngridients(\'cb16\')"/>'+
+    '<label for="cb16"><div class="container"><img src="'+chkBoxImageAndPrice[15][0]+'"><div class="inventoryPrice">'+
+	chkBoxImageAndPrice[15][1]+
+	'</div></div></img></label></li></br><input type="text" id="totalInvExpTxt"></input>'+
 			  '</span><input type="button" value="Evaluate" class="buttonIdCls" onClick="bakery.evaluateInvExp()"/><div id="evalResult"></div>'+
 	'</div>'+
   '</br></br>'+
