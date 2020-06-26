@@ -17,7 +17,7 @@ bakery.translation={
 		"locBugis" : "Bugis Junction",
 		"locSerangoon" : "Nex",
 		"hireAStaff" : "Hire a Staff",
-		"hireQtyStaff" : "Hire:",
+		"hireQtyStaff" : "Hire",
 		"mnthlyRental" : "Monthly Rental",
 		"mnthlyUtility" : "Monthly Utility Bills",
 		"mnthlySalary" : "Monthly Salary",

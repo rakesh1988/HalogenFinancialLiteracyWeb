@@ -336,7 +336,7 @@ label::before {
 }
 
 label img {
-  height: 70px;
+  height: 80px;
   width: 80px;
   transition-duration: 0.2s;
   transform-origin: 50% 50%;

@@ -7,7 +7,8 @@ var bakeryTemplatePage1;
 var bakeryTemplatePage2;
 var bakeryTemplatePage3;
 var bakeryTemplatePage4;
-var bakeryTemplatePage5;
+var bakeryTemplatePage5_Bakery;
+var bakeryTemplatePage5_Cafe;
 var bakeryTemplatePage6;
 var bakeryTemplatePage7;
 var bakeryTemplatePage8;
@@ -89,7 +90,8 @@ try{
 	bakeryTemplatePage2=     Template7.compile(bakery.page2);	
 	bakeryTemplatePage3=     Template7.compile(bakery.page3);	
 	bakeryTemplatePage4=     Template7.compile(bakery.page4);
-	bakeryTemplatePage5=     Template7.compile(bakery.page5);
+	bakeryTemplatePage5_Bakery=     Template7.compile(bakery.page5_Bakery);
+	bakeryTemplatePage5_Cafe=     Template7.compile(bakery.page5_Cafe);
 	bakeryTemplatePage6=     Template7.compile(bakery.page6);	
 	bakeryTemplatePage7=     Template7.compile(bakery.page7);
 	bakeryTemplatePage8=     Template7.compile(bakery.page8);	
@@ -148,6 +150,7 @@ bakery.getTranslation = function(key) {
 bakery.gotoPage = function(breadCrum) {
 var retVal=bakery.highlightHeader(breadCrum);
 
+
 if(retVal)
    {
  
@@ -184,6 +187,7 @@ if(retVal)
 			navCnt=1;
 			bakery['hidePrevNextButton']();
 			document.getElementById("showCalculator").innerHTML='';
+			//document.getElementById("incrementalImages").innerHTML='<img src="images/cafe.svg" style="width:400px;height:150px"></img><img src="images/cafe.svg" style="width:400px;height:150px"></img>';
 			
 			
 		}
@@ -260,7 +264,19 @@ if(retVal)
 			
 			bakery[functionToSetData]();
 			
-			document.getElementById("bakeryBase").innerHTML=bakeryTemplatePage5(bakery.pages);
+			if(pageArray[0].getShopType()=='Cafe')
+			{
+				chkBoxImageAndPrice=chkBoxImageAndPriceCafe;
+				document.getElementById("bakeryBase").innerHTML=bakeryTemplatePage5_Cafe(bakery.pages);
+			}
+		    else
+			{
+				chkBoxImageAndPrice=chkBoxImageAndPriceBakery;
+				document.getElementById("bakeryBase").innerHTML=bakeryTemplatePage5_Bakery(bakery.pages);
+			}
+			
+			
+			
 		
 			var functionToRestoreData='restoreInventoryDataObject';				
 			bakery[functionToRestoreData]();
@@ -274,6 +290,7 @@ if(retVal)
 			document.getElementById("showCalculator").innerHTML=bakeryShowCalc(bakery.pages);
 			
 			bakery.checkResultExpValueInv();
+			
 			
 		}
 		

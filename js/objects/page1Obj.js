@@ -38,4 +38,14 @@ getSMngr()
 {
  return this.sMngr;
 }
+
+setScenario(scenario)
+{
+  this.scenario=scenario;
+}
+
+getScenario()
+{
+ return this.scenario;
+}
 }
