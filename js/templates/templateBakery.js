@@ -60,7 +60,7 @@ bakery.page1='</br></br></br>'+
 								'</td>'+
 								
 								'<td>'+
-								'<table style="height:100%"><tr><td><input type="text" class="inputTextFont textBoxCls inputTextDimension enterKeyPress" id="shopNameId" maxlength="30"></input>'+
+								'<table style="height:100%"><tr><td><input type="text" class="inputTextFont textBoxCls inputTextDimension enterKeyPress" id="shopNameId" maxlength="30" onkeyup="bakery.changeShopNameInImage()"></input>'+
 								'</input></td></tr></table>'+
 								'</td>'+								
 							'</tr>'+
@@ -101,7 +101,7 @@ bakery.page1='</br></br></br>'+
 				'</tr>'+
 			'</table>'+
 		'</td>'+
-		'<td style="height: 70px; "><img src="images/cafe.svg" style="width:600px" />'+					
+		'<td style="height: 70px; "><div class="container"><img src="images/cafe.svg" style="width:600px"><div class="text-block" id="bakeryNameLblDynamic"></div></div>'+					
 		'</td>'+
 	'</tr>'+
 '</table>';
@@ -401,7 +401,7 @@ bakery.page6='</br></br></br>'+
 				'</tr>'+
 			'</table>'+
 		'</td>'+
-		'<td style="height: 70px; "><img src="images/cafe.svg" style="width:600px" />'+					
+		'<td style="height: 70px; "><div class="container"><img src="images/cafe.svg" style="width:600px"><div class="text-block" id="bakeryNameLblDynamic"></div></div>'+					
 		'</td>'+
 	'</tr>'+
 '</table>';
@@ -476,7 +476,7 @@ bakery.page7='</br></br></br>'+
 				'</tr>'+
 			'</table>'+
 		'</td>'+
-		'<td style="height: 70px; "><img src="images/cafe.svg" style="width:600px" />'+					
+		'<td style="height: 70px; "><div class="container"><img src="images/cafe.svg" style="width:600px"><div class="text-block" id="bakeryNameLblDynamic"></div></div>'+					
 		'</td>'+
 	'</tr>'+
 '</table>';

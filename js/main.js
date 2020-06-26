@@ -165,6 +165,9 @@ if(retVal)
 			
 			bakery['hidePrevNextButton']();
 			document.getElementById("showCalculator").innerHTML='';
+			bakery.changeShopNameInImage();
+			
+			
 		
 		}
 		else if(breadCrum=='Location')
@@ -181,6 +184,8 @@ if(retVal)
 			navCnt=1;
 			bakery['hidePrevNextButton']();
 			document.getElementById("showCalculator").innerHTML='';
+			
+			
 		}
 		
 		else if(breadCrum=='Staff')
@@ -298,6 +303,8 @@ if(retVal)
 			document.getElementById("showCalculator").innerHTML=bakeryShowCalc(bakery.pages);
 			
 			bakery.checkResultExpValueAccnting();
+			
+			  document.getElementById('bakeryNameLblDynamic').innerHTML=pageArray[0].getShopName();
 		}
 		
 		else if(breadCrum=='BreakEven')
@@ -328,6 +335,8 @@ if(retVal)
 			document.getElementById("showCalculator").innerHTML=bakeryShowCalc(bakery.pages);
 			
 			bakery.checkResultExpValueBrkEven();
+			
+			  document.getElementById('bakeryNameLblDynamic').innerHTML=pageArray[0].getShopName();
 		}
 		
 		else if(breadCrum=='Result')
@@ -485,6 +494,9 @@ if(navCnt==3)
 bakery.showCalculator=function(){
 var popup = document.getElementById("myPopup");
   popup.classList.toggle("show");
+}
+bakery.changeShopNameInImage=function(){
+ document.getElementById('bakeryNameLblDynamic').innerHTML=document.getElementById('shopNameId').value; 
 }
 
 bakery.addToDisplay=function(clickedButtonVal){

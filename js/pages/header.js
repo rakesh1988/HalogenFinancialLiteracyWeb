@@ -14,6 +14,8 @@ bakery.underlineText= function(ref){
 
 bakery.underlineTextNone= function(ref){
 
+
+
  $(ref).css("border-bottom", "none");
  $(ref).css("color", "#797979");
 //$(ref).css("display", "none");	

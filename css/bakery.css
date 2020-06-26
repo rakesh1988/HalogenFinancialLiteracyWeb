@@ -259,8 +259,8 @@ height:140px;
 .fixedEvalWrong{
 	color:#C44575;
 	font-family: Frutiger45Light; 		
-	font-size:12px
-
+	font-size:24px;
+	
 }
 ul {
   list-style-type: none;
@@ -389,6 +389,31 @@ border-bottom:black 2px solid;
   border: 1px solid #888;
   width: 80%;
   height: 80%;
+}
+
+.container {
+  position: relative;
+  font-family: Arial;
+}
+
+.text-block {
+  position: absolute;
+  bottom: 280px;
+  right: 200px;
+  background-color: #4AADB6;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  height:40px;
+  width:150px;
+  line-height: 40px;
+  font-family: Frutiger45Light; 
+  text-align: center;
+  border-top-right-radius: 25px;
+	border-top-left-radius: 25px;
+	border-bottom-right-radius: 25px;
+	border-bottom-left-radius: 25px;
+	font-weight: bold;
 }
 
 
