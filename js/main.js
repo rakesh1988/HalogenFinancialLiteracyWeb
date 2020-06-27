@@ -175,8 +175,8 @@ if(retVal)
 		}
 		else if(breadCrum=='Location')
 		{
-		  
-
+				
+			
 			var functionToSetData='set'+nextPrevNav[curPos]+'DataObject';
 			bakery[functionToSetData]();
 			
@@ -188,7 +188,7 @@ if(retVal)
 			bakery['hidePrevNextButton']();
 			document.getElementById("showCalculator").innerHTML='';
 			//document.getElementById("incrementalImages").innerHTML='<img src="images/cafe.svg" style="width:400px;height:150px"></img><img src="images/cafe.svg" style="width:400px;height:150px"></img>';
-			
+		 
 			
 		}
 		
@@ -320,8 +320,24 @@ if(retVal)
 			document.getElementById("showCalculator").innerHTML=bakeryShowCalc(bakery.pages);
 			
 			bakery.checkResultExpValueAccnting();
+			var srcVal=""; 
+			var empImgString="";
+			var selectedChkBox=pageArray[4].getSelectedInventoryItems().split(",");
+	
+				 if(selectedChkBox != '')
+				 {
+					for (i = 0; i < selectedChkBox.length; i++) 
+					{
+						
+					  
+					  srcVal=chkBoxImageAndPrice[parseInt(selectedChkBox[i].substr(2,3))-1][0];
+					  empImgString =empImgString+"<img class='selectionImgVariableDimen' src='"+srcVal+"'/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+					}	
+				}
 			
-			  document.getElementById('bakeryNameLblDynamic').innerHTML=pageArray[0].getShopName();
+			document.getElementById("selectionsMadeVariable").innerHTML=empImgString;
+			
+			  //document.getElementById('bakeryNameLblDynamic').innerHTML=pageArray[0].getShopName();
 		}
 		
 		else if(breadCrum=='BreakEven')
@@ -353,7 +369,42 @@ if(retVal)
 			
 			bakery.checkResultExpValueBrkEven();
 			
-			  document.getElementById('bakeryNameLblDynamic').innerHTML=pageArray[0].getShopName();
+			 // document.getElementById('bakeryNameLblDynamic').innerHTML=pageArray[0].getShopName();
+			 var scrollingImages="";
+			 scrollingImages=scrollingImages+'<li><img src="'+'images/cafe.svg '+' height="100" /></li>'+
+			'<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>';
+			
+			scrollingImages=scrollingImages+'<li><img src="'+factsDetails[pageArray[1].getLocationImgInx()][0]+' height="100" /></li>'+
+			'<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>';
+			
+			
+			var emp1Qty=pageArray[2].getEmpQty1();
+			for(var cnter=0;cnter<emp1Qty;cnter++)
+			{
+			 scrollingImages= scrollingImages+'<li><img src="'+staff[0][3]+' height="100" /></li>'+
+			'<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>';
+			}
+			
+			var srcVal=""; 
+			var empImgString="";
+			var selectedChkBox=pageArray[4].getSelectedInventoryItems().split(",");
+	
+				 if(selectedChkBox != '')
+				 {
+					for (i = 0; i < selectedChkBox.length; i++) 
+					{						
+					  srcVal=chkBoxImageAndPrice[parseInt(selectedChkBox[i].substr(2,3))-1][0];
+					  scrollingImages =scrollingImages+'<li><img src="'+srcVal+' height="100" /></li>'+
+					  '<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>';
+					  
+					}	
+				}
+			
+			// document.getElementById('populatescrollingImagesIndex').innerHTML=scrollingImages;
+            
+			 bakery.scrollTheImages();
+			 
+			 
 		}
 		
 		else if(breadCrum=='Result')
@@ -412,6 +463,21 @@ bakery.nxtButton = function(){
 	var snd = new Audio("audio/buttonClick"+ ".mp3");
     snd.play();
 	var retVal=bakery.highlightHeader(nextPrevNav[navCnt+1]);
+	
+	if(navCnt==0 &&( document.getElementById("shopNameId").value==undefined || document.getElementById("shopNameId").value==''))
+		{
+				
+				document.getElementById("shopDetailsValidation").style.display="inline";
+				return;
+		}
+	if(navCnt==2 &&( document.getElementById("staffQtyDynamic").value=='0'))
+		{
+				document.getElementById("employeeValidation").innerHTML="Please select atleast one employee.";
+				document.getElementById("employeeValidation").style.display="inline";
+				return;
+		}
+		
+	
 	if(retVal)
 	{
 		navCnt=navCnt+1;	
@@ -603,6 +669,53 @@ $(".enterKeyPress").keyup( function(e) {
 	
 	 
 });
+
+bakery.underlineTextOnFocus= function(ref){
+	bakery.removeUnderlineTextOnFocus();
+	$(ref).css("color", "black");
+	$(ref).css("display", "inline-block");
+    $(ref).css("text-decoration", "none");
+    $(ref).css("border-bottom", "3px solid #8ED2D3");
+    $(ref).css("margin-bottom", "-1px");
+
+
+}
+
+bakery.removeUnderlineTextOnFocus= function(){
+	
+	var ref="";
+	 ref=document.getElementById("shopAnchorId");
+	 $(ref).css("border-bottom", "none");
+	 $(ref).css("color", "#797979");
+	 
+	 ref=document.getElementById("locationAnchorId");
+	 $(ref).css("border-bottom", "none");
+	 $(ref).css("color", "#797979");
+	 
+	 ref=document.getElementById("staffAnchorId");
+	 $(ref).css("border-bottom", "none");
+	 $(ref).css("color", "#797979");
+	 
+	 ref=document.getElementById("expAnchorId");
+	 $(ref).css("border-bottom", "none");
+	 $(ref).css("color", "#797979");
+	 
+	 ref=document.getElementById("inventoryAnchorId");
+	 $(ref).css("border-bottom", "none");
+	 $(ref).css("color", "#797979");
+	 
+	 ref=document.getElementById("accountingAnchorId");
+	 $(ref).css("border-bottom", "none");
+	 $(ref).css("color", "#797979");
+	 
+	 ref=document.getElementById("brkEvenAnchorId");
+	 $(ref).css("border-bottom", "none");
+	 $(ref).css("color", "#797979");
+
+
+}
+
+
 
 
 

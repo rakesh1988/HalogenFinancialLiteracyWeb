@@ -6,26 +6,26 @@ bakery.bakeryHeader =
 	'<tr>'+
 		' <td class="headerNavWidth15">'+
 		' </td>'+
-		'<td  class="headerNavWidth15Txt"><a id ="shopAnchorId" onclick="bakery.gotoPage(\'Welcome\');bakery.underlineTextOnFocus(this)">'+
+		'<td  class="headerNavWidth15Txt"><a id ="shopAnchorId" onclick="bakery.gotoPage(\'Welcome\')" onMouseOver="bakery.underlineText(this)" onMouseOut="bakery.underlineTextNone(this)">'+
 				 '{{shopTypeLbl}}</a>'+
 		'</td>'+
 		'<td class="headerNavWidth15Txt">'+
-			'<a id ="locationAnchorId" onclick="bakery.gotoPage(\'Location\');bakery.underlineTextOnFocus(this)">{{locationLbl}}</a>'+
+			'<a id ="locationAnchorId" onclick="bakery.gotoPage(\'Location\')" onMouseOver="bakery.underlineText(this)" onMouseOut="bakery.underlineTextNone(this)">{{locationLbl}}</a>'+
 		'</td>'+
 		'<td  class="headerNavWidth10Txt">'+
-			'<a id ="staffAnchorId" onclick="bakery.gotoPage(\'Staff\');bakery.underlineTextOnFocus(this)">{{staffLbl}}</a>'+
+			'<a id ="staffAnchorId" onclick="bakery.gotoPage(\'Staff\')" onMouseOver="bakery.underlineText(this)" onMouseOut="bakery.underlineTextNone(this)">{{staffLbl}}</a>'+
 		'</td>'+
 		'<td class="headerNavWidth15Txt">'+
-			'<a id ="expAnchorId" onclick="bakery.gotoPage(\'Expenditure\');bakery.underlineTextOnFocus(this)" >{{ExpLbl}}</a>'+
+			'<a id ="expAnchorId" onclick="bakery.gotoPage(\'Expenditure\')" onMouseOver="bakery.underlineText(this)" onMouseOut="bakery.underlineTextNone(this)">{{ExpLbl}}</a>'+
 		'</td>'+
 		'<td class="headerNavWidth15Txt">'+
-			'<a id ="inventoryAnchorId" onclick="bakery.gotoPage(\'Inventory\');bakery.underlineTextOnFocus(this)">{{inventoryLbl}}</a>'+
+			'<a id ="inventoryAnchorId" onclick="bakery.gotoPage(\'Inventory\')" onMouseOver="bakery.underlineText(this)" onMouseOut="bakery.underlineTextNone(this)">{{inventoryLbl}}</a>'+
 		'</td>'+
 		'<td class="headerNavWidth15Txt">'+
-			'<a id ="accountingAnchorId" onclick="bakery.gotoPage(\'Accounting\');bakery.underlineTextOnFocus(this)">{{accountingLbl}}</a>'+
+			'<a id ="accountingAnchorId" onclick="bakery.gotoPage(\'Accounting\')" onMouseOver="bakery.underlineText(this)" onMouseOut="bakery.underlineTextNone(this)">{{accountingLbl}}</a>'+
 		'</td>'+
 		'<td class="headerNavWidth15Txt">'+
-			'<a id ="brkEvenAnchorId" onclick="bakery.gotoPage(\'BreakEven\');bakery.underlineTextOnFocus(this)" >{{brkEvenLbl}}</a>'+
+			'<a id ="brkEvenAnchorId" onclick="bakery.gotoPage(\'BreakEven\')" onMouseOver="bakery.underlineText(this)" onMouseOut="bakery.underlineTextNone(this)">{{brkEvenLbl}}</a>'+
 		'</td>	'+			 
 		'<td class="headerNavWidth15">'+				 
 		'</td>'+
@@ -107,12 +107,7 @@ bakery.page1='</br></br></br>'+
 	'<input type="radio" id="A" name="scenarios" value="A" checked>A.'+ 
 	'<input type="radio" id="B" name="scenarios" value="B">B.'+  
 	'<input type="radio" id="C" name="scenarios" value="C">C.'+
-'</td>'+
-'<td></td></tr>'+
-'<tr>'+
-'<td colspan="2">'+
-'</br>&nbsp;&nbsp;<p class="warningMsg" id="shopDetailsValidation">Please enter Shop Name</p>'+
-'</td>'+
+'</td><td></td></tr>'+
 '</table>';
 
 
@@ -492,10 +487,10 @@ bakery.page7='</br></br></br>'+
 	   '<td class="boldHeaderFrutiger" style="font-size:16px;">{{brkEvenUnitLbl}}  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<div  class="tooltip"><img src="images/eye.png"  style="width:20px"><span class="tooltiptext" style="width: 300px;">The breakeven number of units, as the name suggests, is the number of units of goods or services that a company needs to sell in order to break even, or in other words, to suffer no financial losses but also make no profit.</span></img></div></td>'+
 	'</tr><tr style="height:10px"></tr>'+
 	'<tr style="height:5px">'+	
-	  '<td class="boldHeaderFrutiger" style="font-size:16px;">$<input type="text" class="inputTextFont expTextBoxCls" style="font-color:black;" id="fxdPriceTxt" onChange="bakery.hideNextButtonContriPage()"></input>'+
+	  '<td class="boldHeaderFrutiger" style="font-size:16px;"><input type="text" class="inputTextFont expTextBoxCls" style="font-color:black;" id="fxdPriceTxt" onChange="bakery.hideNextButtonContriPage()"></input>'+
 								'</input></td>'+
 	  '<td style="width:50px"><div>/</div></td>'+
-	  '<td class="boldHeaderFrutiger" style="font-size:16px;">$<input type="text" class="inputTextFont expTextBoxCls" style="font-color:black;" id="contriMarginTxt" readonly></input>'+
+	  '<td class="boldHeaderFrutiger" style="font-size:16px;"><input type="text" class="inputTextFont expTextBoxCls" style="font-color:black;" id="contriMarginTxt" readonly></input>'+
 								'</input></td>'+
 	  
 	  '<td style="width:50px"><div>=</div></td>'+
@@ -512,29 +507,8 @@ bakery.page7='</br></br></br>'+
 	'</tr>'+
 	'</tr>'+	
 	'<tr>'+
-	  '<td colspan="5">'+
-	  '<div id="scroller" style="width: 900px; height: 200px; margin: 0 auto;">'+
-      ' <div class="innerScrollArea">'+
-         '<ul id="populatescrollingImagesIndex">'+
-			'<li><img src="images/cafe.svg"  height="100" /></li>'+
-			'<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>'+
-            '<li><img src="images/inventory/cake/baking-glove@2x.png" height="100" /></li>'+
-			'<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>'+
-            '<li><img src="images/inventory/cake/baking-soda@2x.png" height="100" /></li>'+
-			'<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>'+
-            '<li><img src="images/inventory/cake/balloon-whisk@2x.png" height="100" /></li>'+
-			'<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>'+
-            '<li><img src="images/inventory/cake/butter@2x.png" height="100" /></li>'+
-			'<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>'+
-            '<li><img src="images/inventory/cake/cake-pan@2x.png"  height="100" /></li>'+
-			'<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>'+
-			'<li><img src="images/bugis.svg"  height="100" /></li>'+
-			'<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>	'+
-			'<li><img src="images/service.png"  height="100" /></li>'+
-			'<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>	'+					
-         '</ul>'+
-     '</div>'+
- '</div>'+
+	  '<td colspan="5"><div class="container"><img src="images/cafe.svg" style="width:300px"><div class="text-block1" id="bakeryNameLblDynamic"></div></div></img>'+
+			'</div>'+
 			'</td>'+
 	'</tr>'+
 	'</tr><tr style="height:30px"></tr>'+

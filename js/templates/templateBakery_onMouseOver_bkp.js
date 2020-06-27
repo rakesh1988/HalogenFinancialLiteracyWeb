@@ -6,26 +6,26 @@ bakery.bakeryHeader =
 	'<tr>'+
 		' <td class="headerNavWidth15">'+
 		' </td>'+
-		'<td  class="headerNavWidth15Txt"><a id ="shopAnchorId" onclick="bakery.gotoPage(\'Welcome\');bakery.underlineTextOnFocus(this)">'+
+		'<td  class="headerNavWidth15Txt"><a id ="shopAnchorId" onclick="bakery.gotoPage(\'Welcome\');bakery.underlineTextOnFocus(this)" onMouseOver="bakery.underlineText(this)" onMouseOut="bakery.underlineTextNone(this)">'+
 				 '{{shopTypeLbl}}</a>'+
 		'</td>'+
 		'<td class="headerNavWidth15Txt">'+
-			'<a id ="locationAnchorId" onclick="bakery.gotoPage(\'Location\');bakery.underlineTextOnFocus(this)">{{locationLbl}}</a>'+
+			'<a id ="locationAnchorId" onclick="bakery.gotoPage(\'Location\')" onMouseOver="bakery.underlineText(this);bakery.underlineTextOnFocus(this)" onMouseOut="bakery.underlineTextNone(this)">{{locationLbl}}</a>'+
 		'</td>'+
 		'<td  class="headerNavWidth10Txt">'+
-			'<a id ="staffAnchorId" onclick="bakery.gotoPage(\'Staff\');bakery.underlineTextOnFocus(this)">{{staffLbl}}</a>'+
+			'<a id ="staffAnchorId" onclick="bakery.gotoPage(\'Staff\')" onMouseOver="bakery.underlineText(this);bakery.underlineTextOnFocus(this)" onMouseOut="bakery.underlineTextNone(this)">{{staffLbl}}</a>'+
 		'</td>'+
 		'<td class="headerNavWidth15Txt">'+
-			'<a id ="expAnchorId" onclick="bakery.gotoPage(\'Expenditure\');bakery.underlineTextOnFocus(this)" >{{ExpLbl}}</a>'+
+			'<a id ="expAnchorId" onclick="bakery.gotoPage(\'Expenditure\')" onMouseOver="bakery.underlineText(this);bakery.underlineTextOnFocus(this)" onMouseOut="bakery.underlineTextNone(this)">{{ExpLbl}}</a>'+
 		'</td>'+
 		'<td class="headerNavWidth15Txt">'+
-			'<a id ="inventoryAnchorId" onclick="bakery.gotoPage(\'Inventory\');bakery.underlineTextOnFocus(this)">{{inventoryLbl}}</a>'+
+			'<a id ="inventoryAnchorId" onclick="bakery.gotoPage(\'Inventory\')" onMouseOver="bakery.underlineText(this);bakery.underlineTextOnFocus(this)" onMouseOut="bakery.underlineTextNone(this)">{{inventoryLbl}}</a>'+
 		'</td>'+
 		'<td class="headerNavWidth15Txt">'+
-			'<a id ="accountingAnchorId" onclick="bakery.gotoPage(\'Accounting\');bakery.underlineTextOnFocus(this)">{{accountingLbl}}</a>'+
+			'<a id ="accountingAnchorId" onclick="bakery.gotoPage(\'Accounting\')" onMouseOver="bakery.underlineText(this);bakery.underlineTextOnFocus(this)" onMouseOut="bakery.underlineTextNone(this)">{{accountingLbl}}</a>'+
 		'</td>'+
 		'<td class="headerNavWidth15Txt">'+
-			'<a id ="brkEvenAnchorId" onclick="bakery.gotoPage(\'BreakEven\');bakery.underlineTextOnFocus(this)" >{{brkEvenLbl}}</a>'+
+			'<a id ="brkEvenAnchorId" onclick="bakery.gotoPage(\'BreakEven\')" onMouseOver="bakery.underlineText(this);bakery.underlineTextOnFocus(this)" onMouseOut="bakery.underlineTextNone(this)">{{brkEvenLbl}}</a>'+
 		'</td>	'+			 
 		'<td class="headerNavWidth15">'+				 
 		'</td>'+
@@ -107,12 +107,7 @@ bakery.page1='</br></br></br>'+
 	'<input type="radio" id="A" name="scenarios" value="A" checked>A.'+ 
 	'<input type="radio" id="B" name="scenarios" value="B">B.'+  
 	'<input type="radio" id="C" name="scenarios" value="C">C.'+
-'</td>'+
-'<td></td></tr>'+
-'<tr>'+
-'<td colspan="2">'+
-'</br>&nbsp;&nbsp;<p class="warningMsg" id="shopDetailsValidation">Please enter Shop Name</p>'+
-'</td>'+
+'</td><td></td></tr>'+
 '</table>';
 
 
@@ -527,11 +522,7 @@ bakery.page7='</br></br></br>'+
             '<li><img src="images/inventory/cake/butter@2x.png" height="100" /></li>'+
 			'<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>'+
             '<li><img src="images/inventory/cake/cake-pan@2x.png"  height="100" /></li>'+
-			'<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>'+
-			'<li><img src="images/bugis.svg"  height="100" /></li>'+
-			'<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>	'+
-			'<li><img src="images/service.png"  height="100" /></li>'+
-			'<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>	'+					
+			'<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>'+		 
          '</ul>'+
      '</div>'+
  '</div>'+

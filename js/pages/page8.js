@@ -5,6 +5,9 @@ bakery.setResultDataObject = function(){
 	
 }
 bakery.getProfitLossVal = function(){
+	
+	
+	var scenarioSelected=pageArray[0].getScenario();
 
 var fixedValExp=pageArray[3].getFixedExpVal();
 var costPrice=pageArray[4].getTotalInvExp();
@@ -16,21 +19,43 @@ var contriMarginVal=parseInt(pageArray[5].getContributionMargin());
 var random=Math.floor(Math.random() * (brkEvenCnt - 0 + 1)) + 0;
 
 
-var totalUnitSold=parseInt(brkEvenCnt)+parseInt(random);
+var totalUnitSoldProfit=parseInt(brkEvenCnt)+parseInt(random);
+var totalUnitSoldLoss=parseInt(brkEvenCnt)-parseInt(random);
 
-var randomForMultiply=Math.floor(Math.random() * (50 - 0 + 1)) + 0;
+//var randomForMultiply=Math.floor(Math.random() * (50 - 0 + 1)) + 0;
 //totalUnitSold=parseInt(totalUnitSold)*randomForMultiply;
 
 
-var profitMade=(parseInt(totalUnitSold)-parseInt(brkEvenCnt))*contriMarginVal;
-document.getElementById("resultDisplay").innerHTML="Congratulations you sold total of "+totalUnitSold+" Units And made profit of $"+profitMade+" in one month";
+var profitMade=(parseInt(totalUnitSoldProfit)-parseInt(brkEvenCnt))*contriMarginVal;
+var lossIncurred=(parseInt(brkEvenCnt)-parseInt(totalUnitSoldLoss))*contriMarginVal;
+if(scenarioSelected=='A')
+document.getElementById("resultDisplay").innerHTML="Congratulations you sold total of "+totalUnitSoldProfit+" Units ,And made profit of $"+profitMade+" in one month";
+else if(scenarioSelected=='B')
+	document.getElementById("resultDisplay").innerHTML="Sorry you could sell a total of "+totalUnitSoldLoss+" Units ,And incurred a loss of $"+lossIncurred+" in one month";
+else if(scenarioSelected=='C')
+	document.getElementById("resultDisplay").innerHTML="This is a break even situation you sold a total of "+brkEvenCnt +" Units ,Hence no profit and no loss";
 
+ var expense;
+ var revenue ; 
 
+if(scenarioSelected=='A')
+{
+     expense = (costPrice*totalUnitSoldProfit)+parseInt(fixedValExp); //  TOOD: nidhi to send expense value here
+	 revenue = parseInt(expense)+parseInt(profitMade); // TOOD: nidhi to send revenue value here
+}
+else if(scenarioSelected=='B')
+{
+	 expense = (costPrice*totalUnitSoldLoss)+parseInt(fixedValExp); //  TOOD: nidhi to send expense value here
+	 revenue = parseInt(expense)-parseInt(lossIncurred); // TOOD: nidhi to send revenue value here
+}
 
+else if(scenarioSelected=='C')
+{
+	 expense = (costPrice*totalUnitSoldLoss)+parseInt(fixedValExp); //  TOOD: nidhi to send expense value here
+	 revenue = expense; // TOOD: nidhi to send revenue value here
+}
 
-
-    var expense = (costPrice*totalUnitSold)+parseInt(fixedValExp); //  TOOD: nidhi to send expense value here
-	var revenue = parseInt(expense)+parseInt(profitMade); // TOOD: nidhi to send revenue value here
+	
 	
 	
 

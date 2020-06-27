@@ -9,9 +9,9 @@ bakery.selectIngridients = function(elmentSelected){
 	 cnt++;
 	});
 
-	if(cnt==5)
+	if(cnt==11)
 	{
-     document.getElementById("errMsgInventory").innerHTML="Cannot select more than 4 ingridients";
+     document.getElementById("errMsgInventory").innerHTML="Cannot select more than 10 ingridients";
 	 document.getElementById(elmentSelected).checked = false;
 	 document.getElementById("errMsgInventory").style.display='inline';
 	}
@@ -87,6 +87,8 @@ $('input[type=checkbox]').each(function () {
 	}
 	 
 	});	
+	
+	
 	if(actualTotalVal==enteredVal)
 	{
 	   document.getElementById("nxtButtonId").style.display="inline";

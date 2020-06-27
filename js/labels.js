@@ -28,7 +28,7 @@ bakery.translation={
 		"exp1":"Now, try calculating your Monthly Fixed Expenses below.",
 		"calcTxt":"Need a calculator?",
 		"exp2":"Your Selections were:",
-		"contributionmargin1":"Let's calculate your contribution margin for one unit",
+		"contributionmargin1":"Let's calculate your contribution margin per unit",
 		"sellingPrice":"Selling Price",
 		"variableExp":"Variable Expense for One Unit",
 		"contriMargin":"Contribution Margin",		
