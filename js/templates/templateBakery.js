@@ -182,9 +182,9 @@ bakery.page3='</br></br></br>'+
 			'<table class="tableRowSpacing" style="width:100%;height:100%">'+
 				'<tr>'+					
 					'<td class="boldHeaderFrutiger">'+
-						'{{hireStaffLbl}}</td>'+
+						'{{hireStaffLbl}}</br></td>'+
 				'</tr>'+
-				'<tr height = 20px></tr>'+	
+				'<tr > <td class="lightHeaderFrutiger" style="font-size:24px;"><div style="height : 80px">Now choose number of employees , they will help in cooking and serving </div></td></tr>'+	
 				'<tr>'+					
 					'<td>'+
 					   '<table class="staffDetailsTable">'+
@@ -575,12 +575,9 @@ bakery.showcalculator='<table><tr><td class="lightHeaderFrutiger" style="font-si
 	  
 bakery.showWaitingPopup='<div id="myModal" class="modal">'+  
   '<div class="modal-content">'+
-    '<span class="close"><img src="images/peopleWalk.gif" style="height:80%;width:100%"/></span>'+
-   ' <span><img src="images/loding_icon.gif" style="height:20%;width:40%;padding-left:300px"/></span>'+
+    '<span class="close"><video width="100%" height="100%" autoplay><source src="images/movingCust.mp4" type="video/mp4"></video></span>'+
+
  ' </div>'+
 '</div>'
 
 	
-
-
-

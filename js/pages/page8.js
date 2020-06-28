@@ -29,9 +29,9 @@ var totalUnitSoldLoss=parseInt(brkEvenCnt)-parseInt(random);
 var profitMade=(parseInt(totalUnitSoldProfit)-parseInt(brkEvenCnt))*contriMarginVal;
 var lossIncurred=(parseInt(brkEvenCnt)-parseInt(totalUnitSoldLoss))*contriMarginVal;
 if(scenarioSelected=='A')
-document.getElementById("resultDisplay").innerHTML="Congratulations you sold total of "+totalUnitSoldProfit+" Units ,And made profit of $"+profitMade+" in one month";
+document.getElementById("resultDisplay").innerHTML="Congratulations you sold total of "+totalUnitSoldProfit+" Units , And made a profit of $"+profitMade+" in one month";
 else if(scenarioSelected=='B')
-	document.getElementById("resultDisplay").innerHTML="Sorry you could sell a total of "+totalUnitSoldLoss+" Units ,And incurred a loss of $"+lossIncurred+" in one month";
+	document.getElementById("resultDisplay").innerHTML="Sorry you could sell a total of "+totalUnitSoldLoss+" Units , And incurred a loss of $"+lossIncurred+" in one month";
 else if(scenarioSelected=='C')
 	document.getElementById("resultDisplay").innerHTML="This is a break even situation you sold a total of "+brkEvenCnt +" Units ,Hence no profit and no loss";
 

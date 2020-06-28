@@ -415,7 +415,7 @@ if(retVal)
 
 			document.getElementById("bakeryBase").innerHTML=bakeryShowLoadingPopup(bakery.pages);
 	
-			setTimeout(bakery.loadProfitLossResult, 10000);
+			setTimeout(bakery.loadProfitLossResult, 3000);
 		
 		}
 	}
