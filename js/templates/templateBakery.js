@@ -566,8 +566,10 @@ bakery.showcalculator='<table><tr><td class="lightHeaderFrutiger" style="font-si
 			'           <input id="calcButton" class="button gray" type="button" value="0" onclick="bakery.addToDisplay(0)">'+
 			'           <input id="calcButton" class="button orange" type="button" value="=" onclick="bakery.addToDisplay(\'=\')">'+
 			'           <input id="calcButton" class="button pink" type="button" value="-" onclick="bakery.addToDisplay(\'-\')">'+
+			'           <input id="calcButton" class="button gray" type="button" value="&#x2717; " onclick="bakery.showCalculator()">'+
 			'           <input id="calcButton" class="button gray" type="button" value="." onclick="bakery.addToDisplay(\'.\')">'+
 			'			<input id="calcButton" class="button gray" type="button" value="Copy" style="width:50px" onclick="bakery.copyTheValue()">'+
+			'			<input id="calcButton" class="button gray" type="button" value="&larr;" style="width:50px" onclick="bakery.addToDisplay(\'DEL\')">'+
 
 			  '</span>'+
 			'</div>'+

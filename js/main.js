@@ -574,10 +574,7 @@ if(navCnt==3)
 
 
 
-bakery.showCalculator=function(){
-var popup = document.getElementById("myPopup");
-  popup.classList.toggle("show");
-}
+
 bakery.changeShopNameInImage=function(){
  document.getElementById('bakeryNameLblDynamic').innerHTML=document.getElementById('shopNameId').value; 
 }
@@ -633,9 +630,13 @@ bakery.highlightHeader=function(breadCrum)
 
 bakery.showCalculator=function()
 {
+	
   var popup = document.getElementById("myPopup");
   popup.classList.toggle("show");
+  document.getElementById('numberInput').value = '';
 }
+
+
 
 $(document).ready(function() {
 
