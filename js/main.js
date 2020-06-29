@@ -66,6 +66,8 @@ document.getElementById("nxtbckBtnPTag").style.textAlign ="right";
  
      $('body').css('zoom', '100%');
   }
+  
+  bakery.underlineTextOnFocus(document.getElementById("shopAnchorId"));
 
 	
 });
@@ -170,6 +172,8 @@ if(retVal)
 			document.getElementById("showCalculator").innerHTML='';
 			bakery.changeShopNameInImage();
 			
+			bakery.underlineTextOnFocus(document.getElementById("shopAnchorId"));
+			
 			
 		
 		}
@@ -188,7 +192,8 @@ if(retVal)
 			bakery['hidePrevNextButton']();
 			document.getElementById("showCalculator").innerHTML='';
 			//document.getElementById("incrementalImages").innerHTML='<img src="images/cafe.svg" style="width:400px;height:150px"></img><img src="images/cafe.svg" style="width:400px;height:150px"></img>';
-		 
+			debugger;
+			bakery.underlineTextOnFocus(document.getElementById("locationAnchorId"));
 			
 		}
 		
@@ -216,6 +221,7 @@ if(retVal)
 			
 			bakery['hidePrevNextButton']();
 			document.getElementById("showCalculator").innerHTML='';
+			bakery.underlineTextOnFocus(document.getElementById("staffAnchorId"));
 		}
 		
 		else if(breadCrum=='Expenditure')
@@ -254,6 +260,7 @@ if(retVal)
 			
 			bakery['hidePrevNextButton']();			
 			bakery.checkResultExpValueExp();
+			bakery.underlineTextOnFocus(document.getElementById("expAnchorId"));
 				
 		}
 		
@@ -290,6 +297,7 @@ if(retVal)
 			document.getElementById("showCalculator").innerHTML=bakeryShowCalc(bakery.pages);
 			
 			bakery.checkResultExpValueInv();
+			bakery.underlineTextOnFocus(document.getElementById("inventoryAnchorId"));
 			
 			
 		}
@@ -338,6 +346,7 @@ if(retVal)
 			document.getElementById("selectionsMadeVariable").innerHTML=empImgString;
 			
 			  //document.getElementById('bakeryNameLblDynamic').innerHTML=pageArray[0].getShopName();
+			  bakery.underlineTextOnFocus(document.getElementById("accountingAnchorId"));
 		}
 		
 		else if(breadCrum=='BreakEven')
@@ -403,6 +412,7 @@ if(retVal)
 			// document.getElementById('populatescrollingImagesIndex').innerHTML=scrollingImages;
             
 			 bakery.scrollTheImages();
+			 bakery.underlineTextOnFocus(document.getElementById("brkEvenAnchorId"));
 			 
 			 
 		}
@@ -416,6 +426,8 @@ if(retVal)
 			document.getElementById("bakeryBase").innerHTML=bakeryShowLoadingPopup(bakery.pages);
 	
 			setTimeout(bakery.loadProfitLossResult, 5000);
+			
+			bakery.removeUnderlineTextOnFocus();
 		
 		}
 	}
