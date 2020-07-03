@@ -25,6 +25,18 @@ bakery.restoreAccountingDataObject = function(){
 
 bakery.evaluateContriExp= function(){
 var enteredVal=document.getElementById("contriMarginTxt").value;
+if( parseInt(document.getElementById("sellingPriceTxt").value) < parseInt(document.getElementById("variableCostTxt").value))
+{
+	document.getElementById('spValidation').innerHTML='Selling price should be greater than Variable Expense';
+	document.getElementById("spValidation").classList.add('fixedEvalWrong');
+	return;
+}
+
+else if( parseInt(document.getElementById("sellingPriceTxt").value) > parseInt(document.getElementById("variableCostTxt").value))
+{
+	document.getElementById('spValidation').innerHTML='';
+	
+}
 var actualTotalVal= parseInt(document.getElementById("sellingPriceTxt").value)-parseInt(document.getElementById("variableCostTxt").value);
 
 	if(actualTotalVal==enteredVal)

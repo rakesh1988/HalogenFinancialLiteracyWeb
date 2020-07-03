@@ -149,22 +149,22 @@ var chkBoxImageAndPriceBakery = [
 ];
 
 var chkBoxImageAndPriceCafe = [
-    ['images/inventory/coffee/bowl@2x.png', '$6'],	
-	['images/inventory/coffee/coffee-cup@2x.png', '$10'],	
-	['images/inventory/coffee/coffee-jug@2x.png', '$7'],
-	['images/inventory/coffee/coffee-machine@2x.png', '$10'],
-	['images/inventory/coffee/serve-board@2x.png', '$50'],
-	['images/inventory/coffee/cup@2x.png', '$10'],
-	['images/inventory/coffee/food-packaging@2x.png', '$20'],
-	['images/inventory/coffee/take-out-cup@2x.png', '$8'],
-	['images/inventory/coffee/tall-glass@2x.png', '$2'],
-	['images/inventory/coffee/tea-press@2x.png', '$2'],	
-	['images/inventory/coffee/tea_spoon@2x.png', '$10'],	
-	['images/inventory/coffee/sugar@2x.png', '$1'],
+    ['images/inventory/coffee/bowl@2x.png', '$2'],	
+	['images/inventory/coffee/coffee-cup@2x.png', '$5'],	
+	['images/inventory/coffee/coffee-jug@2x.png', '$10'],
+	['images/inventory/coffee/coffee-machine@2x.png', '$300'],
+	['images/inventory/coffee/serve-board@2x.png', '$6'],
+	['images/inventory/coffee/cup@2x.png', '$2'],
+	['images/inventory/coffee/food-packaging@2x.png', '$3'],
+	['images/inventory/coffee/take-out-cup@2x.png', '$5'],
+	['images/inventory/coffee/tall-glass@2x.png', '$6'],
+	['images/inventory/coffee/tea-press@2x.png', '$10'],	
+	['images/inventory/coffee/tea_spoon@2x.png', '$3'],	
+	['images/inventory/coffee/sugar@2x.png', '$2'],
 	['images/inventory/coffee/milk@2x.png', '$6'],	
-	['images/inventory/coffee/coffee-powder@2x.png', '$2']  ,
-	['images/inventory/coffee/coffee-bean@2x.png', '$2'],
-	['images/inventory/coffee/cinammon@2x.png', '$7'],
+	['images/inventory/coffee/coffee-powder@2x.png', '$6']  ,
+	['images/inventory/coffee/coffee-bean@2x.png', '$10'],
+	['images/inventory/coffee/cinammon@2x.png', '$3'],
    
     
 ];
