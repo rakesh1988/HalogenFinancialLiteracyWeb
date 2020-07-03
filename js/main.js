@@ -380,17 +380,17 @@ if(retVal)
 			
 			 // document.getElementById('bakeryNameLblDynamic').innerHTML=pageArray[0].getShopName();
 			 var scrollingImages="";
-			 scrollingImages=scrollingImages+'<li><img src="'+'images/cafe.svg '+' height="100" /></li>'+
+			 scrollingImages=scrollingImages+'<li><img src="'+'images/cafe.svg '+'" style="height:100px" /></li>'+
 			'<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>';
 			
-			scrollingImages=scrollingImages+'<li><img src="'+factsDetails[pageArray[1].getLocationImgInx()][0]+' height="100" /></li>'+
+			scrollingImages=scrollingImages+'<li><img src="'+factsDetails[pageArray[1].getLocationImgInx()][0]+'" style="height:100px" /></li>'+
 			'<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>';
 			
 			
 			var emp1Qty=pageArray[2].getEmpQty1();
 			for(var cnter=0;cnter<emp1Qty;cnter++)
 			{
-			 scrollingImages= scrollingImages+'<li><img src="'+staff[0][3]+' height="100" /></li>'+
+			 scrollingImages= scrollingImages+'<li><img src="'+staff[0][3]+'" style="height:100px" /></li>'+
 			'<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>';
 			}
 			
@@ -403,13 +403,13 @@ if(retVal)
 					for (i = 0; i < selectedChkBox.length; i++) 
 					{						
 					  srcVal=chkBoxImageAndPrice[parseInt(selectedChkBox[i].substr(2,3))-1][0];
-					  scrollingImages =scrollingImages+'<li><img src="'+srcVal+' height="100" /></li>'+
+					  scrollingImages =scrollingImages+'<li><img src="'+srcVal+'" style="height:100px" /></li>'+
 					  '<li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</li>';
 					  
 					}	
 				}
 			
-			// document.getElementById('populatescrollingImagesIndex').innerHTML=scrollingImages;
+			 document.getElementById('populatescrollingImagesIndex').innerHTML=scrollingImages;
             
 			 bakery.scrollTheImages();
 			 bakery.underlineTextOnFocus(document.getElementById("brkEvenAnchorId"));
