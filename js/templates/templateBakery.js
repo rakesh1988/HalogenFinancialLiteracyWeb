@@ -516,7 +516,7 @@ bakery.page7='</br></br></br>'+
 	'</tr>'+	
 	'<tr>'+
 	  '<td colspan="5">'+
-	  '<div id="scroller" style="width: 900px; height: 200px; margin: 0 auto;">'+
+	  '<div id="scroller" style="width: 1100px; height: 200px; margin: 0 auto;">'+
       ' <div class="innerScrollArea">'+
          '<ul id="populatescrollingImagesIndex">'+
 			
