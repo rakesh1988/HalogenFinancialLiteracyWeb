@@ -1,11 +1,31 @@
-.headerNavWidth15Txt {
+.headerNavWidth10Txt {
     text-align: left;
     font-family: Frutiger45Light;
     font-weight: bold;
     font-size: 16px;   
     color:#797979; 
     text-decoration : none;
-	width: 15%;
+	width: 10%;
+}
+
+.headerNavWidth12Txt {
+    text-align: left;
+    font-family: Frutiger45Light;
+    font-weight: bold;
+    font-size: 16px;   
+    color:#797979; 
+    text-decoration : none;
+	width: 12%;
+}
+
+.headerNavWidth8Txt {
+    text-align: left;
+    font-family: Frutiger45Light;
+    font-weight: bold;
+    font-size: 16px;   
+    color:#797979; 
+    text-decoration : none;
+	width: 8%;
 }
 
 a{

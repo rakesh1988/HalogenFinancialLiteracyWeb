@@ -3,32 +3,35 @@ bakery.bakeryHeader =
 	' <tr>'+
 		' <td style="height: 15%;" colspan="9">&nbsp;</td>'+
 	'</tr>'+
-	'<tr>'+
-		' <td class="headerNavWidth15">'+
-		' </td>'+
-		'<td  class="headerNavWidth15Txt"><a id ="shopAnchorId" onclick="bakery.gotoPage(\'Welcome\');bakery.underlineTextOnFocus(this)">'+
+	'<tr>'+		
+		'<td  class="headerNavWidth10Txt"><a id ="shopAnchorId" onclick="bakery.gotoPage(\'Welcome\');bakery.underlineTextOnFocus(this)">'+
 				 '{{shopTypeLbl}}</a>'+
 		'</td>'+
-		'<td class="headerNavWidth15Txt">'+
+		'<td class="headerNavWidth10Txt">'+
 			'<a id ="locationAnchorId" onclick="bakery.gotoPage(\'Location\');bakery.underlineTextOnFocus(this)">{{locationLbl}}</a>'+
 		'</td>'+
-		'<td  class="headerNavWidth10Txt">'+
+		'<td  class="headerNavWidth8Txt">'+
 			'<a id ="staffAnchorId" onclick="bakery.gotoPage(\'Staff\');bakery.underlineTextOnFocus(this)">{{staffLbl}}</a>'+
 		'</td>'+
-		'<td class="headerNavWidth15Txt">'+
+		'<td class="headerNavWidth12Txt">'+
 			'<a id ="expAnchorId" onclick="bakery.gotoPage(\'Expenditure\');bakery.underlineTextOnFocus(this)" >{{ExpLbl}}</a>'+
 		'</td>'+
-		'<td class="headerNavWidth15Txt">'+
+		'<td class="headerNavWidth10Txt">'+
 			'<a id ="inventoryAnchorId" onclick="bakery.gotoPage(\'Inventory\');bakery.underlineTextOnFocus(this)">{{inventoryLbl}}</a>'+
 		'</td>'+
-		'<td class="headerNavWidth15Txt">'+
+		'<td class="headerNavWidth10Txt">'+
 			'<a id ="accountingAnchorId" onclick="bakery.gotoPage(\'Accounting\');bakery.underlineTextOnFocus(this)">{{accountingLbl}}</a>'+
 		'</td>'+
-		'<td class="headerNavWidth15Txt">'+
+		'<td class="headerNavWidth10Txt">'+
 			'<a id ="brkEvenAnchorId" onclick="bakery.gotoPage(\'BreakEven\');bakery.underlineTextOnFocus(this)" >{{brkEvenLbl}}</a>'+
-		'</td>	'+			 
-		'<td class="headerNavWidth15">'+				 
-		'</td>'+
+		'</td>	'+
+		'<td class="headerNavWidth10Txt">'+
+			'<a id ="aboutAnchorId" onclick="bakery.loadStaticPage(\'About\');bakery.underlineTextOnFocus(this)" >About Us</a>'+
+		'</td>	'+	
+		'<td class="headerNavWidth10Txt">'+
+			'<a id ="infoAnchorId" onclick="bakery.loadStaticPage(\'Info\');bakery.underlineTextOnFocus(this)" >More Info</a>'+
+		'</td>	'+			
+		
 	'</tr>'+
  '</table>'
 
@@ -530,6 +533,10 @@ bakery.page8='<audio controls autoplay style="display:none"><source src="audio/c
 '<div style="height:700px; width:700px; ">'+
     '<canvas id="Chart"></canvas>'+
 '</div>';
+
+bakery.page9='<p id="page9Text" class="inputTextFont">this is about page</p>';
+
+bakery.page10='<p id="page10Text" class="inputTextFont">this is more info page</p>';
 
 bakery.showcalculator='<table><tr><td class="lightHeaderFrutiger" style="font-size:12px;padding-left:0px;padding-top:130px">{{calcLbl}}<img src="images/calculator.svg" onclick="bakery.showCalculator()" id="calcImg"/></td></tr>'+
 	  '<tr><td><div class="popup">'+

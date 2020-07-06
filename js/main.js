@@ -12,6 +12,8 @@ var bakeryTemplatePage5_Cafe;
 var bakeryTemplatePage6;
 var bakeryTemplatePage7;
 var bakeryTemplatePage8;
+var bakeryTemplatePage9;
+var bakeryTemplatePage10;
 var bakeryShowLoadingPopup;
 var bakeryShowCalc;
 var currentPage="";
@@ -96,7 +98,9 @@ try{
 	bakeryTemplatePage5_Cafe=     Template7.compile(bakery.page5_Cafe);
 	bakeryTemplatePage6=     Template7.compile(bakery.page6);	
 	bakeryTemplatePage7=     Template7.compile(bakery.page7);
-	bakeryTemplatePage8=     Template7.compile(bakery.page8);	
+	bakeryTemplatePage8=     Template7.compile(bakery.page8);
+	bakeryTemplatePage9=     Template7.compile(bakery.page9);
+	bakeryTemplatePage10=     Template7.compile(bakery.page10);	
 	bakeryShowLoadingPopup	=Template7.compile(bakery.showWaitingPopup);
 	bakeryShowCalc     =     Template7.compile(bakery.showcalculator);	
 	
@@ -120,6 +124,8 @@ bakery.initializeUbsPages = function() {
 	bakery.pages=$.extend(bakery.pages,bakery.page6Config);
 	bakery.pages=$.extend(bakery.pages,bakery.page7Config);
 	bakery.pages=$.extend(bakery.pages,bakery.page8Config);
+	bakery.pages=$.extend(bakery.pages,bakery.page9Config);
+	bakery.pages=$.extend(bakery.pages,bakery.page10Config);
 }
 
 bakery.translateScenarios=function(){
@@ -147,6 +153,45 @@ bakery.getTranslation = function(key) {
   }
 
   return "";
+}
+
+bakery.loadStaticPage = function(staticPageId) {
+	
+	if('About'==staticPageId)		
+		{
+			
+			
+			var functionToSetData='set'+nextPrevNav[curPos]+'DataObject';
+			
+			bakery[functionToSetData]();
+
+			curPos=8;
+			navCnt=8;			
+
+			document.getElementById("bakeryBase").innerHTML=bakeryTemplatePage9(bakery.pages);
+			
+			bakery.underlineTextOnFocus(document.getElementById("aboutAnchorId"));
+		
+		}
+	else if('Info'==staticPageId)
+		{
+			var functionToSetData='set'+nextPrevNav[curPos]+'DataObject';
+			
+			bakery[functionToSetData]();
+
+			curPos=9;
+			navCnt=9;			
+
+			document.getElementById("bakeryBase").innerHTML=bakeryTemplatePage10(bakery.pages);
+			bakery.underlineTextOnFocus(document.getElementById("infoAnchorId"));
+			
+			
+			
+			bakery.removeUnderlineTextOnFocus();
+		
+		}
+		
+	
 }
 
 bakery.gotoPage = function(breadCrum) {
@@ -437,6 +482,8 @@ if(retVal)
 			bakery.removeUnderlineTextOnFocus();
 		
 		}
+		
+		
 	}
 	
 	else
@@ -729,6 +776,14 @@ bakery.removeUnderlineTextOnFocus= function(){
 	 $(ref).css("color", "#797979");
 	 
 	 ref=document.getElementById("brkEvenAnchorId");
+	 $(ref).css("border-bottom", "none");
+	 $(ref).css("color", "#797979");
+	 
+	 ref=document.getElementById("aboutAnchorId");
+	 $(ref).css("border-bottom", "none");
+	 $(ref).css("color", "#797979");
+	 
+	 ref=document.getElementById("infoAnchorId");
 	 $(ref).css("border-bottom", "none");
 	 $(ref).css("color", "#797979");
 
