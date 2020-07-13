@@ -794,6 +794,20 @@ bakery.removeUnderlineTextOnFocus= function(){
 
 }
 
+bakery.displayOverlay= function(){
+
+document.getElementById("overlay").style.display="inline";
+
+
+}
+
+bakery.hideOverlay= function(){
+
+document.getElementById("overlay").style.display="none";
+
+
+}
+
 
 
 

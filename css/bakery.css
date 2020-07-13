@@ -40,6 +40,16 @@ cursor: pointer;
     text-decoration : none;
 	width: 10%;
 }
+
+.headerNavWidth20Txt {
+    text-align: left;
+    font-family: Frutiger45Light;
+    font-weight: bold;
+    font-size: 16px;   
+    color:#797979; 
+    text-decoration : none;
+	width: 15%;
+}
 .headerNavWidth15 {
     width: 5%;
 }
@@ -555,4 +565,52 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 input[type=number] {
   -moz-appearance: textfield;
+}
+
+#screen_viewer .hotspot {
+    border: 1px solid #2a9fd8;
+    background: rgba(0,173,255,.54);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-indent: -9999px;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+    opacity: 0;
+    z-index: 2;
+    cursor: pointer;
+}
+.box{
+        width: 30%;
+        height: 80%;            
+        position: absolute;
+        top: 4000;
+        left: 0;
+        opacity: 0.8;  /* for demo purpose  */
+    }
+.stack-top{
+    z-index: 9;
+    margin-left: 170px;
+    margin-top: 90px;
+	border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+	background:rgba(255,255,255,1);
+	opacity: 1;
+
+    }
+.overlayClose{
+    padding-left:420px;
+	padding-top:10px;
+}
+
+body{
+  position: relative;
 }

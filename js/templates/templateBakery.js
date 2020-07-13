@@ -3,7 +3,10 @@ bakery.bakeryHeader =
 	' <tr>'+
 		' <td style="height: 15%;" colspan="9">&nbsp;</td>'+
 	'</tr>'+
-	'<tr>'+		
+	'<tr>'+	
+		'<td class="headerNavWidth20Txt">'+
+			'<a class="hotspot" style="top: 20px; left: 35px; width: 32px; height: 34px;" onClick="bakery.displayOverlay()">abcde</a>'+			
+		'</td>	'+		
 		'<td  class="headerNavWidth10Txt"><a id ="shopAnchorId" onclick="bakery.gotoPage(\'Welcome\');bakery.underlineTextOnFocus(this)">'+
 				 '{{shopTypeLbl}}</a>'+
 		'</td>'+
@@ -24,13 +27,7 @@ bakery.bakeryHeader =
 		'</td>'+
 		'<td class="headerNavWidth10Txt">'+
 			'<a id ="brkEvenAnchorId" onclick="bakery.gotoPage(\'BreakEven\');bakery.underlineTextOnFocus(this)" >{{brkEvenLbl}}</a>'+
-		'</td>	'+
-		'<td class="headerNavWidth10Txt">'+
-			'<a id ="aboutAnchorId" onclick="bakery.loadStaticPage(\'About\');bakery.underlineTextOnFocus(this)" >About Us</a>'+
-		'</td>	'+	
-		'<td class="headerNavWidth10Txt">'+
-			'<a id ="infoAnchorId" onclick="bakery.loadStaticPage(\'Info\');bakery.underlineTextOnFocus(this)" >More Info</a>'+
-		'</td>	'+			
+		'</td>	'+		
 		
 	'</tr>'+
  '</table>'
@@ -268,7 +265,7 @@ bakery.page4='</br></br></br>'+
 	  '<td class="boldHeaderFrutiger" style="font-size:16px;" colspan="2">{{mnthlyRentalLbl}}</td>'+
 	  '<td class="boldHeaderFrutiger" style="font-size:16px;" colspan="2">{{mnthlyUtilityLbl}}</td>'+
 	  '<td class="boldHeaderFrutiger" style="font-size:16px;" colspan="2">{{mnthlySalaryLbl}}</td>'+
-	   '<td class="boldHeaderFrutiger" style="font-size:16px;">{{mnthlyFixedLbl}}  &nbsp;&nbsp;<div  class="tooltip"><img src="images/eye.png"  style="width:20px"><span class="tooltiptext">Any expense that does not change from period to period,such as mortgage or rent payments, utility bills, and loan payments</span></img></div></td>'+
+	   '<td class="boldHeaderFrutiger" style="font-size:16px;">{{mnthlyFixedLbl}}  &nbsp;&nbsp;<div  class="tooltip"><img src="images/icon-info.png"  style="width:20px"><span class="tooltiptext">Any expense that does not change from period to period,such as mortgage or rent payments, utility bills, and loan payments</span></img></div></td>'+
 	'</tr><tr style="height:10px"></tr>'+
 	'<tr style="height:5px">'+	
 	  '<td class="boldHeaderFrutiger" style="font-size:16px;"><input type="text" class="inputTextFont expTextBoxCls" style="font-color:black;"  id="mnthlyRen" readonly></input></td>'+
@@ -448,7 +445,7 @@ bakery.page6='</br></br></br>'+
 	'<tr>'+
 	  '<td class="boldHeaderFrutiger" style="font-size:16px;" colspan="2">{{sellingPriceLbl}}</td>'+
 	  '<td class="boldHeaderFrutiger" style="font-size:16px;" colspan="2">{{variableExpLbl}}</td>'+	  
-	   '<td class="boldHeaderFrutiger" style="font-size:16px;">{{contriMarginLbl}}  &nbsp;&nbsp;<div  class="tooltip"><img src="images/eye.png"  style="width:20px"><span class="tooltiptext" style="width: 300px;">Contribution margin, or dollar contribution per unit, is the selling price per unit minus the variable cost per unit. "Contribution" represents the portion of sales revenue that is not consumed by variable costs and so contributes to the coverage of fixed costs.</span></img></div></td>'+
+	   '<td class="boldHeaderFrutiger" style="font-size:16px;">{{contriMarginLbl}}  &nbsp;&nbsp;<div  class="tooltip"><img src="images/icon-info.png"  style="width:20px"><span class="tooltiptext" style="width: 300px;">Contribution margin, or dollar contribution per unit, is the selling price per unit minus the variable cost per unit. "Contribution" represents the portion of sales revenue that is not consumed by variable costs and so contributes to the coverage of fixed costs.</span></img></div></td>'+
 	'</tr><tr style="height:10px"></tr>'+
 	'<tr style="height:5px">'+	
 	  '<td class="boldHeaderFrutiger" style="font-size:16px;">$&nbsp;<input type="number" class="inputTextFont expTextBoxCls" style="font-color:black;" id="sellingPriceTxt" onChange="bakery.hideNextButtonContriPage()"></input>'+
@@ -492,7 +489,7 @@ bakery.page7='</br></br></br>'+
 	'<tr>'+
 	  '<td class="boldHeaderFrutiger" style="font-size:16px;" colspan="2">{{fixedExpLbl}}</td>'+
 	  '<td class="boldHeaderFrutiger" style="font-size:16px;" colspan="2">{{contriMarginLbl}}</td>'+	  
-	   '<td class="boldHeaderFrutiger" style="font-size:16px;">{{brkEvenUnitLbl}}  &nbsp;&nbsp;<div  class="tooltip"><img src="images/eye.png"  style="width:20px"><span class="tooltiptext" style="width: 300px;">The breakeven number of units, as the name suggests, is the number of units of goods or services that a company needs to sell in order to break even, or in other words, to suffer no financial losses but also make no profit.</span></img></div></td>'+
+	   '<td class="boldHeaderFrutiger" style="font-size:16px;">{{brkEvenUnitLbl}}  &nbsp;&nbsp;<div  class="tooltip"><img src="images/icon-info.png"  style="width:20px"><span class="tooltiptext" style="width: 300px;">The breakeven number of units, as the name suggests, is the number of units of goods or services that a company needs to sell in order to break even, or in other words, to suffer no financial losses but also make no profit.</span></img></div></td>'+
 	'</tr><tr style="height:10px"></tr>'+
 	'<tr style="height:5px">'+	
 	  '<td class="boldHeaderFrutiger" style="font-size:16px;">$&nbsp;<input type="text" class="inputTextFont expTextBoxCls" style="font-color:black;" id="fxdPriceTxt" onChange="bakery.hideNextButtonContriPage()" readonly></input>'+
@@ -570,6 +567,13 @@ bakery.showcalculator='<table><tr><td class="lightHeaderFrutiger" style="font-si
 bakery.showWaitingPopup='<div id="myModal" class="modal">'+  
   '<div class="modal-content">'+
     '<span class="close"><video width="100%" height="100%" autoplay><source src="images/movingCust.mp4" type="video/mp4"></video></span>'+
+
+ ' </div>'+
+'</div>'
+
+bakery.moreInfoPopup='<div id="myModalmoreInfo" class="modal">'+  
+  '<div class="modal-content">'+
+    '<span class="close">dfgdfgdfg</span>'+
 
  ' </div>'+
 '</div>'
