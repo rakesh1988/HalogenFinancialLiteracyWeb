@@ -171,6 +171,9 @@ bakery.loadStaticPage = function(staticPageId) {
 			document.getElementById("bakeryBase").innerHTML=bakeryTemplatePage9(bakery.pages);
 			
 			bakery.underlineTextOnFocus(document.getElementById("aboutAnchorId"));
+			document.getElementById("nxtButtonId").style.display="none";
+			document.getElementById("backButtonId").style.display="none";
+			document.getElementById("showCalculator").style.display="none";
 		
 		}
 	else if('Info'==staticPageId)
@@ -188,6 +191,9 @@ bakery.loadStaticPage = function(staticPageId) {
 			
 			
 			bakery.removeUnderlineTextOnFocus();
+			document.getElementById("nxtButtonId").style.display="none";
+			document.getElementById("backButtonId").style.display="none";
+			document.getElementById("showCalculator").style.display="none";
 		
 		}
 		
@@ -280,8 +286,8 @@ if(retVal)
 			
 			
 			document.getElementById("mnthlyRen").value= pageArray[1].getExpRental()+document.getElementById("mnthlyRen").value;	
-			document.getElementById("mnthlyUtility").value= pageArray[1].getExpUtility()+document.getElementById("mnthlyUtility").value ;	
-			document.getElementById("mnthlySalary").value='$'+empSalary+document.getElementById("mnthlySalary").value;	
+			document.getElementById("mnthlyUtility").value=pageArray[1].getExpUtility()+document.getElementById("mnthlyUtility").value ;	
+			document.getElementById("mnthlySalary").value='$ '+empSalary+document.getElementById("mnthlySalary").value;	
 			
 			
 			
@@ -493,8 +499,6 @@ if(retVal)
 }
 
 bakery.loadProfitLossResult = function() {
-	
-	
 			
 			
 			document.getElementById("bakeryBase").innerHTML=bakeryTemplatePage8(bakery.pages);

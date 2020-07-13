@@ -9,7 +9,7 @@ bakery.selectIngridients = function(elmentSelected){
 	 cnt++;
 	});
 
-	if(cnt==11)
+	if(cnt==13)
 	{
      document.getElementById("errMsgInventory").innerHTML="Cannot select more than 10 ingridients";
 	 document.getElementById(elmentSelected).checked = false;
@@ -73,6 +73,32 @@ bakery.evaluateInvExp= function(){
 var enteredVal=document.getElementById("totalInvExpTxt").value;
 var cntCheckedBox=1;
 var actualTotalVal=0;
+var cnterChkBox=0;
+var products=[];
+var ingridients=[];
+$('input[type=checkbox]').each(function () {
+	
+	if(cnterChkBox<8 && this.checked)
+	{   products.push(this.id)
+		
+	}
+	if(cnterChkBox>=8 && this.checked)
+	{
+		ingridients.push(this.id)
+		
+	}
+	cnterChkBox++;
+});	
+
+
+	if(ingridients.length<5 || products.length<5)
+	{
+	 document.getElementById("errMsgInventory").innerHTML="Please select atleast 5 products and 5 ingridients";
+	 
+	 document.getElementById("errMsgInventory").style.display='inline';
+		return;
+	}
+
 $('input[type=checkbox]').each(function () {
 
 	if(this.checked)
@@ -135,7 +161,7 @@ var chkBoxImageAndPriceBakery = [
 	['images/inventory/cake/stand-mixer@2x.png', '$50'],
 	['images/inventory/cake/muffin-pan@2x.png', '$10'],
 	['images/inventory/cake/rolling-pin@2x.png', '$20'],
-	['images/inventory/cake/cocoa@2x.png', '$8'],
+	['images/inventory/cake/serve-board@2x.png', '$8'],
 	['images/inventory/cake/eggs@2x.png', '$2'],
 	['images/inventory/cake/flour@2x.png', '$2'],	
 	['images/inventory/cake/measure-flask@2x.png', '$10'],	

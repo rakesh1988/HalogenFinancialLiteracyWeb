@@ -100,9 +100,9 @@ document.getElementById("employeeValidation").style.display="none";
 
 }
 var staff = [
-    ['$2800', 'Design and crafts </br> innovative pastries','Pastry Chef','images/chef.svg'],
-	['$3100', 'Baking cake specialist','Baking Chef','images/emp2.png'],
-    ['$5000', 'Baking and Designing </br> cake specialist','Designing Chef','images/emp3.svg'],
+    ['$ 2800', 'Design and crafts </br> innovative pastries','Pastry Chef','images/chef.svg'],
+	['$ 3100', 'Baking cake specialist','Baking Chef','images/emp2.png'],
+    ['$ 5000', 'Baking and Designing </br> cake specialist','Designing Chef','images/emp3.svg'],
     
 ];
 
