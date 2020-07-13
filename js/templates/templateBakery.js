@@ -5,7 +5,7 @@ bakery.bakeryHeader =
 	'</tr>'+
 	'<tr>'+	
 		'<td class="headerNavWidth20Txt">'+
-			'<a class="hotspot" style="top: 20px; left: 35px; width: 32px; height: 34px;" onClick="bakery.displayOverlay()">abcde</a>'+			
+			'<a class="hotspot" style="top: 20px; left: 35px; width: 32px; height: 34px;" onClick="bakery.displayOverlay()"><img src="images/icon-hamburger.png"/></a>'+			
 		'</td>	'+		
 		'<td  class="headerNavWidth10Txt"><a id ="shopAnchorId" onclick="bakery.gotoPage(\'Welcome\');bakery.underlineTextOnFocus(this)">'+
 				 '{{shopTypeLbl}}</a>'+
