@@ -4,14 +4,17 @@ bakery.selectIngridients = function(elmentSelected){
 	bakery.hideNextButtonInvPage();
 
 	var cnt=0;
+	var topIngridientsCnter=0;
+	
 	$('input[type=checkbox]').each(function () {
+	
 	if(this.checked)
 	 cnt++;
 	});
 
-	if(cnt==13)
+	if(cnt==15)
 	{
-     document.getElementById("errMsgInventory").innerHTML="Cannot select more than 10 ingridients";
+     document.getElementById("errMsgInventory").innerHTML="Cannot select more than 6 ingridients";
 	 document.getElementById(elmentSelected).checked = false;
 	 document.getElementById("errMsgInventory").style.display='inline';
 	}
@@ -91,9 +94,9 @@ $('input[type=checkbox]').each(function () {
 });	
 
 
-	if(ingridients.length<5 || products.length<5)
+	if(ingridients.length<4 )
 	{
-	 document.getElementById("errMsgInventory").innerHTML="Please select atleast 5 products and 5 ingridients";
+	 document.getElementById("errMsgInventory").innerHTML="Please select atleast 4 ingridients";
 	 
 	 document.getElementById("errMsgInventory").style.display='inline';
 		return;
@@ -104,7 +107,9 @@ $('input[type=checkbox]').each(function () {
 	if(this.checked)
 	{
 	var selectedItmPrice=chkBoxImageAndPrice[cntCheckedBox-1][1];
-	  actualTotalVal=parseInt(actualTotalVal)+parseInt(selectedItmPrice.substring(1,selectedItmPrice.length));	  
+	  actualTotalVal=parseFloat(actualTotalVal)+parseFloat(selectedItmPrice.substring(1,selectedItmPrice.length));	  
+	 
+	  
 	  cntCheckedBox++;	  
 	}
 	else
@@ -117,6 +122,8 @@ $('input[type=checkbox]').each(function () {
 	
 	if(actualTotalVal==enteredVal)
 	{
+	var snd = new Audio("audio/correctAnswer"+ ".mp3");
+	snd.play();
 	   document.getElementById("nxtButtonId").style.display="inline";
 	   document.getElementById('evalResult').innerHTML="<img src='images/confirm.svg'/>&nbsp;Correct";
 	   document.getElementById("evalResult").classList.remove('fixedEvalWrong');
@@ -125,6 +132,8 @@ $('input[type=checkbox]').each(function () {
 	}
 	else
 	{
+	var snd = new Audio("audio/wrongAnswer"+ ".mp3");
+	snd.play();
 	  document.getElementById('evalResult').innerHTML="Oops, try again";
 	  document.getElementById("evalResult").classList.remove('fixedEvalCorrect');
       document.getElementById("evalResult").classList.add('fixedEvalWrong');
@@ -154,43 +163,43 @@ bakery.hideNextButtonInvPage = function(){
 var chkBoxImageAndPrice;
 
 var chkBoxImageAndPriceBakery = [
-    ['images/inventory/cake/baking-glove@2x.png', '$6'],	
-	['images/inventory/cake/balloon-whisk@2x.png', '$10'],	
-	['images/inventory/cake/cake-pan@2x.png', '$7'],
-	['images/inventory/cake/flour-sift@2x.png', '$10'],
-	['images/inventory/cake/stand-mixer@2x.png', '$50'],
-	['images/inventory/cake/muffin-pan@2x.png', '$10'],
-	['images/inventory/cake/rolling-pin@2x.png', '$20'],
-	['images/inventory/cake/serve-board@2x.png', '$8'],
-	['images/inventory/cake/eggs@2x.png', '$2'],
-	['images/inventory/cake/flour@2x.png', '$2'],	
+    ['images/inventory/cake/baking-glove@2x.png', '$0.1'],	
+	['images/inventory/cake/balloon-whisk@2x.png', '$0.1'],	
+	['images/inventory/cake/cake-pan@2x.png', '$0.3'],
+	['images/inventory/cake/flour-sift@2x.png', '$0.1'],
+	['images/inventory/cake/stand-mixer@2x.png', '$1'],
+	['images/inventory/cake/muffin-pan@2x.png', '$0.1'],
+	['images/inventory/cake/rolling-pin@2x.png', '$0.2'],
+	['images/inventory/cake/serve-board@2x.png', '$0.1'],
+	['images/inventory/cake/eggs@2x.png', '$6'],
+	['images/inventory/cake/flour@2x.png', '$10'],	
 	['images/inventory/cake/measure-flask@2x.png', '$10'],	
-	['images/inventory/cake/salt@2x.png', '$1'],
+	['images/inventory/cake/salt@2x.png', '$3'],
 	['images/inventory/cake/milk@2x.png', '$6'],	
-	['images/inventory/cake/sugar@2x.png', '$2']  ,
-	['images/inventory/cake/baking-soda@2x.png', '$2'],
-	['images/inventory/cake/butter@2x.png', '$7'],
+	['images/inventory/cake/sugar@2x.png', '$4']  ,
+	['images/inventory/cake/baking-soda@2x.png', '$7'],
+	['images/inventory/cake/butter@2x.png', '$10'],
    
     
 ];
 
 var chkBoxImageAndPriceCafe = [
-    ['images/inventory/coffee/bowl@2x.png', '$2'],	
-	['images/inventory/coffee/coffee-cup@2x.png', '$5'],	
-	['images/inventory/coffee/coffee-jug@2x.png', '$10'],
-	['images/inventory/coffee/coffee-machine@2x.png', '$300'],
-	['images/inventory/coffee/serve-board@2x.png', '$6'],
-	['images/inventory/coffee/cup@2x.png', '$2'],
-	['images/inventory/coffee/food-packaging@2x.png', '$3'],
-	['images/inventory/coffee/take-out-cup@2x.png', '$5'],
-	['images/inventory/coffee/tall-glass@2x.png', '$6'],
-	['images/inventory/coffee/tea-press@2x.png', '$10'],	
-	['images/inventory/coffee/tea_spoon@2x.png', '$3'],	
-	['images/inventory/coffee/sugar@2x.png', '$2'],
-	['images/inventory/coffee/milk@2x.png', '$6'],	
-	['images/inventory/coffee/coffee-powder@2x.png', '$6']  ,
-	['images/inventory/coffee/coffee-bean@2x.png', '$10'],
-	['images/inventory/coffee/cinammon@2x.png', '$3'],
+    ['images/inventory/coffee/bowl@2x.png', '$0.1'],	
+	['images/inventory/coffee/coffee-cup@2x.png', '$0.1'],	
+	['images/inventory/coffee/coffee-jug@2x.png', '$0.3'],
+	['images/inventory/coffee/coffee-machine@2x.png', '$1'],
+	['images/inventory/coffee/serve-board@2x.png', '$0.2'],
+	['images/inventory/coffee/cup@2x.png', '$0.1'],
+	['images/inventory/coffee/food-packaging@2x.png', '$0.1'],
+	['images/inventory/coffee/take-out-cup@2x.png', '$0.1'],
+	['images/inventory/coffee/tall-glass@2x.png', '$1'],
+	['images/inventory/coffee/tea_spoon@2x.png', '$1'],	
+	['images/inventory/coffee/tea-press@2x.png', '$2'],	
+	['images/inventory/coffee/sugar@2x.png', '$1'],
+	['images/inventory/coffee/milk@2x.png', '$1'],	
+	['images/inventory/coffee/coffee-powder@2x.png', '$1']  ,
+	['images/inventory/coffee/coffee-bean@2x.png', '$2'],
+	['images/inventory/coffee/cinammon@2x.png', '$1'],
    
     
 ];

@@ -26,6 +26,7 @@ var empSalary;
 $(document).ready(function(){
 document.getElementById("nxtbckBtnPTag").style.textAlign ="right";
 
+
  $(document).keydown(function(event) {
 	    	    if (event.ctrlKey==true && (event.which == '61' || event.which == '107' || event.which == '173' || event.which == '109'  || event.which == '187'  || event.which == '189'  ) ) {
         
@@ -82,6 +83,7 @@ if(isStartOfGame)
 	
 	   document.getElementById("bakeryheader").innerHTML=bakeryHeader(bakery.pages);	   
 	   document.getElementById("bakeryBase").innerHTML=bakeryTemplatePage1(bakery.pages);
+	   
 }	   
 	   
 }

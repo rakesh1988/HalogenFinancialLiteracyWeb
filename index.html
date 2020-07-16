@@ -44,6 +44,7 @@
 	<script src="js/config/page10Config.js"></script>
 	<script src="js/lib/Chart.bundle.min.js"></script>
     <link rel="stylesheet" href="css/bakery.css">	
+	
 	<style>
 	@font-face {
 	   font-family: Frutiger45Light;
@@ -54,7 +55,9 @@
 	</style>
 	  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
-<body style="background-color: #F6F6F6;overflow-y:hidden ;overflow-x:hidden">
+<body style="background-color: #F6F6F6;overflow-y:hidden ;overflow-x:hidden" onClick="playMusic();">
+<input type="button" id="musicButton" style="display:none" onClick="playMusic()"/>
+
 <div class="box stack-top" style="display:none" id="overlay"><img src="images/icon-close.png" class="overlayClose" onClick="bakery.hideOverlay();"/></div>
 </div>
 <table  style="width: 100%;">
@@ -118,8 +121,17 @@
 	</tr>	    
 </table>
 
- 
+ <audio id="backgroundaudio" style="display:none" src="audio/background.mp3" loop="true" autoplay="true"  controls>
+</audio>
 
 </body>
+<script type="text/javascript">
+//document.getElementById('musicButton').click();
+function playMusic(){
+$('#backgroundaudio').get(0).play();
 
-<html>
+}
+	
+	</script>
+
+</html>

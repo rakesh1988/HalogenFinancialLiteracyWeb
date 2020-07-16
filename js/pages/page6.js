@@ -32,6 +32,13 @@ if( parseInt(document.getElementById("sellingPriceTxt").value) < parseInt(docume
 	return;
 }
 
+if( parseInt(document.getElementById("sellingPriceTxt").value) > parseInt(document.getElementById("variableCostTxt").value)+20)
+{
+	document.getElementById('spValidation').innerHTML='Cannot enter selling price 20 units more than variable Expense';
+	document.getElementById("spValidation").classList.add('fixedEvalWrong');
+	return;
+}
+
 else if( parseInt(document.getElementById("sellingPriceTxt").value) > parseInt(document.getElementById("variableCostTxt").value))
 {
 	document.getElementById('spValidation').innerHTML='';
@@ -41,6 +48,8 @@ var actualTotalVal= parseInt(document.getElementById("sellingPriceTxt").value)-p
 
 	if(actualTotalVal==enteredVal)
 	{
+	   var snd = new Audio("audio/correctAnswer"+ ".mp3");
+	   snd.play();
 	   document.getElementById("nxtButtonId").style.display="inline";
 	   document.getElementById('evalResult').innerHTML="<img src='images/confirm.svg'/>&nbsp;Correct";
 	   document.getElementById("evalResult").classList.remove('fixedEvalWrong');
@@ -49,6 +58,8 @@ var actualTotalVal= parseInt(document.getElementById("sellingPriceTxt").value)-p
 	}
 	else
 	{
+	var snd = new Audio("audio/wrongAnswer"+ ".mp3");
+	   snd.play();
 	  document.getElementById('evalResult').innerHTML="Oops, try again";
 	  document.getElementById("evalResult").classList.remove('fixedEvalCorrect');
       document.getElementById("evalResult").classList.add('fixedEvalWrong');

@@ -26,6 +26,8 @@ var totalMnthlyExpActual=parseInt(empSalary,10)+parseInt(pageArray[1].getExpRent
 
 if(totalMnthlyExpActual==parseInt(document.getElementById('mnthlyTotalExpenses').value))
 {
+var snd = new Audio("audio/correctAnswer"+ ".mp3");
+snd.play();
 document.getElementById('evalResult').innerHTML="<img src='images/confirm.svg'/>&nbsp;Correct";
 document.getElementById("evalResult").classList.remove('fixedEvalWrong');
 document.getElementById("evalResult").classList.add('fixedEvalCorrect');
@@ -37,6 +39,8 @@ page4ObjInner.setValEvaluated(true);
 
 else
 {
+var snd = new Audio("audio/wrongAnswer"+ ".mp3");
+snd.play();
 document.getElementById('evalResult').innerHTML="Oops, try again";
 document.getElementById("evalResult").classList.remove('fixedEvalCorrect');
 document.getElementById("evalResult").classList.add('fixedEvalWrong');
