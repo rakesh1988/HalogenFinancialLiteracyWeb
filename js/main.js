@@ -479,7 +479,9 @@ if(retVal)
 		
 		else if(breadCrum=='Result')
 		{
+			
 			var functionToSetData='set'+nextPrevNav[curPos]+'DataObject';
+			document.getElementById("bakeryheader").innerHTML="";
 			
 			bakery[functionToSetData]();			
 
@@ -487,7 +489,7 @@ if(retVal)
 	
 			setTimeout(bakery.loadProfitLossResult, 5000);
 			
-			bakery.removeUnderlineTextOnFocus();
+			//bakery.removeUnderlineTextOnFocus();
 		
 		}
 		
@@ -797,7 +799,7 @@ bakery.removeUnderlineTextOnFocus= function(){
 }
 
 bakery.displayOverlay= function(){
-
+addBckGrndColorDiv('overlayMenu1Id');
 document.getElementById("overlay").style.display="inline";
 
 

@@ -45,11 +45,11 @@ var totalUnitSoldLoss=parseInt(brkEvenCnt)-parseInt(random);
 var profitMade=(parseInt(totalUnitSoldProfit)-parseInt(brkEvenCnt))*contriMarginVal;
 var lossIncurred=(parseInt(brkEvenCnt)-parseInt(totalUnitSoldLoss))*contriMarginVal;
 if(scenarioSelected=='A')
-document.getElementById("resultDisplay").innerHTML="Congratulations you sold total of "+totalUnitSoldProfit+" Units , And made a profit of $"+profitMade+" in one month";
+document.getElementById("resultDisplay").innerHTML="<font face='Frutiger45Light' size='+2' color='gray'><b>Congratulations!</b></font></br> </br><font face='Frutiger45Light' size='+1' color='gray'>You sold total of "+totalUnitSoldProfit+" Units , And made a profit of $"+profitMade+" in one month</font>";
 else if(scenarioSelected=='B')
-	document.getElementById("resultDisplay").innerHTML="Sorry you could sell a total of "+totalUnitSoldLoss+" Units , And incurred a loss of $"+lossIncurred+" in one month";
+	document.getElementById("resultDisplay").innerHTML="<font face='Frutiger45Light' size='+2' color='gray'><b>Sorry!</b></font> </br></br><font face='Frutiger45Light' size='+1' color='gray'>You could sell a total of "+totalUnitSoldLoss+" Units , And incurred a loss of $"+lossIncurred+" in one month</font>";
 else if(scenarioSelected=='C')
-	document.getElementById("resultDisplay").innerHTML="This is a break even situation you sold a total of "+brkEvenCnt +" Units ,Hence no profit and no loss";
+	document.getElementById("resultDisplay").innerHTML="<font face='Frutiger45Light' size='+2' color='gray'><b>This is a break even situation</b></font></br></br> <font face='Frutiger45Light' size='+1' color='gray'>You sold a total of "+brkEvenCnt +" Units ,Hence no profit and no loss</font>";
 
  var expense;
  var revenue ; 
