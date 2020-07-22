@@ -493,7 +493,8 @@ if(retVal)
 
 			document.getElementById("bakeryBase").innerHTML=bakeryShowLoadingPopup(bakery.pages);
 	
-			setTimeout(bakery.loadProfitLossResult, 5000);
+			setTimeout(bakery.loadProfitLossResult, 14000);
+			document.getElementById('bakeryNameLblDynamicGif').innerHTML=pageArray[0].getShopName(); 
 			
 			//bakery.removeUnderlineTextOnFocus();
 		
