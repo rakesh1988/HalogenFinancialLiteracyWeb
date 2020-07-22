@@ -481,7 +481,13 @@ if(retVal)
 		{
 			
 			var functionToSetData='set'+nextPrevNav[curPos]+'DataObject';
-			document.getElementById("bakeryheader").innerHTML="";
+			document.getElementById("shopAnchorId").style.display="none";
+			document.getElementById("locationAnchorId").style.display="none";
+			document.getElementById("staffAnchorId").style.display="none";
+			document.getElementById("expAnchorId").style.display="none";
+			document.getElementById("inventoryAnchorId").style.display="none";
+			document.getElementById("accountingAnchorId").style.display="none";
+			document.getElementById("brkEvenAnchorId").style.display="none";
 			
 			bakery[functionToSetData]();			
 
