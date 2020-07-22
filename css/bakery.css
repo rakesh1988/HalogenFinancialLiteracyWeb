@@ -482,6 +482,26 @@ border-bottom:black 2px solid;
 	font-weight: bold;
 }
 
+.text-blockgif {
+  position: absolute;
+  bottom: 460px;
+  right: 670px;
+  background-color: #4AADB6;
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  height:45px;
+  width:150px;
+  line-height: 40px;
+  font-family: Frutiger45Light; 
+  text-align: center;
+  border-top-right-radius: 25px;
+	border-top-left-radius: 25px;
+	border-bottom-right-radius: 25px;
+	border-bottom-left-radius: 25px;
+	font-weight: bold;
+}
+
 .text-block1 {
   position: absolute;
   bottom: 140px;
@@ -677,6 +697,12 @@ input[type=number] {
     margin-left: 40px;
 	height:100%;
 	scrollbar-width: none+;
+}
+
+.container img {
+    flex-shrink: 0;
+    min-width: 100%;
+    min-height: 100%
 }
 
 body{
