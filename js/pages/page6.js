@@ -48,7 +48,7 @@ var actualTotalVal= parseInt(document.getElementById("sellingPriceTxt").value)-p
 
 	if(actualTotalVal==enteredVal)
 	{
-	   var snd = new Audio("audio/correctAnswer"+ ".mp3");
+	   var snd = new Audio("audio/04_CorrectAnswer"+ ".mp3");
 	   snd.play();
 	   document.getElementById("nxtButtonId").style.display="inline";
 	   document.getElementById('evalResult').innerHTML="<img src='images/confirm.svg'/>&nbsp;Correct";
@@ -58,7 +58,7 @@ var actualTotalVal= parseInt(document.getElementById("sellingPriceTxt").value)-p
 	}
 	else
 	{
-	var snd = new Audio("audio/wrongAnswer"+ ".mp3");
+	var snd = new Audio("audio/05_WrongAnswer"+ ".mp3");
 	   snd.play();
 	  document.getElementById('evalResult').innerHTML="Oops, try again";
 	  document.getElementById("evalResult").classList.remove('fixedEvalCorrect');

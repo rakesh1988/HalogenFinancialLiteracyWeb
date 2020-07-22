@@ -292,7 +292,7 @@ bakery.page4='</br></br></br>'+
 	'</tr>'+
 	'</tr><tr style="height:30px"></tr>'+
 '</table>';
-bakery.page5_Bakery='</br><p class="boldHeaderFrutiger" style="height:10px">Inventory List</p><p class="lightHeaderFrutiger" style="height:30px">Purchase items you need and calculate total cost.</p><p class="warningMsg" id="errMsgInventory"></p><ul>'+  
+bakery.page5_Bakery='</br><p class="boldHeaderFrutiger" style="height:10px">Inventory List</p><p class="lightHeaderFrutiger" style="height:30px;font-size:20px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Essential rental items</p><ul>'+  
   '<li><input type="checkbox" id="cb1" onClick="return false;" checked/>'+
     '<label for="cb1"><div class="container"><img src="'+chkBoxImageAndPriceBakery[0][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPriceBakery[0][1]+
@@ -324,7 +324,7 @@ bakery.page5_Bakery='</br><p class="boldHeaderFrutiger" style="height:10px">Inve
   '<li><input type="checkbox" id="cb8" onClick="return false;" checked/>'+
     '<label for="cb8"><div class="container"><img src="'+chkBoxImageAndPriceBakery[7][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPriceBakery[7][1]+
-	'</div></div></img></label></li></br></br>'+
+	'</div></div></img></label></li></br></br><p class="warningMsg" id="errMsgInventory"></p><p class="lightHeaderFrutiger" style="height:30px;font-size:20px">Purchase items you need and calculate the total cost.</p>'+
   '<li><input type="checkbox" id="cb9" onClick="bakery.selectIngridients(\'cb9\');"/>'+
     '<label for="cb9"><div class="container"><img src="'+chkBoxImageAndPriceBakery[8][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPriceBakery[8][1]+
@@ -361,7 +361,7 @@ bakery.page5_Bakery='</br><p class="boldHeaderFrutiger" style="height:10px">Inve
 '<table style="padding-left:270px"><tr><td style="border: none;border-bottom: solid;border-color: #737373;margin-left: 100px;"><font style="font-family: Frutiger45Light;font-size: 16px;font-weight: bold;color: #797979;">Total Item Cost:</font>&nbsp;&nbsp;&nbsp;<font style="font-family: Frutiger45Light;font-size: 16px;font-weight: bold;color: #797979;">$&nbsp;</font><input type="number" id="totalInvExpTxt" class="inputTextFont" style="width:100px; border: none;font-size: 24px;'+
     'background-color: #F6F6F6;"></input></td><td><input type="button" value="Evaluate" class="buttonIdCls" onClick="bakery.evaluateInvExp()"/></td></tr><tr><td style="border: none" colspan="2"><div id="evalResult"></div></td></tr></table>';
 	
-bakery.page5_Cafe='</br><p class="boldHeaderFrutiger" style="height:10px">Inventory List</p><p class="lightHeaderFrutiger" style="height:30px">Purchase items you need and calculate total cost.</p><p class="warningMsg" id="errMsgInventory"></p><ul>'+  
+bakery.page5_Cafe='</br><p class="boldHeaderFrutiger" style="height:10px">Inventory List</p><p class="lightHeaderFrutiger" style="height:30px;font-size:20px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Essential rental items</p><ul>'+  
   '<li><input type="checkbox" id="cb1" onClick="return false;" checked/>'+
     '<label for="cb1"><div class="container"><img src="'+chkBoxImageAndPriceCafe[0][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPriceCafe[0][1]+
@@ -393,7 +393,7 @@ bakery.page5_Cafe='</br><p class="boldHeaderFrutiger" style="height:10px">Invent
   '<li><input type="checkbox" id="cb8" onClick="return false;" checked/>'+
     '<label for="cb8"><div class="container"><img src="'+chkBoxImageAndPriceCafe[7][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPriceCafe[7][1]+
-	'</div></div></img></label></li></br></br>'+
+	'</div></div></img></label></li></br></br><p class="warningMsg" id="errMsgInventory"></p><p class="lightHeaderFrutiger" style="height:30px;font-size:20px">Purchase items you need and calculate the total cost.</p>'+
   '<li><input type="checkbox" id="cb9" onClick="bakery.selectIngridients(\'cb9\');"/>'+
     '<label for="cb9"><div class="container"><img src="'+chkBoxImageAndPriceCafe[8][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPriceCafe[8][1]+

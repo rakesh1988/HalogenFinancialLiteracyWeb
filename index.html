@@ -55,8 +55,8 @@
 	</style>
 	  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
 </head>
-<body style="background-color: #F6F6F6;overflow-y:hidden ;overflow-x:hidden" onClick="playMusic();">
-<input type="button" id="musicButton" style="display:none" onClick="playMusic()"/>
+<body style="background-color: #F6F6F6;overflow-y:hidden ;overflow-x:hidden">
+
 
 <div class="box stack-top" style="display:none" id="overlay">
   <table style="height: 520px;">
@@ -69,6 +69,8 @@
   <td>
 	<div id="overlayMenu1Id" class="overlayMenu1" onClick="hideAboutUsDiv();removeBckGrndColorDiv('overlayMenu2Id');addBckGrndColorDiv('overlayMenu1Id') ">&nbsp;&nbsp;Epilogue </br>Presentation</div></br>
 	<div id="overlayMenu2Id" class="overlayMenu2" onClick="hidePresentationDiv(); removeBckGrndColorDiv('overlayMenu1Id');addBckGrndColorDiv('overlayMenu2Id')">About Us</div>
+	</br></br></br></br></br></br></br></br></br></br></br>
+	 <img src="images/ubs_semibold_20_31x84_rgb.png" style="vertical-align:bottom;padding-top:70px;padding-left:20px;"/>
 	<div class="vl"></div>
   </td>
   <td >
@@ -165,14 +167,14 @@
   
   </td>
  
-  </tr>
+  </tr>  
   </table>
 
 </div>
 <table  style="width: 100%;">
 	<tr>
-		<td style="width: 15%; vertical-align:top">	
-           <img src="images/ubs_semibold_20_31x84_rgb.png" style="vertical-align:bottom;padding-top:70px;padding-left:20px;width:100px"/>	
+		<td style="width: 8%; vertical-align:top">	
+           <!--img src="images/ubs_semibold_20_31x84_rgb.png" style="vertical-align:bottom;padding-top:70px;padding-left:20px;width:100px"/-->	
 		</td>
 		<td style="width: 70%;">
 			<div id="bakeryheader">			   
@@ -230,16 +232,11 @@
 	</tr>	    
 </table>
 
- <audio id="backgroundaudio" style="display:none" src="audio/background.mp3" loop="true" autoplay="true"  controls>
-</audio>
+
 
 </body>
 <script type="text/javascript">
-//document.getElementById('musicButton').click();
-function playMusic(){
-$('#backgroundaudio').get(0).play();
 
-}
 
 function addBckGrndColorDiv(id){
 if(id=='overlayMenu1Id')
