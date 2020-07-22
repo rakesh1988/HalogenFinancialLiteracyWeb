@@ -525,7 +525,7 @@ bakery.page7='</br></br></br>'+
 	'</tr><tr style="height:30px"></tr>'+
 '</table>';
 
-bakery.page8='</br></br><a class="hotspot" style="top: 20px; left: 35px; width: 32px; height: 34px;" onClick="bakery.displayOverlay()"><img src="images/icon-hamburger.png"/></a></br></br><p id="resultDisplay" style="margin-left:50px" class="inputTextFont"></p>'+
+bakery.page8='</br></br><p id="resultDisplay" style="margin-left:50px" class="inputTextFont"></p>'+
 '<div style="height:700px; width:700px;margin-left:50px ">'+
     '<canvas id="Chart"></canvas>'+
 	'</br><input type="button" value="Start again" style="margin-left:900px" class="buttonIdCls" onClick="window.location.reload();"/>'+
