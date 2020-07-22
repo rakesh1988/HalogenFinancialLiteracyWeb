@@ -565,16 +565,15 @@ bakery.showcalculator='<table><tr><td class="lightHeaderFrutiger" style="font-si
 	  '</td></tr></table>';
 	  
 bakery.showWaitingPopup='<div id="myModal" class="modal">'+  
-  '<div class="modal-content">'+
-    '<span class="close"><video width="100%" height="100%" autoplay><source src="images/movingCust.mp4" type="video/mp4"></video></span>'+
+  '<div class="modal-content">'+  
+    '<span class="close"><img src="images/bakery.gif" style="height: 100%;width: 100%;"><div class="text-blockgif" id="bakeryNameLblDynamicGif"></div></span>'+
 
  ' </div>'+
-'</div>'
+'</div>';
 
 bakery.moreInfoPopup='<div id="myModalmoreInfo" class="modal">'+  
   '<div class="modal-content">'+
     '<span class="close">dfgdfgdfg</span>'+
-
  ' </div>'+
 '</div>'
 
