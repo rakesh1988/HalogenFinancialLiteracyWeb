@@ -566,7 +566,7 @@ bakery.showcalculator='<table><tr><td class="lightHeaderFrutiger" style="font-si
 	  
 bakery.showWaitingPopup='<div id="myModal" class="modal">'+  
   '<div class="modal-content">'+  
-    '<span class="close"><img src="images/bakery.gif" style="height: 100%;width: 100%;"><div class="text-blockgif" id="bakeryNameLblDynamicGif"></div></span>'+
+    '<span class="close"><img src="images/bakery_no-signage.gif" style="height: 100%;width: 100%;"><div class="text-blockgif" id="bakeryNameLblDynamicGif"></div></span>'+
 
  ' </div>'+
 '</div>';
