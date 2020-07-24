@@ -91,7 +91,12 @@ else if(scenarioSelected=='C')
 
     var dataForChart = [revenue, expense]
     var backgroundColorForChart;
-    var borderColorForChart;
+	var borderColorForChart;
+	var backgroundColorForChartRevenue='rgba(74, 173, 182, 0.3)';
+	var backgroundColorForChartExpense='rgba(196, 69, 117, 0.3)';
+	var borderColorForChartRevenue='#4AADB6';
+	var borderColorForChartExpense='#C44575';
+    
     if (revenue > expense) {//profit
         backgroundColorForChart = graphColorBackground.PROFIT;
         borderColorForChart = graphColorBorder.PROFIT;
@@ -111,14 +116,14 @@ else if(scenarioSelected=='C')
             datasets: [{
                 data: dataForChart,
                 backgroundColor: [
-                    backgroundColorForChart,
-                    backgroundColorForChart
+                    backgroundColorForChartRevenue,
+                    backgroundColorForChartExpense
                 ],
                 borderColor: [
-                    borderColorForChart,
-                    borderColorForChart
+                    borderColorForChartRevenue,
+                    borderColorForChartExpense
                 ],
-                borderWidth: 1
+                borderWidth: 3
             }]
         },
         options: {
