@@ -47,7 +47,7 @@ document.getElementById("locationFactsTxt").innerHTML=factsDetails[selectedIndex
 var locationPrice = [
     ['$ 6000', '$ 1500'],
 	['$ 4700', '$ 800'],
-    ['$ 3600', ' $400'],
+    ['$ 3600', '$ 400'],
     
 ];
 
