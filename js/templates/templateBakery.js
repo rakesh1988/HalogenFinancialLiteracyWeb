@@ -499,7 +499,7 @@ bakery.page7='</br></br></br>'+
 								'</input></td>'+
 	  
 	  '<td style="width:50px"><div>=</div></td>'+
-	   '<td class="boldHeaderFrutiger" style="font-size:16px;">$&nbsp;<input type="number" class="inputTextFont expTextBoxCls" style="font-color:black;" id="breakEvenUnitTxt" onChange="bakery.hideNextButtonContriPage()"></input>'+
+	   '<td class="boldHeaderFrutiger" style="font-size:16px;">&nbsp;<input type="number" class="inputTextFont expTextBoxCls" style="font-color:black;" id="breakEvenUnitTxt" onChange="bakery.hideNextButtonContriPage()"></input>'+
 								'</input>&nbsp;&nbsp;<input type="button" value="Evaluate" class="buttonIdCls" onClick="bakery.evaluateBreakEvenUnitExp()"/></td>'+
 	'</tr>'+
 	'<tr>'+
