@@ -16,11 +16,6 @@ for(i = 0; i < ele.length; i++) {
 }
 }
 
-
-
-
-
-
 bakery.restoreWelcomeDataObject = function(){
 
 var page1ObjInner=pageArray[0];
@@ -38,4 +33,10 @@ bakery.resetManagerNameFields = function(){
 document.getElementById("pMngrId").value='';
 document.getElementById("sMngrId").value='';
 document.getElementById("shopNameId").value='';
+var windowLocationHref=window.location.href;
+var shopTypeElem = document.getElementById("shopTypeId");
+windowLocationHref= windowLocationHref.substr(0,windowLocationHref.indexOf(".html"));
+window.location.replace(windowLocationHref + ".html?shopType="+shopTypeElem.value);
+
+
 }
