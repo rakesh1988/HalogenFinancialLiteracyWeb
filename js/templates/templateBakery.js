@@ -292,39 +292,39 @@ bakery.page4='</br></br></br>'+
 	'</tr>'+
 	'</tr><tr style="height:30px"></tr>'+
 '</table>';
-bakery.page5_Bakery='</br><p class="boldHeaderFrutiger" style="height:10px">Inventory List</p><p class="lightHeaderFrutiger" style="height:30px;font-size:20px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Essential rental items</p><ul>'+  
-  '<li><input type="checkbox" id="cb1" onClick="return false;" checked/>'+
+bakery.page5_Bakery='</br><p class="boldHeaderFrutiger" style="height:10px">Inventory List</p><ul>'+  
+  '<li style="display:none"><input type="checkbox" id="cb1" onClick="return false;" />'+
     '<label for="cb1"><div class="container"><img src="'+chkBoxImageAndPriceBakery[0][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPriceBakery[0][1]+
 	'</div></div></img></label></li>'+
-  '<li><input type="checkbox" id="cb2" onClick="return false;" checked/>'+
+  '<li style="display:none"><input type="checkbox" id="cb2" onClick="return false;" />'+
     '<label for="cb2"><div class="container"><img src="'+chkBoxImageAndPriceBakery[1][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPriceBakery[1][1]+
 	'</div></div></img></label></li>'+
-  '<li><input type="checkbox" id="cb3" onClick="return false;" checked/>'+
+  '<li style="display:none"><input type="checkbox" id="cb3" onClick="return false;" />'+
     '<label for="cb3"><div class="container"><img src="'+chkBoxImageAndPriceBakery[2][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPriceBakery[2][1]+
 	'</div></div></img></label></li>'+
-  '<li><input type="checkbox" id="cb4" onClick="return false;" checked/>'+
+  '<li style="display:none"><input type="checkbox" id="cb4" onClick="return false;" />'+
     '<label for="cb4"><div class="container"><img src="'+chkBoxImageAndPriceBakery[3][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPriceBakery[3][1]+
 	'</div></div></img></label></li>'+
-  '<li><input type="checkbox" id="cb5" onClick="return false;" checked/>'+
+  '<li style="display:none"><input type="checkbox" id="cb5" onClick="return false;" />'+
     '<label for="cb5"><div class="container"><img src="'+chkBoxImageAndPriceBakery[4][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPriceBakery[4][1]+
 	'</div></div></img></label></li>'+
-  '<li><input type="checkbox" id="cb6" onClick="return false;" checked/>'+
+  '<li style="display:none"><input type="checkbox" id="cb6" onClick="return false;" />'+
     '<label for="cb6"><div class="container"><img src="'+chkBoxImageAndPriceBakery[5][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPriceBakery[5][1]+
 	'</div></div></img></label></li>'+
-  '<li><input type="checkbox" id="cb7" onClick="return false;" checked/>'+
+  '<li style="display:none"><input type="checkbox" id="cb7" onClick="return false;" />'+
     '<label for="cb7"><div class="container"><img src="'+chkBoxImageAndPriceBakery[6][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPriceBakery[6][1]+
 	'</div></div></img></label></li>'+
-  '<li><input type="checkbox" id="cb8" onClick="return false;" checked/>'+
+  '<li style="display:none"><input type="checkbox" id="cb8" onClick="return false;" />'+
     '<label for="cb8"><div class="container"><img src="'+chkBoxImageAndPriceBakery[7][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPriceBakery[7][1]+
-	'</div></div></img></label></li></br></br><p class="warningMsg" id="errMsgInventory"></p><p class="lightHeaderFrutiger" style="height:30px;font-size:20px">Purchase items you need and calculate the total cost.</p>'+
+	'</div></div></img></label></li></br></br><p class="warningMsg" id="errMsgInventory"></p><p class="lightHeaderFrutiger" style="height:30px;font-size:24px">Purchase items you need and calculate the total cost.</p>'+
   '<li><input type="checkbox" id="cb9" onClick="bakery.selectIngridients(\'cb9\');"/>'+
     '<label for="cb9"><div class="container"><img src="'+chkBoxImageAndPriceBakery[8][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPriceBakery[8][1]+
@@ -358,42 +358,45 @@ bakery.page5_Bakery='</br><p class="boldHeaderFrutiger" style="height:10px">Inve
 	chkBoxImageAndPriceBakery[15][1]+
 	'</div></div></img></label></li>'+ 
 '</ul>'+
+'</br>'+
+'</br>'+
+'</br>'+
 '<table style="padding-left:270px"><tr><td style="border: none;border-bottom: solid;border-color: #737373;margin-left: 100px;"><font style="font-family: Frutiger45Light;font-size: 16px;font-weight: bold;color: #797979;">Total Item Cost:</font>&nbsp;&nbsp;&nbsp;<font style="font-family: Frutiger45Light;font-size: 16px;font-weight: bold;color: #797979;">$&nbsp;</font><input type="number" id="totalInvExpTxt" class="inputTextFont" style="width:100px; border: none;font-size: 24px;'+
     'background-color: #F6F6F6;"></input></td><td><input type="button" value="Evaluate" class="buttonIdCls" onClick="bakery.evaluateInvExp()"/></td></tr><tr><td style="border: none" colspan="2"><div id="evalResult"></div></td></tr></table>';
 	
-bakery.page5_Cafe='</br><p class="boldHeaderFrutiger" style="height:10px">Inventory List</p><p class="lightHeaderFrutiger" style="height:30px;font-size:20px">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Essential rental items</p><ul>'+  
-  '<li><input type="checkbox" id="cb1" onClick="return false;" checked/>'+
+bakery.page5_Cafe='</br><p class="boldHeaderFrutiger" style="height:10px">Inventory List</p><ul>'+  
+  '<li style="display:none"><input type="checkbox" id="cb1" onClick="return false;" />'+
     '<label for="cb1"><div class="container"><img src="'+chkBoxImageAndPriceCafe[0][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPriceCafe[0][1]+
 	'</div></div></img></label></li>'+
-  '<li><input type="checkbox" id="cb2" onClick="return false;" checked/>'+
+  '<li  style="display:none"><input type="checkbox" id="cb2" onClick="return false;" />'+
     '<label for="cb2"><div class="container"><img src="'+chkBoxImageAndPriceCafe[1][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPriceCafe[1][1]+
 	'</div></div></img></label></li>'+
-  '<li><input type="checkbox" id="cb3" onClick="return false;" checked/>'+
+  '<li style="display:none"><input type="checkbox" id="cb3" onClick="return false;" />'+
     '<label for="cb3"><div class="container"><img src="'+chkBoxImageAndPriceCafe[2][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPriceCafe[2][1]+
 	'</div></div></img></label></li>'+
-  '<li><input type="checkbox" id="cb4" onClick="return false;" checked/>'+
+  '<li  style="display:none"><input type="checkbox" id="cb4" onClick="return false;" />'+
     '<label for="cb4"><div class="container"><img src="'+chkBoxImageAndPriceCafe[3][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPriceCafe[3][1]+
 	'</div></div></img></label></li>'+
-  '<li><input type="checkbox" id="cb5" onClick="return false;" checked/>'+
+  '<li  style="display:none"><input type="checkbox" id="cb5" onClick="return false;" />'+
     '<label for="cb5"><div class="container"><img src="'+chkBoxImageAndPriceCafe[4][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPriceCafe[4][1]+
 	'</div></div></img></label></li>'+
-  '<li><input type="checkbox" id="cb6" onClick="return false;" checked/>'+
+  '<li  style="display:none"><input type="checkbox" id="cb6" onClick="return false;" />'+
     '<label for="cb6"><div class="container"><img src="'+chkBoxImageAndPriceCafe[5][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPriceCafe[5][1]+
 	'</div></div></img></label></li>'+
-  '<li><input type="checkbox" id="cb7" onClick="return false;" checked/>'+
+  '<li  style="display:none"><input type="checkbox" id="cb7" onClick="return false;" />'+
     '<label for="cb7"><div class="container"><img src="'+chkBoxImageAndPriceCafe[6][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPriceCafe[6][1]+
 	'</div></div></img></label></li>'+
-  '<li><input type="checkbox" id="cb8" onClick="return false;" checked/>'+
+  '<li  style="display:none"><input type="checkbox" id="cb8" onClick="return false;" />'+
     '<label for="cb8"><div class="container"><img src="'+chkBoxImageAndPriceCafe[7][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPriceCafe[7][1]+
-	'</div></div></img></label></li></br></br><p class="warningMsg" id="errMsgInventory"></p><p class="lightHeaderFrutiger" style="height:30px;font-size:20px">Purchase items you need and calculate the total cost.</p>'+
+	'</div></div></img></label></li></br></br><p class="warningMsg" id="errMsgInventory"></p><p class="lightHeaderFrutiger" style="height:30px;font-size:24px">Purchase items you need and calculate the total cost.</p>'+
   '<li><input type="checkbox" id="cb9" onClick="bakery.selectIngridients(\'cb9\');"/>'+
     '<label for="cb9"><div class="container"><img src="'+chkBoxImageAndPriceCafe[8][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPriceCafe[8][1]+
@@ -427,6 +430,9 @@ bakery.page5_Cafe='</br><p class="boldHeaderFrutiger" style="height:10px">Invent
 	chkBoxImageAndPriceCafe[15][1]+
 	'</div></div></img></label></li>'+ 
 '</ul>'+
+'</br>'+
+'</br>'+
+'</br>'+
 '<table style="padding-left:270px"><tr><td style="border: none;border-bottom: solid;border-color: #737373;margin-left: 100px;"><font style="font-family: Frutiger45Light;font-size: 16px;font-weight: bold;color: #797979;">Total Item Cost:</font>&nbsp;&nbsp;&nbsp;<font style="font-family: Frutiger45Light;font-size: 16px;font-weight: bold;color: #797979;">$&nbsp;</font><input type="number" id="totalInvExpTxt" class="inputTextFont" style="width:100px; border: none;font-size: 24px;'+
     'background-color: #F6F6F6;"></input></td><td><input type="button" value="Evaluate" class="buttonIdCls" onClick="bakery.evaluateInvExp()"/></td></tr><tr><td style="border: none" colspan="2"><div id="evalResult"></div></td></tr></table>';
 	
@@ -448,7 +454,7 @@ bakery.page6='</br></br></br>'+
 	   '<td class="boldHeaderFrutiger" style="font-size:16px;">{{contriMarginLbl}}  &nbsp;&nbsp;<div  class="tooltip"><img src="images/icon-info.png"  style="width:20px"><span class="tooltiptext" style="width: 300px;">Contribution margin, or dollar contribution per unit, is the selling price per unit minus the variable cost per unit. "Contribution" represents the portion of sales revenue that is not consumed by variable costs and so contributes to the coverage of fixed costs.</span></img></div></td>'+
 	'</tr><tr style="height:10px"></tr>'+
 	'<tr style="height:5px">'+	
-	  '<td class="boldHeaderFrutiger" style="font-size:16px;">$&nbsp;<input type="number" class="inputTextFont expTextBoxCls" style="font-color:black;" id="sellingPriceTxt" onChange="bakery.hideNextButtonContriPage()"></input>'+
+	  '<td class="boldHeaderFrutiger" style="font-size:16px;">$&nbsp;<input type="number" class="inputTextFont expTextBoxCls" style="font-color:black;" id="sellingPriceTxt" onChange="bakery.hideNextButtonContriPage()" maxlength="18"></input>'+
 								'</input></td>'+
 	  '<td style="width:50px"><div>-</div></td>'+
 	  '<td class="boldHeaderFrutiger" style="font-size:16px;">$&nbsp;<input type="number" class="inputTextFont expTextBoxCls" style="font-color:black;" id="variableCostTxt" readonly></input>'+
