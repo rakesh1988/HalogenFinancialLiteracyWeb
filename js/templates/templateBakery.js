@@ -498,14 +498,14 @@ bakery.page7='</br></br></br>'+
 	   '<td class="boldHeaderFrutiger" style="font-size:16px;">{{brkEvenUnitLbl}}  &nbsp;&nbsp;<div  class="tooltip"><img src="images/icon-info.png"  style="width:20px"><span class="tooltiptext" style="width: 300px;">The breakeven number of units, as the name suggests, is the number of units of goods or services that a company needs to sell in order to break even, or in other words, to suffer no financial losses but also make no profit.</span></img></div></td>'+
 	'</tr><tr style="height:10px"></tr>'+
 	'<tr style="height:5px">'+	
-	  '<td class="boldHeaderFrutiger" style="font-size:16px;">$&nbsp;<input type="text" class="inputTextFont expTextBoxCls" style="font-color:black;" id="fxdPriceTxt" onChange="bakery.hideNextButtonContriPage()" readonly></input>'+
+	  '<td class="boldHeaderFrutiger" style="font-size:16px;">$&nbsp;<input type="text" class="inputTextFont expTextBoxCls" style="font-color:black;" id="fxdPriceTxt" onChange="bakery.hideNextButtonBrkEvenPage()" readonly></input>'+
 								'</input></td>'+
 	  '<td style="width:50px"><div>/</div></td>'+
 	  '<td class="boldHeaderFrutiger" style="font-size:16px;">$&nbsp;<input type="text" class="inputTextFont expTextBoxCls" style="font-color:black;" id="contriMarginTxt" readonly></input>'+
 								'</input></td>'+
 	  
 	  '<td style="width:50px"><div>=</div></td>'+
-	   '<td class="boldHeaderFrutiger" style="font-size:16px;">&nbsp;<input type="number" class="inputTextFont expTextBoxCls" style="font-color:black;" id="breakEvenUnitTxt" onChange="bakery.hideNextButtonContriPage()"></input>'+
+	   '<td class="boldHeaderFrutiger" style="font-size:16px;">&nbsp;<input type="number" class="inputTextFont expTextBoxCls" style="font-color:black;" id="breakEvenUnitTxt" onChange="bakery.hideNextButtonBrkEvenPage()"></input>'+
 								'</input>&nbsp;&nbsp;<input type="button" value="Evaluate" class="buttonIdCls" onClick="bakery.evaluateBreakEvenUnitExp()"/></td>'+
 	'</tr>'+
 	'<tr>'+
