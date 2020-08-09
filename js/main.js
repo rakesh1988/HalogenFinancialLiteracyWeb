@@ -52,13 +52,7 @@ document.getElementById("nxtbckBtnPTag").style.textAlign ="right";
 	bakery.translateScenarios();		
 	bakery.intitializeTemplates();		
 	bakery.renderPages();
-	
-	
-	//alert("Your screen resolution is: " + screen.width + "x" + screen.height);
-  
- //alert("Your screen resolution is 2: " + $(window).width() + "x" + $(window).height());
- 
- //alert(parseInt($(window).width()));
+
   
   if(parseInt(screen.width)<1400)
   {  
@@ -71,6 +65,14 @@ document.getElementById("nxtbckBtnPTag").style.textAlign ="right";
   }
   
   bakery.underlineTextOnFocus(document.getElementById("shopAnchorId"));
+  
+    var url = new URL(window.location.href);
+	var shopTypeParamVal = url.searchParams.get("shopType");
+	var shopTypeElem = document.getElementById("shopTypeId");
+	if(shopTypeParamVal!= null && shopTypeParamVal!='')
+	{		
+		shopTypeElem.value=shopTypeParamVal;
+	}
 
 	
 });
