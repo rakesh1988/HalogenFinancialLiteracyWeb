@@ -626,6 +626,8 @@ if(navCnt==3)
 	   document.getElementById('mnthlyTotalExpenses').value=document.getElementById('numberInput').value;
 	   document.getElementById('numberInput').value="";
 	   document.getElementById("calcImg").click();
+	   bakery.hideNextButtonExpPage();
+	   
 	}
 	
 	if(navCnt==4)
@@ -633,6 +635,7 @@ if(navCnt==3)
 	   document.getElementById('totalInvExpTxt').value=document.getElementById('numberInput').value;
 	   document.getElementById('numberInput').value="";
 	   document.getElementById("calcImg").click();
+	   bakery.hideNextButtonInvPage();
 	}
 	
 	if(navCnt==5)
@@ -640,6 +643,7 @@ if(navCnt==3)
 	   document.getElementById('contriMarginTxt').value=document.getElementById('numberInput').value;
 	   document.getElementById('numberInput').value="";
 	   document.getElementById("calcImg").click();
+	   bakery.hideNextButtonContriPage();
 	}
 
 	
@@ -648,6 +652,7 @@ if(navCnt==3)
 	   document.getElementById('breakEvenUnitTxt').value=document.getElementById('numberInput').value;
 	   document.getElementById('numberInput').value="";
 	   document.getElementById("calcImg").click();
+	   bakery.hideNextButtonBrkEvenPage();
 	}
 
 
