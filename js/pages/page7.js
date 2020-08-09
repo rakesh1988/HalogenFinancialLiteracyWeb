@@ -63,6 +63,11 @@ var actualTotalVal=Math.ceil(parseInt(document.getElementById("fxdPriceTxt").val
 	  document.getElementById('evalResult').innerHTML="";	 
 	  document.getElementById("nxtButtonId").style.display="none";
   }
+  bakery.limitBrkEvenUnit=function(brkEvenExpenses){
+	if (brkEvenExpenses.value.length > 6) {
+        brkEvenExpenses.value = brkEvenExpenses.value.slice(0,6); 
+	}
+}
   
   bakery.scrollTheImages=function()
   {

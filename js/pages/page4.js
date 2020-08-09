@@ -19,7 +19,11 @@ bakery.restoreExpenditureDataObject = function(){
  }
  
 }
-
+bakery.limitMnthlyFixedExp=function(mnthlyTotalExpenses){
+	if (mnthlyTotalExpenses.value.length > 6) {
+        mnthlyTotalExpenses.value = mnthlyTotalExpenses.value.slice(0,6); 
+	}
+}
 bakery.evaluateFixedExp=function(){
 
 var totalMnthlyExpActual=parseInt(empSalary,10)+parseInt(pageArray[1].getExpRental().substring(1,pageArray[1].getExpRental().length),10)+parseInt(pageArray[1].getExpUtility().substring(1,pageArray[1].getExpUtility().length),10);

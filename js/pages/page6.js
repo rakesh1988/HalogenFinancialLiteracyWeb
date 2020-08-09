@@ -75,6 +75,7 @@ var actualTotalVal= parseInt(document.getElementById("sellingPriceTxt").value)-p
 }
 
 bakery.checkResultExpValueAccnting=function(){
+	
 if(page6ObjInner.getValEvaluated())
  {
        document.getElementById("nxtButtonId").style.display="inline";
@@ -90,6 +91,11 @@ bakery.hideNextButtonContriPage=function()
 	  document.getElementById("nxtButtonId").style.display="none";
 	  pageArray[6].setValEvaluated(false);
   }
+  bakery.limitContriMarginExp=function(contriExpenses){
+	if (contriExpenses.value.length > 2) {
+        contriExpenses.value = contriExpenses.value.slice(0,2); 
+	}
+}
 
 
 

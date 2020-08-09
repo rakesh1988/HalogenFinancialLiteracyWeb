@@ -162,6 +162,12 @@ bakery.hideNextButtonInvPage = function(){
 
 var chkBoxImageAndPrice;
 
+bakery.limitInventoryExp=function(invExpenses){
+	if (invExpenses.value.length > 2) {
+        invExpenses.value = invExpenses.value.slice(0,2); 
+	}
+}
+
 var chkBoxImageAndPriceBakery = [
     ['images/inventory/cake/baking-glove@2x.png', '$0.1'],	
 	['images/inventory/cake/balloon-whisk@2x.png', '$0.1'],	
