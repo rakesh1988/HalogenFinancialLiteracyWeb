@@ -12,7 +12,7 @@ bakery.selectIngridients = function(elmentSelected){
 	 cnt++;
 	});
 
-	if(cnt==15)
+	if(cnt==7)
 	{
      document.getElementById("errMsgInventory").innerHTML="Cannot select more than 6 ingridients";
 	 document.getElementById(elmentSelected).checked = false;
