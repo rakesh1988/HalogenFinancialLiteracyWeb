@@ -14,7 +14,7 @@ bakery.selectIngridients = function(elmentSelected){
 
 	if(cnt==7)
 	{
-     document.getElementById("errMsgInventory").innerHTML="Cannot select more than 6 ingridients";
+     document.getElementById("errMsgInventory").innerHTML="Cannot select more than 6 ingredients";
 	 document.getElementById(elmentSelected).checked = false;
 	 document.getElementById("errMsgInventory").style.display='inline';
 	}
@@ -96,7 +96,7 @@ $('input[type=checkbox]').each(function () {
 
 	if(ingridients.length<4 )
 	{
-	 document.getElementById("errMsgInventory").innerHTML="Please select atleast 4 ingridients";
+	 document.getElementById("errMsgInventory").innerHTML="Please select atleast 4 ingredients";
 	 
 	 document.getElementById("errMsgInventory").style.display='inline';
 		return;

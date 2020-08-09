@@ -34,7 +34,14 @@ if( parseInt(document.getElementById("sellingPriceTxt").value) < parseInt(docume
 
 if( parseInt(document.getElementById("sellingPriceTxt").value) > parseInt(document.getElementById("variableCostTxt").value)+20)
 {
-	document.getElementById('spValidation').innerHTML='Cannot enter selling price 20 units more than variable Expense';
+	document.getElementById('spValidation').innerHTML='Cannot enter selling price 20 units more than variable expense';
+	document.getElementById("spValidation").classList.add('fixedEvalWrong');
+	return;
+}
+
+if( parseInt(document.getElementById("sellingPriceTxt").value) == parseInt(document.getElementById("variableCostTxt").value))
+{
+	document.getElementById('spValidation').innerHTML='Please enter selling price more than variable expense';
 	document.getElementById("spValidation").classList.add('fixedEvalWrong');
 	return;
 }
