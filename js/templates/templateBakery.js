@@ -534,7 +534,7 @@ bakery.page7='</br></br></br>'+
 bakery.page8='</br></br><p id="resultDisplay" style="margin-left:50px" class="inputTextFont"></p>'+
 '<div style="height:700px; width:700px;margin-left:50px ">'+
     '<canvas id="Chart"></canvas>'+
-	'</br><input type="button" value="Start again" style="margin-left:900px" class="buttonIdCls" onClick="window.location.reload();"/>'+
+	'</br><input type="button" value="Start again" style="margin-left:900px" class="buttonIdCls" onClick="bakery.startGameAgain();"/>'+
 '</div>';
 
 bakery.page9='<p id="page9Text" class="inputTextFont">this is about page</p>';
