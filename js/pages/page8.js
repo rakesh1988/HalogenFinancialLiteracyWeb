@@ -1,8 +1,9 @@
-bakery.setResultDataObject = function(){
-
-
-	 
+bakery.setResultDataObject = function(){	 
 	
+}
+
+bakery.startGameAgain = function(){
+window.location.reload();	
 }
 bakery.getProfitLossVal = function(){
 	
