@@ -1,0 +1,37 @@
+. About Halogen Foundation Singapore
+
+Founded in 2003, Halogen Foundation Singapore is an Institution of a Public Character (IPC) charity focusing on building young leaders and entrepreneurs. Defining leadership and entrepreneurship as influence, Halogen Foundation believes that every young person has innate potential to influence and lead, becoming positive change agents. By developing an entrepreneurial mindset, youths can be further equipped to contribute positively to society. 
+
+ 
+
+Halogen Foundation aims to make quality leadership and entrepreneurship education available to all young people regardless of background, race, income, or religion, particularly those who are disadvantaged - coming from challenging family backgrounds and/or are in need of financial assistance
+
+ 
+
+2. Name of Application
+
+B.E.A. App (Break-Even Analysis application)
+
+ 
+
+I'll imagine it to be hosted on "www.halogen.sg/entrepreneurship/beaapp", there's a BeApp, by the way
+
+ 
+
+3. App/ Programme Description
+
+In building a business, entrepreneurs need to ensure financial viability of their business model. What entrepreneurs earn from the sale of services and goods needs to cover the cost of their operations for their business to be profitable. This Break-Even Analysis Application is designed to give students a platform to simulate different cost and profit scenarios, to help them develop a better understanding of how their expenditure and revenue play a part in the financial performance of their business concepts. 
+
+ 
+
+This Break-Even Analysis Application (BEA App) is built in collaboration with our corporate partners from UBS Singapore, and is a pro bono project kindly powered by volunteer efforts.
+
+ 
+
+4. I've attached our brand logo and brand guide here in case you need it
+
+ 
+
+5. Yes we'll like to confirm to have it being hosted on a webpage instead of offline 
+
+would you be able to advise us on the next steps for this?
