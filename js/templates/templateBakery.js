@@ -119,7 +119,7 @@ bakery.page1='</br></br></br>'+
 bakery.page2='</br></br></br>'+
 '<table>'+
 	'<tr>'+
-	'<td style="height: 100px; "><img src="images/mblm.svg" style="width:430px;height:270px" id="locationImgTag"/><div class="locDiv" id="locationFactsTxt"></br>&nbsp;&nbsp;LOCATION FACTS </br></br>&nbsp;&nbsp;Marina Bay Link Mall is situated directly below The Lawn @ Marina Bay and it is &nbsp;&nbsp;surrounded by multiple office buildings. The area is frequented by working adults &nbsp;&nbsp;from the surrounding offices. As it is a financial and corporate district, there is high &nbsp;&nbsp;human traffic on weekdays. However, there may be little to no patrons on the &nbsp;&nbsp;weekends when offices are closed.</br></br></div>'+					
+	'<td style="height: 100px; "><img src="images/mblm.svg" style="width:430px;height:270px" id="locationImgTag"/><div class="locDiv" id="locationFactsTxt" style="word-wrap: break-word;text-align:justify;padding-left:10px"></br>&nbsp;&nbsp;LOCATION FACTS </br></br>&nbsp;&nbsp;Marina Bay Link Mall is situated directly below The Lawn @ Marina Bay and it is surrounded by multiple office buildings. The area is frequented by working adults from the surrounding offices. As it is a financial and corporate district, there is high human traffic on weekdays. However, there may be little to no patrons on the weekends when offices are closed.</br></br></div>'+					
 		'</td>'+
 		'<td style="vertical-align:top">'+
 			'<table class="tableRowSpacing">'+
