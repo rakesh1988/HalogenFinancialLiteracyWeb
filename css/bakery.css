@@ -595,7 +595,7 @@ input[type=number] {
 }
 
 .box {
-    width: 60%;
+    width: 65%;
     height: 80%;
     position: absolute;
     top: 4000;
@@ -630,6 +630,8 @@ input[type=number] {
     /*margin-top: -200px;*/
     padding-top: 20px;
     cursor: pointer;
+	width: 158px;
+	
 }
 
 .overlayMenu2 {
@@ -688,15 +690,15 @@ input[type=number] {
     border-left: 2px solid #E6E6E6;
     height: 420px;
     position: absolute;
-    left: 20%;
+    left: 22%;
     margin-left: -3px;
     top: 50px;
 }
 
 .overlayTxtDiv {
-    width: 700px;
+    width: 770px;
     overflow-y: scroll;
-    margin-left: 40px;
+    	
     height: 100%;
     scrollbar-width: none+;
 }
