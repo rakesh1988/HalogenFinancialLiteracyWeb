@@ -247,7 +247,7 @@ if(retVal)
 			bakery['hidePrevNextButton']();
 			document.getElementById("showCalculator").innerHTML='';
 			//document.getElementById("incrementalImages").innerHTML='<img src="images/cafe.svg" style="width:400px;height:150px"></img><img src="images/cafe.svg" style="width:400px;height:150px"></img>';
-			debugger;
+			
 			bakery.underlineTextOnFocus(document.getElementById("locationAnchorId"));
 			
 		}
@@ -813,7 +813,7 @@ bakery.removeUnderlineTextOnFocus= function(){
 }
 
 bakery.displayOverlay= function(){
-addBckGrndColorDiv('overlayMenu1Id');
+addBckGrndColorDiv('overlayMenu2Id');
 document.getElementById("overlay").style.display="inline";
 
 
