@@ -274,7 +274,7 @@ bakery.page4='</br></br></br>'+
 	  '<td><div>+</div></td>'+
 	  '<td class="boldHeaderFrutiger" style="font-size:16px;"><input type="text" class="inputTextFont expTextBoxCls" style="font-color:black;"  id="mnthlySalary" readonly></input></td>'+
 	  '<td><div>=</div></td>'+
-	   '<td class="boldHeaderFrutiger" style="font-size:16px;">$&nbsp;<input type="number" class="inputTextFont expTextBoxCls" id="mnthlyTotalExpenses" onChange="bakery.hideNextButtonExpPage()" oninput="bakery.limitMnthlyFixedExp(this)"></input>&nbsp;&nbsp;<input type="button" value="Evaluate" class="buttonIdCls" onClick="bakery.evaluateFixedExp()"/></td>'+
+	   '<td style="vertical-align: bottom;" class="inputTextFont">$&nbsp;<input type="number" class="inputTextFont expTextBoxCls" id="mnthlyTotalExpenses" onChange="bakery.hideNextButtonExpPage()" oninput="bakery.limitMnthlyFixedExp(this)"></input>&nbsp;&nbsp;<input type="button" value="Evaluate" class="buttonIdCls" onClick="bakery.evaluateFixedExp()"/></td>'+
 	'</tr>'+
 	'<tr>'+
 	  '<td colspan="6">&nbsp;</td>'+	 
@@ -361,7 +361,7 @@ bakery.page5_Bakery='</br><p class="boldHeaderFrutiger" style="height:10px">Inve
 '</br>'+
 '</br>'+
 '</br>'+
-'<table style="padding-left:270px"><tr><td style="border: none;border-bottom: solid;border-color: #737373;margin-left: 100px;"><font style="font-family: Frutiger45Light;font-size: 16px;font-weight: bold;color: #797979;">Total Item Cost:</font>&nbsp;&nbsp;&nbsp;<font style="font-family: Frutiger45Light;font-size: 16px;font-weight: bold;color: #797979;">$&nbsp;</font><input type="number" id="totalInvExpTxt" class="inputTextFont" oninput="bakery.limitInventoryExp(this)" style="width:100px; border: none;font-size: 24px;'+
+'<table style="padding-left:270px"><tr><td style="border: none;border-bottom: solid;border-color: #737373;margin-left: 100px;"><font style="font-family: Frutiger45Light;font-size: 16px;font-weight: bold;color: #797979;">Total Item Cost:</font>&nbsp;&nbsp;&nbsp;<font style="font-family: Frutiger45Light;font-size: 20px;color: black;">$&nbsp;</font><input type="number" id="totalInvExpTxt" class="inputTextFont" oninput="bakery.limitInventoryExp(this)" style="width:100px; border: none;font-size: 24px;'+
     'background-color: #F6F6F6;"></input></td><td><input type="button" value="Evaluate" class="buttonIdCls" onClick="bakery.evaluateInvExp()"/></td></tr><tr><td style="border: none" colspan="2"><div id="evalResult"></div></td></tr></table>';
 	
 bakery.page5_Cafe='</br><p class="boldHeaderFrutiger" style="height:10px">Inventory List</p><ul>'+  
@@ -433,7 +433,7 @@ bakery.page5_Cafe='</br><p class="boldHeaderFrutiger" style="height:10px">Invent
 '</br>'+
 '</br>'+
 '</br>'+
-'<table style="padding-left:270px"><tr><td style="border: none;border-bottom: solid;border-color: #737373;margin-left: 100px;"><font style="font-family: Frutiger45Light;font-size: 16px;font-weight: bold;color: #797979;">Total Item Cost:</font>&nbsp;&nbsp;&nbsp;<font style="font-family: Frutiger45Light;font-size: 16px;font-weight: bold;color: #797979;">$&nbsp;</font><input type="number" id="totalInvExpTxt" class="inputTextFont" oninput="bakery.limitInventoryExp(this)" style="width:100px; border: none;font-size: 24px;'+
+'<table style="padding-left:270px"><tr><td style="border: none;border-bottom: solid;border-color: #737373;margin-left: 100px;"><font style="font-family: Frutiger45Light;font-size: 16px;font-weight: bold;color: #797979;">Total Item Cost:</font>&nbsp;&nbsp;&nbsp;<font style="font-family: Frutiger45Light;font-size: 20px;color: black;">$&nbsp;</font><input type="number" id="totalInvExpTxt" class="inputTextFont" oninput="bakery.limitInventoryExp(this)" style="width:100px; border: none;font-size: 24px;'+
     'background-color: #F6F6F6;"></input></td><td><input type="button" value="Evaluate" class="buttonIdCls" onClick="bakery.evaluateInvExp()"/></td></tr><tr><td style="border: none" colspan="2"><div id="evalResult"></div></td></tr></table>';
 	
 	
@@ -454,14 +454,14 @@ bakery.page6='</br></br></br>'+
 	   '<td class="boldHeaderFrutiger" style="font-size:16px;">{{contriMarginLbl}}  &nbsp;&nbsp;<div  class="tooltip"><img src="images/icon-info.png"  style="width:20px"><span class="tooltiptext" style="width: 300px;">Contribution margin, or dollar contribution per unit, is the selling price per unit minus the variable cost per unit. "Contribution" represents the portion of sales revenue that is not consumed by variable costs and so contributes to the coverage of fixed costs.</span></img></div></td>'+
 	'</tr><tr style="height:10px"></tr>'+
 	'<tr style="height:5px">'+	
-	  '<td class="boldHeaderFrutiger" style="font-size:16px;">$&nbsp;<input type="number" class="inputTextFont expTextBoxCls" style="font-color:black;" id="sellingPriceTxt" onChange="bakery.hideNextButtonContriPage()" maxlength="18"></input>'+
+	  '<td style="font-size:16px;"><font style="font-family: Frutiger45Light;font-size: 20px;color: black;">$&nbsp;</font><input type="number" class="inputTextFont expTextBoxCls" style="font-color:black;" id="sellingPriceTxt" onChange="bakery.hideNextButtonContriPage()" maxlength="18"></input>'+
 								'</input></td>'+
 	  '<td style="width:50px"><div>-</div></td>'+
-	  '<td class="boldHeaderFrutiger" style="font-size:16px;">$&nbsp;<input type="number" class="inputTextFont expTextBoxCls" style="font-color:black;" id="variableCostTxt" readonly></input>'+
+	  '<td style="font-size:16px;"><font style="font-family: Frutiger45Light;font-size: 20px;color: black;">$&nbsp;</font><input type="number" class="inputTextFont expTextBoxCls" style="font-color:black;" id="variableCostTxt" readonly></input>'+
 								'</input></td>'+
 	  
 	  '<td style="width:50px"><div>=</div></td>'+
-	   '<td class="boldHeaderFrutiger" style="font-size:16px;">$&nbsp;<input type="number" class="inputTextFont expTextBoxCls" style="font-color:black;" id="contriMarginTxt" onChange="bakery.hideNextButtonContriPage()" oninput="bakery.limitContriMarginExp(this)"></input>'+
+	   '<td style="font-size:16px;"><font style="font-family: Frutiger45Light;font-size: 20px;color: black;">$&nbsp;</font><input type="number" class="inputTextFont expTextBoxCls" style="font-color:black;" id="contriMarginTxt" onChange="bakery.hideNextButtonContriPage()" oninput="bakery.limitContriMarginExp(this)"></input>'+
 								'</input>&nbsp;&nbsp;<input type="button" value="Evaluate" class="buttonIdCls" onClick="bakery.evaluateContriExp()"/></td>'+
 	'</tr>'+
 	'<tr>'+
@@ -498,10 +498,10 @@ bakery.page7='</br></br></br>'+
 	   '<td class="boldHeaderFrutiger" style="font-size:16px;">{{brkEvenUnitLbl}}  &nbsp;&nbsp;<div  class="tooltip"><img src="images/icon-info.png"  style="width:20px"><span class="tooltiptext" style="width: 300px;">The breakeven number of units, as the name suggests, is the number of units of goods or services that a company needs to sell in order to break even, or in other words, to suffer no financial losses but also make no profit.</span></img></div></td>'+
 	'</tr><tr style="height:10px"></tr>'+
 	'<tr style="height:5px">'+	
-	  '<td class="boldHeaderFrutiger" style="font-size:16px;">$&nbsp;<input type="text" class="inputTextFont expTextBoxCls" style="font-color:black;" id="fxdPriceTxt" onChange="bakery.hideNextButtonBrkEvenPage()" readonly></input>'+
+	  '<td style="font-size:16px;"><font style="font-family: Frutiger45Light;font-size: 20px;color: black;">$&nbsp;</font><input type="text" class="inputTextFont expTextBoxCls" style="font-color:black;" id="fxdPriceTxt" onChange="bakery.hideNextButtonBrkEvenPage()" readonly></input>'+
 								'</input></td>'+
 	  '<td style="width:50px"><div>/</div></td>'+
-	  '<td class="boldHeaderFrutiger" style="font-size:16px;">$&nbsp;<input type="text" class="inputTextFont expTextBoxCls" style="font-color:black;" id="contriMarginTxt" readonly></input>'+
+	  '<td style="font-size:16px;"><font style="font-family: Frutiger45Light;font-size: 20px;color: black;">$&nbsp;</font><input type="text" class="inputTextFont expTextBoxCls" style="font-color:black;" id="contriMarginTxt" readonly></input>'+
 								'</input></td>'+
 	  
 	  '<td style="width:50px"><div>=</div></td>'+
