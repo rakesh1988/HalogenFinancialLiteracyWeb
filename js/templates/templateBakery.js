@@ -229,8 +229,8 @@ bakery.page3='</br></br></br>'+
 							    '{{hireQtyStaffLbl}}'+
 							   '</td>'+							    
 							   '<td  style="background-color: white">'+
-								'<div><img src="images/btn-plus.svg" style="vertical-align: middle" onClick="bakery.hireStaffIncrement()"/><input type="text" style="width:20px;vertical-align: middle;border:0;padding:10px;outline:none" id="staffQtyDynamic" class="inputTextFont" readOnly></input>'+
-								'<img src="images/btn-minus.svg" style="vertical-align: middle" onClick="bakery.hireStaffDecrement()"/></div>'+
+								'<div><img src="images/btn-minus.svg" style="vertical-align: middle" onClick="bakery.hireStaffDecrement()"/><input type="text" style="width:20px;vertical-align: middle;border:0;padding:10px;outline:none" id="staffQtyDynamic" class="inputTextFont" readOnly></input>'+
+								'<img src="images/btn-plus.svg" style="vertical-align: middle" onClick="bakery.hireStaffIncrement()"/></div>'+
 							   '</td>'+
 							   '</tr>'+
 							   '</table>'+				
