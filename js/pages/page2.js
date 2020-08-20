@@ -52,7 +52,7 @@ var locationPrice = [
 ];
 
 var factsDetails = [
-    ['images/mblm.svg', '</br>&nbsp;&nbsp;LOCATION FACTS </br></br>Marina Bay Link Mall is situated directly below The Lawn @ Marina Bay and it is surrounded by multiple office buildings. The area is frequented by working adults from the surrounding.Nex throughout fices.As it is a financial and corporate district, there is high human traffic on weekdays. However, there may be little to no patrons on the weekends when offices are closed.</br></br>'],
+    ['images/mblm.svg', '</br>&nbsp;&nbsp;LOCATION FACTS </br></br>Marina Bay Link Mall is situated directly below The Lawn @ Marina Bay and it is surrounded by multiple office buildings. The area is frequented by working adults from the surrounding offices.As it is a financial and corporate district, there is high human traffic on weekdays. However, there may be little to no patrons on the weekends when offices are closed.</br></br>'],
 	['images/bugis.svg', '</br>&nbsp;&nbsp;LOCATION FACTS </br></br>Bugis Junction is located in the heart of Singapore\'s Civic and Cultural District. The area is frequented by students from nearby schools, tourists and young adults. The peak periods are weekdays & weekends.</br></br>'],
     ['images/nex-loc.png', '</br>&nbsp;&nbsp;LOCATION FACTS </br></br>NEX is a regional shopping mall in Serangoon, within the North-East Region of Singapore.Nex\'s regular customers tend to be residents from the surrounding HDB flats. Patrons frequent Nex throughout the day, with its peak periods being lunch-time, weekday evenings and weekends.</br></br>'],
     
