@@ -7,26 +7,26 @@ bakery.bakeryHeader =
 		'<td class="headerNavWidth20Txt">'+
 			'<a class="hotspot" style="top: 20px; left: 35px; width: 32px; height: 34px;" onClick="bakery.displayOverlay()"><img src="images/icon-hamburger.png"/></a>'+			
 		'</td>	'+		
-		'<td  class="headerNavWidth10Txt"><a id ="shopAnchorId" onclick="bakery.gotoPage(\'Welcome\');bakery.underlineTextOnFocus(this)">'+
+		'<td  class="headerNavWidth10Txt"><a id ="shopAnchorId">'+
 				 '{{shopTypeLbl}}</a>'+
 		'</td>'+
 		'<td class="headerNavWidth10Txt">'+
-			'<a id ="locationAnchorId" onclick="bakery.gotoPage(\'Location\');bakery.underlineTextOnFocus(this)">{{locationLbl}}</a>'+
+			'<a id ="locationAnchorId" >{{locationLbl}}</a>'+
 		'</td>'+
 		'<td  class="headerNavWidth8Txt">'+
-			'<a id ="staffAnchorId" onclick="bakery.gotoPage(\'Staff\');bakery.underlineTextOnFocus(this)">{{staffLbl}}</a>'+
+			'<a id ="staffAnchorId">{{staffLbl}}</a>'+
 		'</td>'+
 		'<td class="headerNavWidth12Txt">'+
-			'<a id ="expAnchorId" onclick="bakery.gotoPage(\'Expenditure\');bakery.underlineTextOnFocus(this)" >{{ExpLbl}}</a>'+
+			'<a id ="expAnchorId">{{ExpLbl}}</a>'+
 		'</td>'+
 		'<td class="headerNavWidth10Txt">'+
-			'<a id ="inventoryAnchorId" onclick="bakery.gotoPage(\'Inventory\');bakery.underlineTextOnFocus(this)">{{inventoryLbl}}</a>'+
+			'<a id ="inventoryAnchorId">{{inventoryLbl}}</a>'+
 		'</td>'+
 		'<td class="headerNavWidth10Txt">'+
-			'<a id ="accountingAnchorId" onclick="bakery.gotoPage(\'Accounting\');bakery.underlineTextOnFocus(this)">{{accountingLbl}}</a>'+
+			'<a id ="accountingAnchorId">{{accountingLbl}}</a>'+
 		'</td>'+
 		'<td class="headerNavWidth10Txt">'+
-			'<a id ="brkEvenAnchorId" onclick="bakery.gotoPage(\'BreakEven\');bakery.underlineTextOnFocus(this)" >{{brkEvenLbl}}</a>'+
+			'<a id ="brkEvenAnchorId">{{brkEvenLbl}}</a>'+
 		'</td>	'+		
 		
 	'</tr>'+
