@@ -541,7 +541,7 @@ bakery.page9='<p id="page9Text" class="inputTextFont">this is about page</p>';
 
 bakery.page10='<p id="page10Text" class="inputTextFont">this is more info page</p>';
 
-bakery.showcalculator='<table><tr><td class="lightHeaderFrutiger" style="font-size:12px;padding-left:0px;padding-top:130px">{{calcLbl}}<img src="images/calculator.svg" onclick="bakery.showCalculator()" id="calcImg"/></td></tr>'+
+bakery.showcalculator='<table><tr><td class="lightHeaderFrutiger" style="font-size:12px;padding-left:0px;padding-top:50px">{{calcLbl}}<img src="images/calculator.svg" onclick="bakery.showCalculator()" id="calcImg"/></td></tr>'+
 	  '<tr><td><div class="popup">'+
 			  '<span class="popuptext" id="myPopup">'+
 			  '           <input type="text" readonly size="10" maxlength="7" id="numberInput">'+
