@@ -8,23 +8,7 @@ window.location.reload();
 bakery.getProfitLossVal = function(){
 	
 	
-	var scenarioSelected=pageArray[0].getScenario();
-	if(scenarioSelected=='A')
-	{
-	   var snd = new Audio("audio/clapping"+ ".mp3");
-	   snd.play();
-	}
-	if(scenarioSelected=='B')
-	{
-	   var snd = new Audio("audio/wrongbeat"+ ".mp3");
-	   snd.play();
-	}
-
-	if(scenarioSelected=='C')
-	{
-		var snd = new Audio("audio/breakeven"+ ".mp3");
-	   snd.play();
-	}
+	var scenarioSelected=pageArray[0].getScenario();	
 
 var fixedValExp=pageArray[3].getFixedExpVal();
 var costPrice=pageArray[4].getTotalInvExp();
