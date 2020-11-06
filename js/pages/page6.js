@@ -97,6 +97,25 @@ bakery.hideNextButtonContriPage=function()
 	}
 }
 
+bakery.roundTheSPValue=function()
+  {
+	  page6ObjInner.setValEvaluated(false);
+	  var num = document.getElementById('sellingPriceTxt').value;
+	 
+	  document.getElementById('sellingPriceTxt').value=Math.round(num);
+	  
+	  var result = (num - Math.floor(num)) !== 0;   
+	  
+		if (result)	  
+		{		  
+		  document.getElementById('spValidation').innerHTML='Please note selling price value is rounded';
+		  document.getElementById("spValidation").classList.add('fixedEvalWrong');
+		  
+		}
+	  
+	  
+  }
+
 
 
 

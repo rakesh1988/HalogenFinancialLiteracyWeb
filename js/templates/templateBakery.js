@@ -72,7 +72,7 @@ bakery.page1='</br></br></br>'+
 						'<table class="tableUnderlineCls">'+
 							'<tr class="tableRowCls">'+
 								'<td class= "textLblCls">'+
-									'Primary&nbsp;&nbsp;&nbsp;&nbsp; </br>Manager'+
+									'First&nbsp;&nbsp;&nbsp;&nbsp; </br>Manager'+
 								'</td>'+
 								
 								'<td>'+
@@ -88,7 +88,7 @@ bakery.page1='</br></br></br>'+
 						'<table class="tableUnderlineCls">'+
 							'<tr class="tableRowCls">'+
 								'<td class= "textLblCls">'+
-									'Secondary </br>Manager'+
+									'Second </br>Manager'+
 								'</td>'+
 								
 								'<td>'+
@@ -119,7 +119,7 @@ bakery.page1='</br></br></br>'+
 bakery.page2='</br></br></br>'+
 '<table>'+
 	'<tr>'+
-	'<td style="height: 100px; "><img src="images/mblm.svg" style="width:430px;height:270px" id="locationImgTag"/><div class="locDiv" id="locationFactsTxt" style="word-wrap: break-word;text-align:justify;padding-left:10px"></br>&nbsp;&nbsp;LOCATION FACTS </br></br>&nbsp;&nbsp;Marina Bay Link Mall is situated directly below The Lawn @ Marina Bay and it is surrounded by multiple office buildings. The area is frequented by working adults from the surrounding offices. As it is a financial and corporate district, there is high human traffic on weekdays. However, there may be little to no patrons on the weekends when offices are closed.</br></br></div>'+					
+	'<td style="height: 100px; "><img src="images/mblm.svg" style="width:430px;height:270px" id="locationImgTag"/><div class="locDiv" id="locationFactsTxt" style="word-wrap: break-word;text-align:justify;padding-left:10px;padding-right:10px"></br>&nbsp;&nbsp;LOCATION FACTS </br></br>&nbsp;&nbsp;Marina Bay Link Mall is situated directly below The Lawn @ Marina Bay and it is surrounded by multiple office buildings. The area is frequented by working adults from the surrounding offices. As it is a financial and corporate district, there is high human traffic on weekdays. However, there may be little to no patrons on the weekends when offices are closed.</br></br></div>'+					
 		'</td>'+
 		'<td style="vertical-align:top">'+
 			'<table class="tableRowSpacing">'+
@@ -246,7 +246,7 @@ bakery.page3='</br></br></br>'+
 '</tr>'+				
 			'</table>'+
 		'</td>'+
-		'<td style="height: 100px;width:30% "><img src="images/bubble.png" style="width:200px;padding-left:300px"/><img src="images/service.png" style="padding-left:150px"/>'+					
+		'<td style="height: 100px;width:30% "><img src="images/bubble.png" style="width:200px;padding-left:300px"/><img src="images/chef.svg" style="padding-left:150px"/>'+					
 		'</td>'+		
 	'</tr><tr style="height:30px"></tr>'+
 '</table>';
@@ -454,7 +454,7 @@ bakery.page6='</br></br></br>'+
 	   '<td class="boldHeaderFrutiger" style="font-size:16px;">{{contriMarginLbl}}  &nbsp;&nbsp;<div  class="tooltip"><img src="images/icon-info.png"  style="width:20px"><span class="tooltiptext" style="width: 300px;">Contribution margin, or dollar contribution per unit, is the selling price per unit minus the variable cost per unit. "Contribution" represents the portion of sales revenue that is not consumed by variable costs and so contributes to the coverage of fixed costs.</span></img></div></td>'+
 	'</tr><tr style="height:10px"></tr>'+
 	'<tr style="height:5px">'+	
-	  '<td style="font-size:16px;"><font style="font-family: Frutiger45Light;font-size: 20px;color: black;">$&nbsp;</font><input type="number" class="inputTextFont expTextBoxCls" style="font-color:black;" id="sellingPriceTxt" onChange="bakery.hideNextButtonContriPage()" maxlength="18"></input>'+
+	  '<td style="font-size:16px;"><font style="font-family: Frutiger45Light;font-size: 20px;color: black;">$&nbsp;</font><input type="number" class="inputTextFont expTextBoxCls" style="font-color:black;" id="sellingPriceTxt" onChange="bakery.hideNextButtonContriPage()" onBlur="bakery.roundTheSPValue()" maxlength="18"></input>'+
 								'</input></td>'+
 	  '<td style="width:50px"><div>-</div></td>'+
 	  '<td style="font-size:16px;"><font style="font-family: Frutiger45Light;font-size: 20px;color: black;">$&nbsp;</font><input type="number" class="inputTextFont expTextBoxCls" style="font-color:black;" id="variableCostTxt" readonly></input>'+
@@ -572,7 +572,7 @@ bakery.showcalculator='<table><tr><td class="lightHeaderFrutiger" style="font-si
 	  
 bakery.showWaitingPopup='<div id="myModal" class="modal">'+  
   '<div class="modal-content">'+  
-    '<span class="close"><img src="images/bakery_no-signage.gif" style="height: 100%;width: 100%;"><div class="text-blockgif" id="bakeryNameLblDynamicGif"></div></span>'+
+    '<span class="close"><img src="images/bakery_no-signage.gif" style="height: 100%;width: 100%;"><div class="text-blockgif" id="bakeryNameLblDynamicGif"></div><div class="text-blockgif1" id="bakeryNameLblDynamicGif">Please wait while we are running a monthly cycle</div></span>'+
 
  ' </div>'+
 '</div>';

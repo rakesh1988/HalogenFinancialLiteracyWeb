@@ -494,6 +494,7 @@ if(retVal)
 			bakery[functionToSetData]();			
 
 			document.getElementById("bakeryBase").innerHTML=bakeryShowLoadingPopup(bakery.pages);
+			document.getElementById("myPopup").style.display="none";
 	
 			setTimeout(bakery.loadProfitLossResult, 14000);
 			document.getElementById('bakeryNameLblDynamicGif').innerHTML=pageArray[0].getShopName(); 
