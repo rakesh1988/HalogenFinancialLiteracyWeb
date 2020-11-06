@@ -499,14 +499,14 @@ label img {
 
 .text-blockgif1 {
     position: absolute;
-    bottom: 31%;
+    bottom: 15%;
+	width:400px;
     right: 560px;   
-    color: white;
-    padding-left: 20px;
-    padding-right: 20px;    
+    color: black;        
     font-family: Frutiger45Light;
     text-align: center;    
     font-weight: bold;
+	font-size: 20px;
 }
 
 .text-block1 {
