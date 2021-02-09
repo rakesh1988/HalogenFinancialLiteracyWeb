@@ -56,7 +56,7 @@ bakery.page1='</br></br></br>'+
 						'<table class="tableUnderlineCls">'+
 							'<tr class="tableRowCls">'+
 								'<td class= "textLblCls">'+
-									'Shop&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</br>Name'+
+									'Shop&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</br>Name'+
 								'</td>'+
 								
 								'<td>'+
@@ -72,7 +72,7 @@ bakery.page1='</br></br></br>'+
 						'<table class="tableUnderlineCls">'+
 							'<tr class="tableRowCls">'+
 								'<td class= "textLblCls">'+
-									'First&nbsp;&nbsp;&nbsp;&nbsp; </br>Manager'+
+									'Manager</br>Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; '+
 								'</td>'+
 								
 								'<td>'+
@@ -83,22 +83,22 @@ bakery.page1='</br></br></br>'+
 						'</table>'+
 					'</td>'+
 				'</tr>'+
-				'<tr>'+					
-					'<td>'+
-						'<table class="tableUnderlineCls">'+
-							'<tr class="tableRowCls">'+
-								'<td class= "textLblCls">'+
-									'Second </br>Manager'+
-								'</td>'+
+				//'<tr>'+					
+					//'<td>'+
+						//'<table class="tableUnderlineCls">'+
+							//'<tr class="tableRowCls">'+
+							//	'<td class= "textLblCls">'+
+								//	'Second </br>Manager'+
+								//'</td>'+
 								
-								'<td>'+
-								'<table style="height:100%"><tr><td><input type="text" class="inputTextFont textBoxCls inputTextDimension enterKeyPress" id="sMngrId" maxlength="30"></input>'+
-								'</input></td></tr></table>'+
-								'</td>'+								
-							'</tr>'+
-						'</table>'+
-					'</td>'+
-				'</tr>'+
+								//'<td>'+
+								//'<table style="height:100%"><tr><td><input type="text" class="inputTextFont textBoxCls inputTextDimension enterKeyPress" id="sMngrId" //maxlength="30"></input>'+
+								//'</input></td></tr></table>'+
+								//'</td>'+								
+							//'</tr>'+
+						//'</table>'+
+					//'</td>'+
+				//'</tr>'+
 			'</table>'+
 		'</td>'+
 		'<td style="height: 70px; "><div class="container"><img src="images/cafe.svg" style="width:600px"><div class="text-block" id="bakeryNameLblDynamic"></div></div></img>'+					
@@ -184,7 +184,7 @@ bakery.page3='</br></br></br>'+
 					'<td class="boldHeaderFrutiger">'+
 						'{{hireStaffLbl}}</br></td>'+
 				'</tr>'+
-				'<tr > <td class="lightHeaderFrutiger" style="font-size:24px;"><div style="height : 80px">Now choose number of employees , they will help in cooking and serving </div></td></tr>'+	
+				'<tr > <td class="lightHeaderFrutiger" style="font-size:24px;"><div style="height : 80px">Now choose number of employees, they will help in cooking and serving. </div></td></tr>'+	
 				'<tr>'+					
 					'<td>'+
 					   '<table class="staffDetailsTable">'+
@@ -328,40 +328,40 @@ bakery.page5_Bakery='</br><p class="boldHeaderFrutiger" style="height:10px">Inve
   '<li><input type="checkbox" id="cb9" onClick="bakery.selectIngridients(\'cb9\');"/>'+
     '<label for="cb9"><div class="container"><img src="'+chkBoxImageAndPriceBakery[8][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPriceBakery[8][1]+
-	'</div></div></img></label></li>'+
+	'</div></div></img></label><div class="inventoryItemName">'+chkBoxImageAndPriceBakery[8][2]+'</div></li>'+
   '<li><input type="checkbox" id="cb10" onClick="bakery.selectIngridients(\'cb10\');"/>'+
     '<label for="cb10"><div class="container"><img src="'+chkBoxImageAndPriceBakery[9][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPriceBakery[9][1]+
-	'</div></div></img></label></li>'+
+	'</div></div></img></label><div class="inventoryItemName">'+chkBoxImageAndPriceBakery[9][2]+'</div></li>'+
   '<li><input type="checkbox" id="cb11" onClick="bakery.selectIngridients(\'cb11\');"/>'+
     '<label for="cb11"><div class="container"><img src="'+chkBoxImageAndPriceBakery[10][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPriceBakery[10][1]+
-	'</div></div></img></label></li>'+
+	'</div></div></img></label><div class="inventoryItemName">'+chkBoxImageAndPriceBakery[10][2]+'</div></li>'+
    '<li><input type="checkbox" id="cb12" onClick="bakery.selectIngridients(\'cb12\');"/>'+
     '<label for="cb12"><div class="container"><img src="'+chkBoxImageAndPriceBakery[11][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPriceBakery[11][1]+
-	'</div></div></img></label></li>'+
+	'</div></div></img></label><div class="inventoryItemName">'+chkBoxImageAndPriceBakery[11][2]+'</div></li>'+
    '<li><input type="checkbox" id="cb13" onClick="bakery.selectIngridients(\'cb13\');"/>'+
     '<label for="cb13"><div class="container"><img src="'+chkBoxImageAndPriceBakery[12][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPriceBakery[12][1]+
-	'</div></div></img></label></li>'+
+	'</div></div></img></label><div class="inventoryItemName">'+chkBoxImageAndPriceBakery[12][2]+'</div></li>'+
    '<li><input type="checkbox" id="cb14" onClick="bakery.selectIngridients(\'cb14\');"/>'+
     '<label for="cb14"><div class="container"><img src="'+chkBoxImageAndPriceBakery[13][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPriceBakery[13][1]+
-	'</div></div></img></label></li>'+
+	'</div></div></img></label><div class="inventoryItemName">'+chkBoxImageAndPriceBakery[13][2]+'</div></li>'+
    '<li><input type="checkbox" id="cb15" onClick="bakery.selectIngridients(\'cb15\');"/>'+
     '<label for="cb15"><div class="container"><img src="'+chkBoxImageAndPriceBakery[14][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPriceBakery[14][1]+
-	'</div></div></img></label></li>'+
+	'</div></div></img></label><div class="inventoryItemName">'+chkBoxImageAndPriceBakery[14][2]+'</div></li>'+
   '<li><input type="checkbox" id="cb16" onClick="bakery.selectIngridients(\'cb16\')"/>'+
     '<label for="cb16"><div class="container"><img src="'+chkBoxImageAndPriceBakery[15][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPriceBakery[15][1]+
-	'</div></div></img></label></li>'+ 
+	'</div></div></img></label><div class="inventoryItemName">'+chkBoxImageAndPriceBakery[15][2]+'</div></li>'+
 '</ul>'+
 '</br>'+
 '</br>'+
 '</br>'+
-'<table style="padding-left:270px"><tr><td style="border: none;border-bottom: solid;border-color: #737373;margin-left: 100px;"><font style="font-family: Frutiger45Light;font-size: 16px;font-weight: bold;color: #797979;">Total Item Cost:</font>&nbsp;&nbsp;&nbsp;<font style="font-family: Frutiger45Light;font-size: 20px;color: black;">$&nbsp;</font><input type="number" id="totalInvExpTxt" class="inputTextFont" oninput="bakery.limitInventoryExp(this)" style="width:100px; border: none;font-size: 24px;'+
+'<table style="padding-left:270px"><tr><td style="border: none;border-bottom: solid;border-color: #737373;margin-left: 100px;"><font style="font-family: Frutiger45Light;font-size: 16px;font-weight: bold;color: #797979;">Total Item Cost:</font>&nbsp;&nbsp;&nbsp;<font style="font-family: Frutiger45Light;font-size: 20px;color: black;">$&nbsp;</font><input type="number" id="totalInvExpTxt" class="inputTextFont" oninput="bakery.limitInventoryExp(this)" style="width:100px; border: none;'+
     'background-color: #F6F6F6;"></input></td><td><input type="button" value="Evaluate" class="buttonIdCls" onClick="bakery.evaluateInvExp()"/></td></tr><tr><td style="border: none" colspan="2"><div id="evalResult"></div></td></tr></table>';
 	
 bakery.page5_Cafe='</br><p class="boldHeaderFrutiger" style="height:10px">Inventory List</p><ul>'+  
@@ -400,40 +400,40 @@ bakery.page5_Cafe='</br><p class="boldHeaderFrutiger" style="height:10px">Invent
   '<li><input type="checkbox" id="cb9" onClick="bakery.selectIngridients(\'cb9\');"/>'+
     '<label for="cb9"><div class="container"><img src="'+chkBoxImageAndPriceCafe[8][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPriceCafe[8][1]+
-	'</div></div></img></label></li>'+
+	'</div></div></img></label><div class="inventoryItemName">'+chkBoxImageAndPriceCafe[8][2]+'</div></li>'+
   '<li><input type="checkbox" id="cb10" onClick="bakery.selectIngridients(\'cb10\');"/>'+
     '<label for="cb10"><div class="container"><img src="'+chkBoxImageAndPriceCafe[9][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPriceCafe[9][1]+
-	'</div></div></img></label></li>'+
+	'</div></div></img></label><div class="inventoryItemName">'+chkBoxImageAndPriceCafe[9][2]+'</div></li>'+
   '<li><input type="checkbox" id="cb11" onClick="bakery.selectIngridients(\'cb11\');"/>'+
     '<label for="cb11"><div class="container"><img src="'+chkBoxImageAndPriceCafe[10][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPriceCafe[10][1]+
-	'</div></div></img></label></li>'+
+	'</div></div></img></label><div class="inventoryItemName">'+chkBoxImageAndPriceCafe[10][2]+'</div></li>'+
    '<li><input type="checkbox" id="cb12" onClick="bakery.selectIngridients(\'cb12\');"/>'+
     '<label for="cb12"><div class="container"><img src="'+chkBoxImageAndPriceCafe[11][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPriceCafe[11][1]+
-	'</div></div></img></label></li>'+
+	'</div></div></img></label><div class="inventoryItemName">'+chkBoxImageAndPriceCafe[11][2]+'</div></li>'+
    '<li><input type="checkbox" id="cb13" onClick="bakery.selectIngridients(\'cb13\');"/>'+
     '<label for="cb13"><div class="container"><img src="'+chkBoxImageAndPriceCafe[12][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPriceCafe[12][1]+
-	'</div></div></img></label></li>'+
+	'</div></div></img></label><div class="inventoryItemName">'+chkBoxImageAndPriceCafe[12][2]+'</div></li>'+
    '<li><input type="checkbox" id="cb14" onClick="bakery.selectIngridients(\'cb14\');"/>'+
     '<label for="cb14"><div class="container"><img src="'+chkBoxImageAndPriceCafe[13][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPriceCafe[13][1]+
-	'</div></div></img></label></li>'+
+	'</div></div></img></label><div class="inventoryItemName">'+chkBoxImageAndPriceCafe[13][2]+'</div></li>'+
    '<li><input type="checkbox" id="cb15" onClick="bakery.selectIngridients(\'cb15\');"/>'+
     '<label for="cb15"><div class="container"><img src="'+chkBoxImageAndPriceCafe[14][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPriceCafe[14][1]+
-	'</div></div></img></label></li>'+
+	'</div></div></img></label><div class="inventoryItemName">'+chkBoxImageAndPriceCafe[14][2]+'</div></li>'+
   '<li><input type="checkbox" id="cb16" onClick="bakery.selectIngridients(\'cb16\')"/>'+
     '<label for="cb16"><div class="container"><img src="'+chkBoxImageAndPriceCafe[15][0]+'"><div class="inventoryPrice">'+
 	chkBoxImageAndPriceCafe[15][1]+
-	'</div></div></img></label></li>'+ 
+	'</div></div></img></label><div class="inventoryItemName">'+chkBoxImageAndPriceCafe[15][2]+'</div></li>'+ 
 '</ul>'+
 '</br>'+
 '</br>'+
 '</br>'+
-'<table style="padding-left:270px"><tr><td style="border: none;border-bottom: solid;border-color: #737373;margin-left: 100px;"><font style="font-family: Frutiger45Light;font-size: 16px;font-weight: bold;color: #797979;">Total Item Cost:</font>&nbsp;&nbsp;&nbsp;<font style="font-family: Frutiger45Light;font-size: 20px;color: black;">$&nbsp;</font><input type="number" id="totalInvExpTxt" class="inputTextFont" oninput="bakery.limitInventoryExp(this)" style="width:100px; border: none;font-size: 24px;'+
+'<table style="padding-left:270px"><tr><td style="border: none;border-bottom: solid;border-color: #737373;margin-left: 100px;"><font style="font-family: Frutiger45Light;font-size: 16px;font-weight: bold;color: #797979;">Total Item Cost:</font>&nbsp;&nbsp;&nbsp;<font style="font-family: Frutiger45Light;font-size: 20px;color: black;">$&nbsp;</font><input type="number" id="totalInvExpTxt" class="inputTextFont" oninput="bakery.limitInventoryExp(this)" style="width:100px; border: none;'+
     'background-color: #F6F6F6;"></input></td><td><input type="button" value="Evaluate" class="buttonIdCls" onClick="bakery.evaluateInvExp()"/></td></tr><tr><td style="border: none" colspan="2"><div id="evalResult"></div></td></tr></table>';
 	
 	
@@ -488,7 +488,7 @@ bakery.page7='</br></br></br>'+
 	  '<td class="boldHeaderFrutiger" colspan="5">{{breakEven1Lbl}}</td>'+
 	'</tr>'+
     '<tr>'+
-	  '<td class="lightHeaderFrutiger" style="font-size:24px;" colspan="5">Break even unit is Total monthly fixed expense / Contribution margin</td>'+
+	  '<td class="lightHeaderFrutiger" style="font-size:24px;" colspan="5">Break Even Unit is Total monthly fixed expense / Contribution margin</td>'+
 	  
 	'</tr>'+
 	'</tr><tr style="height:30px"></tr>'+
@@ -514,7 +514,7 @@ bakery.page7='</br></br></br>'+
 	'</tr>'+
 	'</tr>'+	
 	'<tr>'+
-	  '<td class="lightHeaderFrutiger" style="font-size:24px;" colspan="5">Your bakery shop details :</br></br></td>'+	 
+	  '<td class="lightHeaderFrutiger" style="font-size:24px;" colspan="5"></br></br></td>'+	 
 	'</tr>'+
 	'</tr>'+	
 	'<tr>'+
@@ -522,7 +522,11 @@ bakery.page7='</br></br></br>'+
 	  '<div id="scroller" style="width: 1100px; height: 200px; margin: 0 auto;">'+
       ' <div class="innerScrollArea">'+
          '<ul id="populatescrollingImagesIndex">'+
-			
+		 '<table><tr><td class="lightHeaderFrutiger" style="font-size:24px;"><input type="button" value="Shop Type" class="buttonIdCls" onClick="bakery.showFinalPageDetails(\'shopDetails\')"/></td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="lightHeaderFrutiger"'+
+				'style="font-size:24px;"><input type="button" value="Location" class="buttonIdCls" onClick="bakery.showFinalPageDetails(\'locDetails\')"/></td>'+
+				'<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="lightHeaderFrutiger" style="font-size:24px;"><input type="button" value="Staff" class="buttonIdCls" onClick="bakery.showFinalPageDetails(\'empDetails\')"/></td>'+
+				'<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td class="lightHeaderFrutiger" style="font-size:24px;"><input type="button" value="Inventory" class="buttonIdCls" onClick="bakery.showFinalPageDetails(\'invDetails\')"/></td>'+
+				'</tr></table></br></br><div id="detailImages"><img src="'+'images/cafe.svg '+'" style="height:100px" /></div>'+			
          '</ul>'+
      '</div>'+
  '</div>'+
