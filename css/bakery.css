@@ -358,7 +358,20 @@ label::before {
     border-bottom-left-radius: 25px;
     text-align: center;
     height: 20px;
-    width: 80px;
+    width: 100px;
+	color: rgb(246, 246, 246);
+}
+
+.inventoryItemName {    
+    font-size: 16px;
+    font-family: Frutiger45Light;
+    border-top-right-radius: 25px;
+    border-top-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    text-align: center;    
+    width: 120px;
+	color: rgb(192, 192, 192);
 }
 
 label img {
@@ -730,3 +743,27 @@ input[type=number] {
 body {
     position: relative;
 }
+
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.active, .collapsible:hover {
+  background-color: #555;
+}
+
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
