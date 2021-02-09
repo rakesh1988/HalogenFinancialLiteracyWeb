@@ -1,5 +1,51 @@
 var page7ObjInner=pageArray[6];
 
+bakery.showFinalPageDetails= function(detailId){
+	
+	if(detailId=='shopDetails')
+	{
+		document.getElementById("detailImages").innerHTML='<img src="'+'images/cafe.svg '+'" style="height:100px" />';
+	}
+	
+	if(detailId=='locDetails')
+	{
+		document.getElementById("detailImages").innerHTML='<img src="'+factsDetails[pageArray[1].getLocationImgInx()][0]+'" style="height:100px" />';
+	}
+	
+	if(detailId=='empDetails')
+	{
+					var emp1Qty=pageArray[2].getEmpQty1();
+					
+					var empImagesDetails='';
+					for(var cnter=0;cnter<emp1Qty;cnter++)
+					{
+					 empImagesDetails= empImagesDetails+'<img src="'+staff[0][3]+'" style="height:100px" />'+
+					'&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+					}
+					document.getElementById("detailImages").innerHTML=empImagesDetails;
+	}
+	if(detailId=='invDetails')
+	{
+					var srcVal=""; 
+					var empImgString="";
+					var selectedChkBox=pageArray[4].getSelectedInventoryItems().split(",");
+					var invImagesDetails='';
+			
+						 if(selectedChkBox != '')
+						 {
+							 
+							for (i = 0; i < selectedChkBox.length; i++) 
+							{						
+							  srcVal=chkBoxImageAndPrice[parseInt(selectedChkBox[i].substr(2,3))-1][0];
+							  invImagesDetails =invImagesDetails+'<img src="'+srcVal+'" style="height:100px" />'+
+							  '&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;';
+							  
+							}	
+						}
+						document.getElementById("detailImages").innerHTML=invImagesDetails;
+	}
+}
+
 bakery.setBreakEvenDataObject = function(){
 
 //document.getElementById("sellingPriceTxt").value
