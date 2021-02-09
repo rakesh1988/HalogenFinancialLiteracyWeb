@@ -32,7 +32,7 @@ bakery.translation={
 		"sellingPrice":"Selling Price",
 		"variableExp":"Variable Expense for One Unit",
 		"contriMargin":"Contribution Margin",		
-		"brkEven1":"Let's find out how many units you have to sell in order to break even",
+		"brkEven1":"Let's find out how many units you have to sell in order to Break Even",
 		"totalFxdExp":"Total Monthly Fixed Expenses",
 		"brkEvenUnit":"Break Even Unit",
 		
