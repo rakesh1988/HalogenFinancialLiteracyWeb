@@ -493,13 +493,13 @@ label img {
 .text-blockgif {
     position: absolute;
     bottom: 61%;
-    right: 670px;
+    right: 43%;
     background-color: #4AADB6;
     color: white;
     padding-left: 20px;
     padding-right: 20px;
     height: 45px;
-    width: 150px;
+    width: 160px;
     line-height: 40px;
     font-family: Frutiger45Light;
     text-align: center;
@@ -510,17 +510,19 @@ label img {
     font-weight: bold;
 }
 
+
 .text-blockgif1 {
     position: absolute;
     bottom: 15%;
 	width:420px;
-    right: 560px;   
+    right: 35%;   
     color: black;        
     font-family: Frutiger45Light;
     text-align: center;    
     font-weight: bold;
 	font-size: 20px;
 }
+
 
 .text-block1 {
     position: absolute;
